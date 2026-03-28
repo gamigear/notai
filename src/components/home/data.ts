@@ -1,3 +1,55 @@
+export const utilityLinks = ["Khuyến mãi", "Vé máy bay", "Khách sạn", "Tour", "Concert", "Hỗ trợ"];
+
+export const searchTabs = ["Tour", "Khách sạn", "Vé show", "Leisure"];
+
+export const searchFields = [
+  {
+    label: "Điểm đến",
+    value: "Bạn muốn đi đâu?",
+  },
+  {
+    label: "Ngày đi",
+    value: "Chọn ngày khởi hành",
+  },
+  {
+    label: "Ngân sách",
+    value: "Tất cả mức giá",
+  },
+];
+
+export const serviceShortcuts = [
+  {
+    title: "Tour quốc tế",
+    subtitle: "Best seller",
+    accent: "from-[#ffe7c7] to-[#ffd1a1]",
+  },
+  {
+    title: "Khách sạn",
+    subtitle: "Đặt nhanh",
+    accent: "from-[#d7e7ff] to-[#bfd3ff]",
+  },
+  {
+    title: "Vé concert",
+    subtitle: "Hot issue",
+    accent: "from-[#eed8ff] to-[#d8b8ff]",
+  },
+  {
+    title: "Công viên",
+    subtitle: "Gia đình",
+    accent: "from-[#d7f7eb] to-[#b5ead7]",
+  },
+  {
+    title: "Spa",
+    subtitle: "Healing",
+    accent: "from-[#ffe0ec] to-[#ffc9df]",
+  },
+  {
+    title: "Cuối tuần",
+    subtitle: "Getaway",
+    accent: "from-[#efe8ff] to-[#d9ccff]",
+  },
+];
+
 export const companionOptions = [
   {
     title: "Bạn bè / người yêu",
@@ -58,11 +110,11 @@ export const rankingCards = [
   },
 ];
 
-export const quickCategories = [
-  "Tour quốc tế",
-  "Khách sạn",
-  "Vé show",
-  "Công viên",
-  "Spa & thư giãn",
-  "Cuối tuần",
+export const quickCategories = ["Tour quốc tế", "Khách sạn", "Vé show", "Công viên", "Spa & thư giãn", "Cuối tuần"];
+
+export const paritySteps = [
+  "Chạy local, chụp đối chiếu bố cục homepage giữa site gốc và bản clone.",
+  "Tách layout thành component: header, hero, category chips, deal cards, ranking block.",
+  "Dùng Frontman để tinh chỉnh spacing, typography, radius, shadow và responsive.",
+  "Sau khi homepage ổn mới mở rộng sang subpages và modernize logic React bên dưới.",
 ];
