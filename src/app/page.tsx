@@ -1,7 +1,9 @@
 import { CategoriesSection } from "@/components/home/categories";
 import { DealsSection } from "@/components/home/deals";
+import { Footer } from "@/components/home/footer";
 import { Header } from "@/components/home/header";
 import { HeroSection } from "@/components/home/hero";
+import { PromotionsSection } from "@/components/home/promotions";
 import { RankingSection } from "@/components/home/ranking";
 
 export default function Home() {
@@ -11,7 +13,9 @@ export default function Home() {
       <HeroSection />
       <CategoriesSection />
       <DealsSection />
+      <PromotionsSection />
       <RankingSection />
+      <Footer />
     </main>
   );
 }

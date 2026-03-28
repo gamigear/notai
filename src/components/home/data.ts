@@ -112,6 +112,54 @@ export const rankingCards = [
 
 export const quickCategories = ["Tour quốc tế", "Khách sạn", "Vé show", "Công viên", "Spa & thư giãn", "Cuối tuần"];
 
+export const portalBenefits = [
+  {
+    title: "Giá tốt mỗi ngày",
+    description: "Deal được làm mới liên tục theo mùa và theo nhu cầu du lịch thực tế.",
+  },
+  {
+    title: "Đặt nhanh 3 bước",
+    description: "Từ tìm kiếm đến đặt chỗ chỉ trong một luồng gọn, rõ và ít cản trở.",
+  },
+  {
+    title: "Nội dung dày nhưng dễ quét",
+    description: "Portal density cao nhưng vẫn phân tầng tốt để người dùng không bị ngợp.",
+  },
+];
+
+export const promoBanners = [
+  {
+    eyebrow: "SPRING SALE",
+    title: "Khuyến mãi vé show & concert cuối tuần",
+    description: "Flash deals, ghế đẹp và nhiều lựa chọn giải trí đang tăng tốc bán.",
+    accent: "from-[#111827] via-[#1f2937] to-[#374151]",
+  },
+  {
+    eyebrow: "GETAWAY",
+    title: "Combo nghỉ dưỡng ngắn ngày cho gia đình",
+    description: "Khách sạn, công viên, spa và vé trải nghiệm được gom thành combo dễ mua.",
+    accent: "from-[#5b3df5] via-[#7c3aed] to-[#a855f7]",
+  },
+];
+
+export const themeCollections = [
+  {
+    title: "Weekend pick",
+    subtitle: "Đi nhanh về gọn",
+    items: ["Busan 3N2Đ", "Jeju healing", "Theme park day pass"],
+  },
+  {
+    title: "Couple moments",
+    subtitle: "Lãng mạn vừa đủ",
+    items: ["Macau skyline", "Hong Kong harbor", "Night musical ticket"],
+  },
+  {
+    title: "Family choice",
+    subtitle: "Dễ đi cùng trẻ nhỏ",
+    items: ["Resort + breakfast", "Water park package", "Zoo & kids museum"],
+  },
+];
+
 export const paritySteps = [
   "Chạy local, chụp đối chiếu bố cục homepage giữa site gốc và bản clone.",
   "Tách layout thành component: header, hero, category chips, deal cards, ranking block.",
