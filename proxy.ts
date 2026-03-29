@@ -1,13 +1,7 @@
-import { createMiddleware } from '@frontman-ai/nextjs';
 import { NextRequest, NextResponse } from 'next/server';
 
-const frontman = createMiddleware({
-  host: 'api.frontman.sh',
-});
-
-export async function proxy(req: NextRequest): Promise<NextResponse> {
-  const response = await frontman(req);
-  if (response) return response;
+export async function proxy(_req: NextRequest): Promise<NextResponse> {
+  void _req;
   return NextResponse.next();
 }
 

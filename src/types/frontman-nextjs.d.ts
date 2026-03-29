@@ -7,5 +7,10 @@ declare module "@frontman-ai/nextjs" {
 }
 
 declare module "@frontman-ai/nextjs/Instrumentation" {
-  export function setup(): [any, any];
+  export type FrontmanProcessor = {
+    shutdown?: () => Promise<void>;
+    forceFlush?: () => Promise<void>;
+  };
+
+  export function setup(): [FrontmanProcessor, FrontmanProcessor];
 }
