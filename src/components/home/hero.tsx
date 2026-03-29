@@ -43,11 +43,17 @@ export function HeroSection() {
               ))}
             </div>
 
-            <div className="mt-4 grid gap-3 lg:grid-cols-[1fr_1fr_1fr_auto]">
-              {searchFields.map((field) => (
+            <div className="mt-4 grid gap-3 lg:grid-cols-[1.15fr_0.95fr_1fr_auto]">
+              {searchFields.map((field, index) => (
                 <div key={field.label} className="rounded-[22px] border border-[#ececf3] bg-[#fafafe] px-4 py-3">
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{field.label}</p>
-                  <p className="mt-1 text-sm font-semibold text-[#111827]">{field.value}</p>
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{field.label}</p>
+                      <p className="mt-1 text-sm font-semibold text-[#111827]">{field.value}</p>
+                      <p className="mt-1 text-[11px] font-medium text-[#9ca3af]">{field.hint}</p>
+                    </div>
+                    <span className={`mt-1 h-2.5 w-2.5 rounded-full ${index === 0 ? "bg-[#4154ff]" : "bg-[#d1d5db]"}`} />
+                  </div>
                 </div>
               ))}
               <button className="rounded-[22px] bg-[#1c1c1e] px-6 py-4 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)]">

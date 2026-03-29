@@ -14,14 +14,17 @@ export const searchFields = [
   {
     label: "여행지",
     value: "어디로 떠나시나요?",
+    hint: "도시 · 국가 · 상품명",
   },
   {
     label: "출발일",
     value: "날짜를 선택해 주세요",
+    hint: "가는 날을 고르세요",
   },
   {
     label: "인원 · 옵션",
     value: "인원과 조건을 선택해 주세요",
+    hint: "동행자 · 객실 · 옵션",
   },
 ];
 
