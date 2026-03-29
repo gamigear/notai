@@ -7,25 +7,25 @@ export function Footer() {
         <div className="mx-auto w-full max-w-7xl px-4 pt-10 pb-0 sm:px-6 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="rounded-[32px] bg-gradient-to-br from-[#5b3df5] via-[#7c3aed] to-[#a855f7] p-6 text-white shadow-[0_18px_56px_rgba(91,61,245,0.22)] sm:p-8">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">Final booking push</p>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">앱 혜택</p>
               <div className="mt-3 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                 <div>
-                  <h3 className="text-3xl font-black tracking-[-0.04em]">Sẵn sàng kéo bản clone tiến gần site gốc hơn nữa.</h3>
+                  <h3 className="text-3xl font-black tracking-[-0.04em]">앱에서 더 빠르게, 더 큰 혜택으로 예약하세요.</h3>
                   <p className="mt-3 max-w-2xl text-sm leading-7 text-white/80">
-                    Homepage hiện đã có đầy đủ lớp nội dung để bước vào vòng tinh chỉnh thị giác sâu hơn bằng Frontman và
-                    đối chiếu trực tiếp với nol.interpark.com.
+                    실시간 인기 상품 확인부터 쿠폰 적용, 저장한 상품 다시 보기까지. 여행과 공연 예매를 더 빠르게 이어갈 수
+                    있도록 주요 혜택을 한곳에 담았습니다.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  <button className="rounded-full bg-white px-5 py-3 text-sm font-bold text-[#111827]">Open Frontman</button>
-                  <button className="rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white">Review homepage</button>
+                  <button className="rounded-full bg-white px-5 py-3 text-sm font-bold text-[#111827]">앱 혜택 보기</button>
+                  <button className="rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white">최근 본 상품</button>
                 </div>
               </div>
             </div>
 
             <div className="rounded-[32px] bg-[#111827] p-6 text-white shadow-[0_18px_56px_rgba(15,23,42,0.18)] sm:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/60">Membership value</p>
-              <h3 className="mt-3 text-3xl font-black tracking-[-0.04em]">Tạo cảm giác quay lại là có lợi.</h3>
+              <h3 className="mt-3 text-3xl font-black tracking-[-0.04em]">다시 찾을수록 더 편리해집니다.</h3>
               <div className="mt-5 space-y-3">
                 {membershipBenefits.map((benefit) => (
                   <div key={benefit} className="rounded-[22px] border border-white/10 bg-white/6 px-4 py-3 text-sm font-medium text-white/80">
@@ -39,37 +39,37 @@ export function Footer() {
 
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#7c3aed]">Notai Clone Lab</p>
-            <h3 className="mt-3 text-2xl font-black tracking-[-0.03em] text-[#111827]">Next.js rebuild for nol.interpark.com</h3>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#7c3aed]">NOL SERVICE</p>
+            <h3 className="mt-3 text-2xl font-black tracking-[-0.03em] text-[#111827]">여행, 공연, 레저 예약을 한 곳에서.</h3>
             <p className="mt-3 max-w-md text-sm leading-7 text-[#6b7280]">
-              Dự án này ưu tiên giữ nguyên cảm giác sử dụng của website gốc trong khi thay phần frontend sang kiến trúc hiện đại,
-              dễ bảo trì hơn.
+              원하는 상품을 빠르게 찾고, 실시간 인기 흐름을 확인하며, 더 쉬운 예약 경험으로 이어질 수 있도록 메인 화면을
+              구성했습니다.
             </p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-3">
             <div>
-              <p className="text-sm font-black text-[#111827]">Triển khai</p>
+              <p className="text-sm font-black text-[#111827]">서비스</p>
               <ul className="mt-3 space-y-2 text-sm text-[#6b7280]">
-                <li>Homepage parity</li>
-                <li>Subpage expansion</li>
-                <li>Frontman visual edits</li>
+                <li>해외여행</li>
+                <li>숙소 예약</li>
+                <li>공연 예매</li>
               </ul>
             </div>
             <div>
-              <p className="text-sm font-black text-[#111827]">Kỹ thuật</p>
+              <p className="text-sm font-black text-[#111827]">혜택</p>
               <ul className="mt-3 space-y-2 text-sm text-[#6b7280]">
-                <li>Next.js App Router</li>
-                <li>Tailwind CSS</li>
-                <li>React modernization</li>
+                <li>앱 전용 쿠폰</li>
+                <li>실시간 랭킹</li>
+                <li>저장한 상품</li>
               </ul>
             </div>
             <div>
-              <p className="text-sm font-black text-[#111827]">Mục tiêu</p>
+              <p className="text-sm font-black text-[#111827]">고객지원</p>
               <ul className="mt-3 space-y-2 text-sm text-[#6b7280]">
-                <li>Không đổi trải nghiệm</li>
-                <li>UI parity cao</li>
-                <li>Dễ bảo trì dài hạn</li>
+                <li>도움말 센터</li>
+                <li>취소/환불 안내</li>
+                <li>이용 가이드</li>
               </ul>
             </div>
           </div>
@@ -84,7 +84,7 @@ export function Footer() {
                 </a>
               ))}
             </div>
-            <p>© 2026 Notai Clone Lab. Built for UI parity migration.</p>
+            <p>© 2026 NOL. All rights reserved.</p>
           </div>
         </div>
       </footer>

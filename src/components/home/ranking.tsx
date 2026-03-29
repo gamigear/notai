@@ -8,13 +8,13 @@ export function RankingSection() {
           <div className="flex items-end justify-between gap-4">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">티켓 랭킹</p>
-              <h2 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">Hôm nay xem gì?</h2>
+              <h2 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">오늘 뭐 볼까? 지금 HOT한 공연</h2>
             </div>
             <span className="rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold text-[#7c3aed]">Updated live</span>
           </div>
 
           <p className="mt-3 max-w-lg text-sm leading-7 text-[#6b7280]">
-            Module này mô phỏng block ticket ranking của site gốc: headline rõ, danh sách nổi bật và CTA gọn.
+            실시간 관심도가 높은 공연과 티켓을 한 번에 살펴보고, 예매 전환이 빠른 상품부터 먼저 확인할 수 있습니다.
           </p>
 
           <div className="mt-5 flex flex-wrap gap-2">
@@ -36,7 +36,7 @@ export function RankingSection() {
                   <p className="mt-1 text-sm leading-6 text-[#6b7280]">{card.description}</p>
                 </div>
                 <button className="self-center rounded-full border border-[#ddd6fe] px-3 py-2 text-xs font-bold text-[#6d28d9]">
-                  Xem vé
+                  예매하기
                 </button>
               </article>
             ))}
@@ -44,8 +44,8 @@ export function RankingSection() {
         </div>
 
         <div className="rounded-[32px] border border-dashed border-[#c4b5fd] bg-[#f6f2ff] p-6 sm:p-8" id="parity">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">UI parity plan</p>
-          <h2 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">Các bước tiếp theo nô tài sẽ làm</h2>
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">Service guide</p>
+          <h2 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">예약 전에 꼭 확인해 주세요</h2>
           <ol className="mt-6 space-y-4 text-sm leading-7 text-[#374151]">
             {paritySteps.map((step, index) => (
               <li key={step}>

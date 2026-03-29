@@ -12,7 +12,7 @@ export function Header() {
               </a>
             ))}
           </div>
-          <span className="hidden sm:block">Clone target · nol.interpark.com</span>
+          <span className="hidden sm:block">혜택부터 티켓까지 한 번에</span>
         </div>
       </div>
 
@@ -39,17 +39,17 @@ export function Header() {
                 NO
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#5b3df5]">Notai Clone Lab</p>
-                <h1 className="text-lg font-bold tracking-tight">nol.interpark.com</h1>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#5b3df5]">NOL</p>
+                <h1 className="text-lg font-bold tracking-tight">전세계 여행 할인 & 인기 공연 예매</h1>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
               <button className="hidden rounded-full border border-[#e5e7eb] bg-white px-4 py-2 text-sm font-semibold text-[#374151] md:block">
-                Ngôn ngữ
+                KRW · 한국어
               </button>
               <button className="rounded-full bg-[#111827] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-black">
-                Đăng nhập
+                로그인
               </button>
             </div>
           </div>
