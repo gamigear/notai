@@ -127,6 +127,27 @@ export const portalBenefits = [
   },
 ];
 
+export const destinationHighlights = ["Seoul", "Busan", "Jeju", "Tokyo", "Osaka", "Hong Kong", "Singapore", "Macau"];
+
+export const categoryGrid = [
+  {
+    title: "Overseas tours",
+    desc: "Các tuyến bán tốt và dễ chốt nhanh.",
+  },
+  {
+    title: "Stays & hotels",
+    desc: "Nghỉ dưỡng, staycation, phòng đẹp và combo tiện lợi.",
+  },
+  {
+    title: "Performance tickets",
+    desc: "Concert, musical, triển lãm và event hot.",
+  },
+  {
+    title: "Leisure pass",
+    desc: "Theme park, zoo, museum, waterpark và vé trải nghiệm.",
+  },
+];
+
 export const promoBanners = [
   {
     eyebrow: "SPRING SALE",

@@ -3,6 +3,25 @@ import { supportLinks } from "./data";
 export function Footer() {
   return (
     <footer className="mt-8 border-t border-black/5 bg-white">
+      <div className="mx-auto w-full max-w-7xl px-4 pt-10 pb-0 sm:px-6 lg:px-8">
+        <div className="rounded-[32px] bg-gradient-to-br from-[#5b3df5] via-[#7c3aed] to-[#a855f7] p-6 text-white shadow-[0_18px_56px_rgba(91,61,245,0.22)] sm:p-8">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">Final booking push</p>
+          <div className="mt-3 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <h3 className="text-3xl font-black tracking-[-0.04em]">Sẵn sàng kéo bản clone tiến gần site gốc hơn nữa.</h3>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-white/80">
+                Homepage hiện đã có đầy đủ lớp nội dung để bước vào vòng tinh chỉnh thị giác sâu hơn bằng Frontman và
+                đối chiếu trực tiếp với nol.interpark.com.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <button className="rounded-full bg-white px-5 py-3 text-sm font-bold text-[#111827]">Open Frontman</button>
+              <button className="rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white">Review homepage</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#7c3aed]">Notai Clone Lab</p>
