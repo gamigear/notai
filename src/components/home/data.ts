@@ -6,6 +6,8 @@ export const trendingKeywords = ["Jeju flash deal", "Musical ranking", "Spring g
 
 export const quickNavItems = ["Flights", "Hotels", "Tours", "Tickets", "Spa", "Parks"];
 
+export const mobileQuickActions = ["Home", "Search", "Deals", "Saved", "Account"];
+
 export const searchTabs = ["Tour", "Khách sạn", "Vé show", "Leisure"];
 
 export const searchFields = [
@@ -230,6 +232,12 @@ export const appBenefits = [
     title: "Saved picks",
     description: "Lưu nhanh tour, phòng và show để quay lại quyết định sau.",
   },
+];
+
+export const membershipBenefits = [
+  "Ưu đãi riêng cho người quay lại",
+  "Coupon app-only theo mùa",
+  "Lưu wishlists và đặt lại nhanh hơn",
 ];
 
 export const supportLinks = ["Điều khoản", "Chính sách giá", "Hoàn hủy", "Trung tâm trợ giúp", "Liên hệ", "Tuyển dụng"];
