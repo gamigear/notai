@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { companionOptions, heroStats, searchFields, searchTabs, serviceShortcuts } from "./data";
 
 export function HeroSection() {
@@ -61,9 +62,12 @@ export function HeroSection() {
                   </div>
                 </button>
               ))}
-              <button className="rounded-[18px] bg-[#1c1c1e] px-6 py-4 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)] transition duration-150 hover:bg-black hover:shadow-[0_18px_34px_rgba(17,24,39,0.22)] active:translate-y-px sm:rounded-[22px]">
+              <Link
+                href="/search"
+                className="rounded-[18px] bg-[#1c1c1e] px-6 py-4 text-center text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)] transition duration-150 hover:bg-black hover:shadow-[0_18px_34px_rgba(17,24,39,0.22)] active:translate-y-px sm:rounded-[22px]"
+              >
                 검색
-              </button>
+              </Link>
             </div>
           </div>
 
