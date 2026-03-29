@@ -18,7 +18,7 @@ export function Footer() {
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  <button className="rounded-full bg-white px-5 py-3 text-sm font-bold text-[#111827]">앱 혜택 보기</button>
+                  <button className="rounded-full bg-white px-5 py-3 text-sm font-bold text-[#111827] shadow-sm">앱 혜택 보기</button>
                   <button className="rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white">최근 본 상품</button>
                 </div>
               </div>

@@ -30,14 +30,14 @@ export function DealsSection() {
               className="group overflow-hidden rounded-[24px] bg-[#fbfbfe] ring-1 ring-black/4 transition duration-200 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.10)] sm:rounded-[28px]"
             >
               <div className={`flex h-40 items-end bg-gradient-to-br ${deal.accent} p-4 sm:h-48 sm:p-5`}>
-                <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-[#4154ff]">{deal.badge}</span>
+                <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-[#4154ff] shadow-sm">{deal.badge}</span>
               </div>
               <div className="p-4 sm:p-5">
                 <h3 className="text-lg font-bold leading-7 text-[#111827]">{deal.title}</h3>
                 <p className="mt-2 min-h-0 text-sm leading-6 text-[#6b7280] sm:min-h-12">{deal.meta}</p>
                 <div className="mt-5 flex items-center justify-between gap-3">
                   <p className="text-base font-black text-[#ff322e]">{deal.price}</p>
-                  <span className="rounded-full bg-[#eef1ff] px-3 py-1 text-xs font-bold text-[#4154ff]">예약하기</span>
+                  <span className="rounded-full border border-[#dbe1ff] bg-white px-3 py-1 text-xs font-bold text-[#4154ff] shadow-sm">예약하기</span>
                 </div>
               </div>
             </article>
