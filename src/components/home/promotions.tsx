@@ -89,6 +89,9 @@ export function PromotionsSection() {
               <article key={benefit.title} className="rounded-[24px] bg-[#f8f8fc] p-5 ring-1 ring-black/3">
                 <h4 className="text-lg font-black tracking-[-0.03em] text-[#111827]">{benefit.title}</h4>
                 <p className="mt-3 text-sm leading-7 text-[#6b7280]">{benefit.description}</p>
+                <button className="mt-5 rounded-full border border-[#ececf3] px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#4b5563]">
+                  Learn more
+                </button>
               </article>
             ))}
           </div>

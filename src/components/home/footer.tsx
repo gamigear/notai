@@ -91,9 +91,14 @@ export function Footer() {
 
       <div className="fixed right-0 bottom-0 left-0 z-40 border-t border-black/5 bg-white/95 px-4 py-3 backdrop-blur md:hidden">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-2">
-          {mobileQuickActions.map((action) => (
-            <button key={action} className="flex min-w-0 flex-1 flex-col items-center gap-1 rounded-2xl bg-[#f8f8fc] px-2 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#6b7280]">
-              <span className="h-2 w-2 rounded-full bg-[#7c3aed]" />
+          {mobileQuickActions.map((action, index) => (
+            <button
+              key={action}
+              className={`flex min-w-0 flex-1 flex-col items-center gap-1 rounded-2xl px-2 py-2 text-[11px] font-bold uppercase tracking-[0.08em] ${
+                index === 0 ? "bg-[#111827] text-white" : "bg-[#f8f8fc] text-[#6b7280]"
+              }`}
+            >
+              <span className={`h-2 w-2 rounded-full ${index === 0 ? "bg-white" : "bg-[#7c3aed]"}`} />
               <span className="truncate">{action}</span>
             </button>
           ))}
