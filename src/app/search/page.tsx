@@ -1,6 +1,16 @@
 import Link from "next/link";
 import { travelDeals } from "@/components/home/data";
 
+function slugify(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/·/g, "-")
+    .replace(/[\/\s]+/g, "-")
+    .replace(/[^a-z0-9가-힣-]/g, "")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 export default function SearchPage() {
   return (
     <main className="min-h-screen bg-[#f6f7fb] px-4 py-6 text-[#111827] sm:px-6 lg:px-8">
@@ -42,12 +52,7 @@ export default function SearchPage() {
 
             <section>
               <div className="mb-4 flex flex-wrap items-center gap-2">
-                {[
-                  "추천순",
-                  "낮은 가격순",
-                  "출발 임박순",
-                  "평점순",
-                ].map((sort, index) => (
+                {["추천순", "낮은 가격순", "출발 임박순", "평점순"].map((sort, index) => (
                   <button
                     key={sort}
                     className={`rounded-full px-4 py-2 text-sm font-semibold ${
@@ -79,9 +84,12 @@ export default function SearchPage() {
                           <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">판매가</p>
                           <p className="mt-1 text-lg font-black text-[#ff322e]">{deal.price}</p>
                         </div>
-                        <button className="rounded-full bg-[#1c1c1e] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)]">
+                        <Link
+                          href={`/tour/${slugify(deal.title)}`}
+                          className="rounded-full bg-[#1c1c1e] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)]"
+                        >
                           상품 보기
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </article>
