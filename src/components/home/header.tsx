@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { mainNavLinks, quickNavItems, trendingKeywords, utilityLinks } from "./data";
 
 export function Header() {
@@ -35,10 +36,13 @@ export function Header() {
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <img
+              <Image
                 src="https://tour-web-assets.interparkcdn.net/assets/int-frontend/nol-header/nol-interpark-logo-multiline.svg"
                 alt="NOL 인터파크"
+                width={122}
+                height={44}
                 className="h-11 w-auto"
+                priority
               />
               <div>
                 <p className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#4154ff]">INTERPARK</p>

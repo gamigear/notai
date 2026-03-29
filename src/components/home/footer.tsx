@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { membershipBenefits, mobileQuickActions, supportLinks } from "./data";
 
 export function Footer() {
@@ -39,9 +40,11 @@ export function Footer() {
 
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
-            <img
+            <Image
               src="https://tour-web-assets.interparkcdn.net/assets/int-frontend/nol-header/nol-interpark-logo-multiline.svg"
               alt="NOL 인터파크"
+              width={122}
+              height={44}
               className="h-11 w-auto"
             />
             <p className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-[#4154ff]">NOL SERVICE</p>
@@ -51,14 +54,18 @@ export function Footer() {
               구성했습니다.
             </p>
             <div className="mt-5 flex items-center gap-4 opacity-80">
-              <img
+              <Image
                 src="https://tour-web-assets.interparkcdn.net/assets/int-frontend/nol-footer/partner-nol.svg"
                 alt="NOL"
+                width={52}
+                height={20}
                 className="h-5 w-auto"
               />
-              <img
+              <Image
                 src="https://tour-web-assets.interparkcdn.net/assets/int-frontend/nol-footer/partner-triple.svg"
                 alt="TRIPLE"
+                width={73}
+                height={20}
                 className="h-5 w-auto"
               />
             </div>
