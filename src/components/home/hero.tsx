@@ -2,14 +2,14 @@ import { companionOptions, heroStats, searchFields, searchTabs, serviceShortcuts
 
 export function HeroSection() {
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 pt-6 pb-10 sm:px-6 lg:px-8">
-      <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+    <section className="mx-auto w-full max-w-7xl px-4 pt-5 pb-10 sm:px-6 lg:px-8">
+      <div className="grid gap-5 lg:grid-cols-[1.25fr_0.75fr]">
         <div className="overflow-hidden rounded-[36px] bg-gradient-to-br from-[#5b3df5] via-[#7848ff] to-[#9c6bff] p-6 text-white shadow-[0_28px_90px_rgba(91,61,245,0.24)] sm:p-8">
           <div className="inline-flex rounded-full bg-white/16 px-4 py-1.5 text-xs font-semibold tracking-[0.18em] uppercase text-white/90">
             Frontend parity rebuild
           </div>
 
-          <div className="mt-6 max-w-2xl">
+          <div className="mt-5 max-w-2xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/70">Travel · Stay · Ticket · Leisure</p>
             <h2 className="mt-3 text-3xl font-black leading-tight tracking-[-0.04em] sm:text-5xl">
               Giữ nguyên trải nghiệm cũ, nâng cấp frontend bằng Next.js.
@@ -29,7 +29,7 @@ export function HeroSection() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-[30px] bg-white p-4 text-[#111827] shadow-[0_20px_50px_rgba(17,24,39,0.12)] sm:p-5">
+          <div className="mt-7 rounded-[30px] bg-white p-4 text-[#111827] shadow-[0_20px_50px_rgba(17,24,39,0.12)] sm:p-5">
             <div className="flex flex-wrap gap-2">
               {searchTabs.map((tab, index) => (
                 <button
@@ -50,7 +50,9 @@ export function HeroSection() {
                   <p className="mt-1 text-sm font-semibold text-[#111827]">{field.value}</p>
                 </div>
               ))}
-              <button className="rounded-[22px] bg-[#111827] px-6 py-4 text-sm font-bold text-white">Tìm kiếm</button>
+              <button className="rounded-[22px] bg-[#111827] px-6 py-4 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)]">
+                Tìm kiếm
+              </button>
             </div>
           </div>
 
@@ -64,7 +66,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <aside className="grid gap-6">
+        <aside className="grid gap-5">
           <div className="rounded-[30px] bg-white p-6 shadow-[0_16px_50px_rgba(15,23,42,0.06)]">
             <div className="flex items-center justify-between">
               <div>
@@ -86,10 +88,10 @@ export function HeroSection() {
 
           <div className="rounded-[30px] bg-[#111827] p-6 text-white shadow-[0_16px_50px_rgba(15,23,42,0.16)]">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/60">Giai đoạn hiện tại</p>
-            <h3 className="mt-3 text-2xl font-bold">Phase 04 · Live Commerce Signals</h3>
+            <h3 className="mt-3 text-2xl font-bold">Phase 05 · Surface Consistency</h3>
             <p className="mt-3 text-sm leading-6 text-white/72">
-              Mục tiêu là làm portal có cảm giác sống hơn: thêm stats, thêm dấu hiệu realtime và phân tầng thông tin theo
-              kiểu commerce-driven homepage.
+              Mục tiêu là giảm cảm giác các khối bị rời nhau: thống nhất nền, nhịp đệm, shadow và độ mượt giữa header,
+              hero và các surface chính.
             </p>
           </div>
         </aside>
