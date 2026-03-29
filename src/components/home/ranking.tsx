@@ -10,7 +10,7 @@ export function RankingSection() {
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">티켓 랭킹</p>
               <h2 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">오늘 뭐 볼까? 지금 HOT한 공연</h2>
             </div>
-            <span className="rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold text-[#7c3aed]">Updated live</span>
+            <span className="rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold text-[#7c3aed]">실시간 반영</span>
           </div>
 
           <p className="mt-3 max-w-lg text-sm leading-7 text-[#6b7280]">
@@ -44,7 +44,7 @@ export function RankingSection() {
         </div>
 
         <div className="rounded-[32px] border border-dashed border-[#c4b5fd] bg-[#f6f2ff] p-6 sm:p-8" id="parity">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">Service guide</p>
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">이용 안내</p>
           <h2 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">예약 전에 꼭 확인해 주세요</h2>
           <ol className="mt-6 space-y-4 text-sm leading-7 text-[#374151]">
             {paritySteps.map((step, index) => (

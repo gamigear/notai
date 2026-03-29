@@ -7,10 +7,11 @@ export function DealsSection() {
         <div className="flex items-end justify-between gap-4">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">투어 특가</p>
-            <h2 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">Tour deals nổi bật tuần này</h2>
+            <h2 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">마감임박! 금주의 특가 여행 추천</h2>
+            <p className="mt-3 text-sm leading-7 text-[#6b7280]">누구와 여행 가시나요? 동행자와 취향에 맞는 인기 여행 상품을 모아 보여드립니다.</p>
           </div>
           <a className="text-sm font-semibold text-[#5b3df5]" href="#">
-            Xem tất cả
+            전체보기
           </a>
         </div>
 
@@ -36,7 +37,7 @@ export function DealsSection() {
                 <p className="mt-2 min-h-12 text-sm leading-6 text-[#6b7280]">{deal.meta}</p>
                 <div className="mt-5 flex items-center justify-between gap-3">
                   <p className="text-base font-black text-[#ef4444]">{deal.price}</p>
-                  <span className="rounded-full bg-[#ede9fe] px-3 py-1 text-xs font-bold text-[#6d28d9]">Đặt ngay</span>
+                  <span className="rounded-full bg-[#ede9fe] px-3 py-1 text-xs font-bold text-[#6d28d9]">예약하기</span>
                 </div>
               </div>
             </article>
