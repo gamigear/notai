@@ -10,12 +10,13 @@ export function HeroSection() {
           </div>
 
           <div className="mt-6 max-w-2xl">
-            <h2 className="text-3xl font-black leading-tight tracking-[-0.04em] sm:text-5xl">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/70">Travel · Stay · Ticket · Leisure</p>
+            <h2 className="mt-3 text-3xl font-black leading-tight tracking-[-0.04em] sm:text-5xl">
               Giữ nguyên trải nghiệm cũ, nâng cấp frontend bằng Next.js.
             </h2>
             <p className="mt-4 max-w-xl text-sm leading-7 text-white/82 sm:text-base">
               Scaffold này đang đi theo nhịp portal đậm nội dung giống nol.interpark.com: khối tìm kiếm lớn, shortcut
-              dịch vụ, deal card dày và module ranking dễ quét mắt.
+              dịch vụ, ranking cập nhật nhanh và nhiều điểm chạm để người dùng khám phá rồi đặt ngay.
             </p>
           </div>
 
@@ -76,10 +77,10 @@ export function HeroSection() {
 
           <div className="rounded-[30px] bg-[#111827] p-6 text-white shadow-[0_16px_50px_rgba(15,23,42,0.16)]">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/60">Giai đoạn hiện tại</p>
-            <h3 className="mt-3 text-2xl font-bold">Phase 02 · Portal Density</h3>
+            <h3 className="mt-3 text-2xl font-bold">Phase 03 · Navigation Rhythm</h3>
             <p className="mt-3 text-sm leading-6 text-white/72">
-              Mục tiêu là tăng mật độ nội dung giống site gốc hơn: thanh tiện ích trên cùng, search CTA lớn, shortcut
-              tiles và khối nội dung nhiều tầng.
+              Mục tiêu là làm cảm giác portal Hàn rõ hơn: nhiều lớp điều hướng, line trending, quick nav và hierarchy nội dung
+              dày nhưng vẫn dễ quét.
             </p>
           </div>
         </aside>

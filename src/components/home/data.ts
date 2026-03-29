@@ -1,5 +1,11 @@
 export const utilityLinks = ["Khuyến mãi", "Vé máy bay", "Khách sạn", "Tour", "Concert", "Hỗ trợ"];
 
+export const mainNavLinks = ["Tour", "Khách sạn", "Leisure", "Concert", "Ranking", "Benefits"];
+
+export const trendingKeywords = ["Jeju flash deal", "Musical ranking", "Spring getaway", "Family leisure pass"];
+
+export const quickNavItems = ["Flights", "Hotels", "Tours", "Tickets", "Spa", "Parks"];
+
 export const searchTabs = ["Tour", "Khách sạn", "Vé show", "Leisure"];
 
 export const searchFields = [
