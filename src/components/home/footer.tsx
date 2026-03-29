@@ -38,7 +38,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
           <div>
             <Image
               src="https://tour-web-assets.interparkcdn.net/assets/int-frontend/nol-header/nol-interpark-logo-multiline.svg"
@@ -69,6 +69,11 @@ export function Footer() {
                 className="h-5 w-auto"
               />
             </div>
+            <div className="mt-6 text-sm leading-7 text-[#6b7280]">
+              <p>(주)놀유니버스</p>
+              <p>서울특별시 강남구 테헤란로 146</p>
+              <p>고객센터 1588-1555 · 평일 09:00 - 18:00</p>
+            </div>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-3">
@@ -78,6 +83,7 @@ export function Footer() {
                 <li>해외여행</li>
                 <li>숙소 예약</li>
                 <li>공연 예매</li>
+                <li>레저 · 액티비티</li>
               </ul>
             </div>
             <div>
@@ -86,6 +92,7 @@ export function Footer() {
                 <li>앱 전용 쿠폰</li>
                 <li>실시간 랭킹</li>
                 <li>저장한 상품</li>
+                <li>회원 전용 프로모션</li>
               </ul>
             </div>
             <div>
@@ -94,6 +101,7 @@ export function Footer() {
                 <li>도움말 센터</li>
                 <li>취소/환불 안내</li>
                 <li>이용 가이드</li>
+                <li>공지사항</li>
               </ul>
             </div>
           </div>
@@ -108,7 +116,7 @@ export function Footer() {
                 </a>
               ))}
             </div>
-            <p>© 2026 NOL. 모든 권리 보유.</p>
+            <p>© 2026 NOL INTERPARK Clone Lab. All rights reserved.</p>
           </div>
         </div>
       </footer>
