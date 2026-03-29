@@ -34,8 +34,10 @@ export function HeroSection() {
               {searchTabs.map((tab, index) => (
                 <button
                   key={tab}
-                  className={`rounded-full px-4 py-2 text-sm font-semibold ${
-                    index === 0 ? "bg-[#4154ff] text-white" : "bg-[#f3f4f8] text-[#4b5563]"
+                  className={`rounded-full px-4 py-2 text-sm font-semibold transition duration-150 ${
+                    index === 0
+                      ? "bg-[#4154ff] text-white shadow-[0_10px_24px_rgba(65,84,255,0.26)]"
+                      : "bg-[#f3f4f8] text-[#4b5563] hover:bg-[#e9edf8]"
                   }`}
                 >
                   {tab}
@@ -45,7 +47,10 @@ export function HeroSection() {
 
             <div className="mt-4 grid gap-3 lg:grid-cols-[1.15fr_0.95fr_1fr_auto]">
               {searchFields.map((field, index) => (
-                <div key={field.label} className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-3 sm:rounded-[22px]">
+                <button
+                  key={field.label}
+                  className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-3 text-left transition duration-150 hover:border-[#dbe1ff] hover:bg-white hover:shadow-sm sm:rounded-[22px]"
+                >
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{field.label}</p>
@@ -54,9 +59,9 @@ export function HeroSection() {
                     </div>
                     <span className={`mt-1 h-2.5 w-2.5 rounded-full ${index === 0 ? "bg-[#4154ff]" : "bg-[#d1d5db]"}`} />
                   </div>
-                </div>
+                </button>
               ))}
-              <button className="rounded-[18px] bg-[#1c1c1e] px-6 py-4 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)] sm:rounded-[22px]">
+              <button className="rounded-[18px] bg-[#1c1c1e] px-6 py-4 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)] transition duration-150 hover:bg-black hover:shadow-[0_18px_34px_rgba(17,24,39,0.22)] active:translate-y-px sm:rounded-[22px]">
                 검색
               </button>
             </div>
