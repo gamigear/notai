@@ -32,9 +32,32 @@ export default function SearchPage() {
             </Link>
           </div>
 
+          <div className="mt-4 flex flex-wrap gap-2">
+            {[
+              "인천 출발",
+              "4일 ~ 9일",
+              "친구 · 연인 / 가족",
+              `${travelDeals.length}개 상품`,
+            ].map((chip, index) => (
+              <span
+                key={chip}
+                className={`rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] ${
+                  index === 3 ? "bg-[#4154ff] text-white shadow-[0_10px_24px_rgba(65,84,255,0.26)]" : "bg-[#eef1ff] text-[#4154ff]"
+                }`}
+              >
+                {chip}
+              </span>
+            ))}
+          </div>
+
           <div className="mt-6 grid gap-6 lg:grid-cols-[280px_1fr]">
             <aside className="rounded-[24px] bg-[#fafafe] p-5 ring-1 ring-black/4">
-              <h2 className="text-lg font-black text-[#111827]">필터</h2>
+              <div className="flex items-center justify-between gap-3">
+                <h2 className="text-lg font-black text-[#111827]">필터</h2>
+                <button className="rounded-full border border-[#ececf3] bg-white px-3 py-2 text-xs font-bold text-[#4b5563] shadow-sm">
+                  초기화
+                </button>
+              </div>
               <div className="mt-4 space-y-4">
                 {[
                   ["출발 지역", "인천 출발"],
@@ -51,17 +74,22 @@ export default function SearchPage() {
             </aside>
 
             <section>
-              <div className="mb-4 flex flex-wrap items-center gap-2">
-                {["추천순", "낮은 가격순", "출발 임박순", "평점순"].map((sort, index) => (
-                  <button
-                    key={sort}
-                    className={`rounded-full px-4 py-2 text-sm font-semibold ${
-                      index === 0 ? "bg-[#4154ff] text-white shadow-[0_10px_24px_rgba(65,84,255,0.26)]" : "bg-white text-[#4b5563] ring-1 ring-black/5"
-                    }`}
-                  >
-                    {sort}
-                  </button>
-                ))}
+              <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-sm font-semibold text-[#6b7280]">
+                  총 <span className="font-black text-[#111827]">{travelDeals.length}개</span> 상품을 찾았어요
+                </p>
+                <div className="flex flex-wrap items-center gap-2">
+                  {["추천순", "낮은 가격순", "출발 임박순", "평점순"].map((sort, index) => (
+                    <button
+                      key={sort}
+                      className={`rounded-full px-4 py-2 text-sm font-semibold ${
+                        index === 0 ? "bg-[#4154ff] text-white shadow-[0_10px_24px_rgba(65,84,255,0.26)]" : "bg-white text-[#4b5563] ring-1 ring-black/5"
+                      }`}
+                    >
+                      {sort}
+                    </button>
+                  ))}
+                </div>
               </div>
 
               <div className="grid gap-4 xl:grid-cols-2">

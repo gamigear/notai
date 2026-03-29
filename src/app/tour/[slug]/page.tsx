@@ -31,7 +31,7 @@ export default async function TourDetailPage({ params }: PageProps) {
   return (
     <main className="min-h-screen bg-[#f6f7fb] px-4 py-6 text-[#111827] sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="rounded-[28px] bg-white shadow-[0_18px_56px_rgba(15,23,42,0.06)] ring-1 ring-black/4 overflow-hidden">
+        <div className="overflow-hidden rounded-[28px] bg-white shadow-[0_18px_56px_rgba(15,23,42,0.06)] ring-1 ring-black/4">
           <div className={`h-56 bg-gradient-to-br ${deal.accent} sm:h-72`} />
 
           <div className="p-5 sm:p-8">
@@ -82,6 +82,39 @@ export default async function TourDetailPage({ params }: PageProps) {
                     <div key={item} className="flex gap-3 rounded-[18px] bg-[#f8f8fc] px-4 py-3 ring-1 ring-black/3">
                       <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#4154ff] text-xs font-bold text-white">{index + 1}</span>
                       <p className="text-sm leading-6 text-[#374151]">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </div>
+
+            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+              <section className="rounded-[24px] bg-white p-5 ring-1 ring-black/4">
+                <h2 className="text-xl font-black text-[#111827]">추천 일정</h2>
+                <div className="mt-4 space-y-3">
+                  {[
+                    "DAY 1 · 출발 및 도착 후 자유시간",
+                    "DAY 2 · 핵심 관광지 + 로컬 체험",
+                    "DAY 3 · 자유 일정 또는 선택 투어",
+                    "DAY 4+ · 귀국 또는 연장 일정",
+                  ].map((item) => (
+                    <div key={item} className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-3 text-sm text-[#374151]">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section className="rounded-[24px] bg-white p-5 ring-1 ring-black/4">
+                <h2 className="text-xl font-black text-[#111827]">리뷰 & 정책</h2>
+                <div className="mt-4 space-y-3">
+                  {[
+                    "평점 9점대 후기 블록이 들어갈 자리",
+                    "취소/환불 규정 요약 블록",
+                    "자주 묻는 질문(FAQ) 아코디언 확장 가능",
+                  ].map((item) => (
+                    <div key={item} className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-3 text-sm text-[#374151]">
+                      {item}
                     </div>
                   ))}
                 </div>
