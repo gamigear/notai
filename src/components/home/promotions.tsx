@@ -21,10 +21,10 @@ export function PromotionsSection() {
         <div className="rounded-[32px] bg-white p-6 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">테마 큐레이션</p>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4154ff]">테마 큐레이션</p>
               <h3 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">기분에 맞는 여행을 골라보세요</h3>
             </div>
-            <span className="rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold text-[#7c3aed]">3개 큐레이션</span>
+            <span className="rounded-full bg-[#eef1ff] px-3 py-1 text-xs font-bold text-[#4154ff]">3개 큐레이션</span>
           </div>
 
           <div className="mt-6 space-y-4">
@@ -32,10 +32,10 @@ export function PromotionsSection() {
               <article key={collection.title} className="rounded-[26px] bg-[#f8f8fc] p-5 ring-1 ring-black/3">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#7c3aed]">{collection.subtitle}</p>
+                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#4154ff]">{collection.subtitle}</p>
                     <h4 className="mt-2 text-xl font-black tracking-[-0.03em] text-[#111827]">{collection.title}</h4>
                   </div>
-                  <button className="rounded-full border border-[#ddd6fe] px-3 py-2 text-xs font-bold text-[#6d28d9]">
+                  <button className="rounded-full border border-[#dbe1ff] px-3 py-2 text-xs font-bold text-[#4154ff]">
                     더보기
                   </button>
                 </div>
@@ -54,7 +54,7 @@ export function PromotionsSection() {
       </div>
 
       <div className="mt-6 grid gap-6 xl:grid-cols-[0.95fr_1.05fr]">
-        <div className="rounded-[32px] bg-[#111827] p-6 text-white shadow-[0_18px_56px_rgba(15,23,42,0.16)] sm:p-8">
+        <div className="rounded-[32px] bg-[#1c1c1e] p-6 text-white shadow-[0_18px_56px_rgba(15,23,42,0.16)] sm:p-8">
           <div className="flex items-end justify-between gap-4">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/60">실시간 이슈</p>
@@ -78,10 +78,10 @@ export function PromotionsSection() {
         <div className="rounded-[32px] bg-white p-6 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">앱 혜택</p>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4154ff]">앱 혜택</p>
               <h3 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">앱에서 누릴 수 있는 편리한 기능</h3>
             </div>
-            <span className="rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold text-[#7c3aed]">회원혜택</span>
+            <span className="rounded-full bg-[#eef1ff] px-3 py-1 text-xs font-bold text-[#4154ff]">회원혜택</span>
           </div>
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">

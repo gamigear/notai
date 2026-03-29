@@ -6,14 +6,14 @@ export function Footer() {
       <footer className="mt-8 border-t border-black/5 bg-white pb-24 md:pb-0">
         <div className="mx-auto w-full max-w-7xl px-4 pt-10 pb-0 sm:px-6 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="rounded-[32px] bg-gradient-to-br from-[#5b3df5] via-[#7c3aed] to-[#a855f7] p-6 text-white shadow-[0_18px_56px_rgba(91,61,245,0.22)] sm:p-8">
+            <div className="rounded-[32px] bg-gradient-to-br from-[#4154ff] via-[#6b4ef7] to-[#a94df5] p-6 text-white shadow-[0_18px_56px_rgba(65,84,255,0.22)] sm:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">앱 혜택</p>
               <div className="mt-3 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                 <div>
                   <h3 className="text-3xl font-black tracking-[-0.04em]">앱에서 더 빠르게, 더 큰 혜택으로 예약하세요.</h3>
                   <p className="mt-3 max-w-2xl text-sm leading-7 text-white/80">
-                    실시간 인기 상품 확인부터 쿠폰 적용, 저장한 상품 다시 보기까지. 여행과 공연 예매를 더 빠르게 이어갈 수
-                    있도록 주요 혜택을 한곳에 담았습니다.
+                    실시간 인기 상품 확인부터 쿠폰 적용, 저장한 상품 다시 보기까지. 여행과 공연 예매를 더 빠르게 이어갈 수 있도록
+                    주요 혜택을 한곳에 담았습니다.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3">
@@ -23,7 +23,7 @@ export function Footer() {
               </div>
             </div>
 
-            <div className="rounded-[32px] bg-[#111827] p-6 text-white shadow-[0_18px_56px_rgba(15,23,42,0.18)] sm:p-8">
+            <div className="rounded-[32px] bg-[#1c1c1e] p-6 text-white shadow-[0_18px_56px_rgba(15,23,42,0.18)] sm:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/60">Membership value</p>
               <h3 className="mt-3 text-3xl font-black tracking-[-0.04em]">다시 찾을수록 더 편리해집니다.</h3>
               <div className="mt-5 space-y-3">
@@ -39,7 +39,7 @@ export function Footer() {
 
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#7c3aed]">NOL SERVICE</p>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4154ff]">NOL SERVICE</p>
             <h3 className="mt-3 text-2xl font-black tracking-[-0.03em] text-[#111827]">여행, 공연, 레저 예약을 한 곳에서.</h3>
             <p className="mt-3 max-w-md text-sm leading-7 text-[#6b7280]">
               원하는 상품을 빠르게 찾고, 실시간 인기 흐름을 확인하며, 더 쉬운 예약 경험으로 이어질 수 있도록 메인 화면을
@@ -95,10 +95,10 @@ export function Footer() {
             <button
               key={action}
               className={`flex min-w-0 flex-1 flex-col items-center gap-1 rounded-2xl px-2 py-2 text-[11px] font-bold uppercase tracking-[0.08em] ${
-                index === 0 ? "bg-[#111827] text-white" : "bg-[#f8f8fc] text-[#6b7280]"
+                index === 0 ? "bg-[#1c1c1e] text-white" : "bg-[#f8f8fc] text-[#6b7280]"
               }`}
             >
-              <span className={`h-2 w-2 rounded-full ${index === 0 ? "bg-white" : "bg-[#7c3aed]"}`} />
+              <span className={`h-2 w-2 rounded-full ${index === 0 ? "bg-white" : "bg-[#4154ff]"}`} />
               <span className="truncate">{action}</span>
             </button>
           ))}
@@ -107,4 +107,3 @@ export function Footer() {
     </>
   );
 }
-
