@@ -16,8 +16,9 @@ const secondarySans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Notai Clone Lab · NOL Frontend Rebuild",
-  description: "Next.js frontend rebuild focused on UI parity for nol.interpark.com.",
+  title: "NOL 인터파크 | 전세계 여행 할인 & 인기 공연 예매",
+  description:
+    "여행과 공연, 전시 예약을 한번에 | 항공, 전세계 숙소, 액티비티 특가 | 연극, 뮤지컬, 콘서트, 클래식 티켓 예매까지",
 };
 
 export default function RootLayout({

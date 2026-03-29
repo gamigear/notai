@@ -1,14 +1,14 @@
-export const utilityLinks = ["할인혜택", "항공", "호텔", "투어", "공연", "고객센터"];
+export const utilityLinks = ["국내숙소", "해외숙소", "투어", "티켓", "항공", "고객센터"];
 
-export const mainNavLinks = ["투어", "호텔", "레저", "공연", "랭킹", "혜택"];
+export const mainNavLinks = ["투어", "티켓", "국내숙소", "해외숙소", "항공", "혜택"];
 
-export const trendingKeywords = ["제주 특가", "뮤지컬 랭킹", "봄 여행", "가족 레저 패스"];
+export const trendingKeywords = ["제주 특가", "뮤지컬 랭킹", "홍콩/마카오", "가족 레저 패스"];
 
-export const quickNavItems = ["항공", "호텔", "투어", "티켓", "스파", "파크"];
+export const quickNavItems = ["항공", "호텔", "투어", "티켓", "레저", "공연"];
 
-export const mobileQuickActions = ["홈", "검색", "특가", "저장", "마이"];
+export const mobileQuickActions = ["홈", "투어", "티켓", "저장", "마이"];
 
-export const searchTabs = ["투어", "호텔", "공연", "레저"];
+export const searchTabs = ["투어", "호텔", "티켓", "레저"];
 
 export const searchFields = [
   {
@@ -20,8 +20,8 @@ export const searchFields = [
     value: "날짜를 선택해 주세요",
   },
   {
-    label: "예산",
-    value: "전체 가격대",
+    label: "인원 · 옵션",
+    value: "인원과 조건을 선택해 주세요",
   },
 ];
 
@@ -44,32 +44,32 @@ export const serviceShortcuts = [
   {
     title: "해외투어",
     subtitle: "추천",
-    accent: "from-[#ffe7c7] to-[#ffd1a1]",
+    accent: "from-[#fdf0d6] to-[#ffd7a8]",
   },
   {
-    title: "호텔",
+    title: "국내숙소",
     subtitle: "빠른예약",
-    accent: "from-[#d7e7ff] to-[#bfd3ff]",
+    accent: "from-[#dce7ff] to-[#bfd2ff]",
   },
   {
-    title: "공연티켓",
+    title: "티켓",
     subtitle: "인기",
-    accent: "from-[#eed8ff] to-[#d8b8ff]",
+    accent: "from-[#efe0ff] to-[#dcc0ff]",
   },
   {
-    title: "테마파크",
+    title: "레저",
     subtitle: "가족추천",
-    accent: "from-[#d7f7eb] to-[#b5ead7]",
+    accent: "from-[#d9f8eb] to-[#bdeccf]",
   },
   {
     title: "스파",
     subtitle: "힐링",
-    accent: "from-[#ffe0ec] to-[#ffc9df]",
+    accent: "from-[#ffe5ef] to-[#ffcfe0]",
   },
   {
     title: "주말여행",
     subtitle: "주말추천",
-    accent: "from-[#efe8ff] to-[#d9ccff]",
+    accent: "from-[#efeaff] to-[#ddd0ff]",
   },
 ];
 
@@ -90,28 +90,32 @@ export const companionOptions = [
 
 export const travelDeals = [
   {
-    badge: "추천특가",
-    title: "홍콩 · 마카오 4일",
-    meta: "인천 출발 · 홍콩항공 · 노쇼핑",
+    badge: "친구연인",
+    title: "홍콩/마카오 4일",
+    meta: "인천 출발 · 홍콩항공 · 노쇼핑 · 노옵션",
     price: "749,000원~",
+    accent: "from-[#d8dcff] via-[#c1cbff] to-[#ffd7ee]",
   },
   {
     badge: "평점 9.7",
-    title: "스페인 · 포르투갈 9일",
-    meta: "아시아나항공 · 5성급 숙박 · 출발 확정",
+    title: "스페인/포르투갈 9일",
+    meta: "아시아나항공 · 3박 5성급 숙박 · 출발확정",
     price: "6,099,000원~",
+    accent: "from-[#cfe4ff] via-[#d8d7ff] to-[#ffe4c7]",
   },
   {
-    badge: "가족추천",
+    badge: "가족",
     title: "싱가포르 5일 마리나베이샌즈",
-    meta: "4인 이상 출발 보장 · 실속 구성",
+    meta: "4인 이상 출발보장 · 노쇼핑 · 실속 구성",
     price: "1,659,000원~",
+    accent: "from-[#d8f4ff] via-[#d7e5ff] to-[#fff0c7]",
   },
   {
-    badge: "휴양특가",
+    badge: "가족",
     title: "푸꾸옥 5일 5성급",
-    meta: "핵심 관광 포함 · 마사지 혜택",
+    meta: "310$ 상당 혜택 · 핵심 관광 포함 · 마사지 혜택",
     price: "679,000원~",
+    accent: "from-[#d8ffe9] via-[#dcf7d8] to-[#ffe7c7]",
   },
 ];
 
@@ -141,7 +145,7 @@ export const rankingCards = [
 
 export const rankingNotices = ["실시간 업데이트", "예매 많은 순", "저녁 시간대 관심 급상승"];
 
-export const quickCategories = ["해외투어", "호텔", "공연", "테마파크", "스파", "주말여행"];
+export const quickCategories = ["해외투어", "국내숙소", "티켓", "레저", "스파", "주말여행"];
 
 export const portalBenefits = [
   {
@@ -184,13 +188,13 @@ export const promoBanners = [
     eyebrow: "봄 특가",
     title: "주말 공연 · 콘서트 특가 모음",
     description: "지금 주목받는 좌석과 빠르게 마감되는 공연 혜택을 모아 보여드립니다.",
-    accent: "from-[#111827] via-[#1f2937] to-[#374151]",
+    accent: "from-[#17181f] via-[#232734] to-[#3a4256]",
   },
   {
     eyebrow: "가족 여행",
     title: "가족 여행을 위한 짧고 편한 휴양 패키지",
     description: "숙소와 레저, 체험 상품을 묶어 보다 편리하게 예약할 수 있습니다.",
-    accent: "from-[#5b3df5] via-[#7c3aed] to-[#a855f7]",
+    accent: "from-[#4154ff] via-[#6b4ef7] to-[#a94df5]",
   },
 ];
 

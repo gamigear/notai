@@ -3,8 +3,8 @@ import { mainNavLinks, quickNavItems, trendingKeywords, utilityLinks } from "./d
 export function Header() {
   return (
     <>
-      <div className="border-b border-black/5 bg-[#f3f4f8]/90">
-        <div className="mx-auto flex h-11 w-full max-w-7xl items-center justify-between px-4 text-xs font-medium text-[#6b7280] sm:px-6 lg:px-8">
+      <div className="border-b border-black/5 bg-[#f5f6fa]">
+        <div className="mx-auto flex h-10 w-full max-w-7xl items-center justify-between px-4 text-[12px] font-medium text-[#6b7280] sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 overflow-x-auto whitespace-nowrap">
             {utilityLinks.map((link) => (
               <a key={link} href="#" className="transition hover:text-[#111827]">
@@ -12,13 +12,13 @@ export function Header() {
               </a>
             ))}
           </div>
-          <span className="hidden sm:block">혜택부터 티켓까지 한 번에</span>
+          <span className="hidden sm:block">여행과 공연, 전시 예약을 한번에</span>
         </div>
       </div>
 
-      <div className="border-b border-black/5 bg-white/86 backdrop-blur-sm">
+      <div className="border-b border-black/5 bg-white">
         <div className="mx-auto flex h-10 w-full max-w-7xl items-center gap-4 overflow-hidden px-4 text-sm text-[#4b5563] sm:px-6 lg:px-8">
-          <span className="shrink-0 rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-[#7c3aed]">
+          <span className="shrink-0 rounded-full bg-[#eef1ff] px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#4154ff]">
             지금 인기
           </span>
           <div className="flex flex-wrap gap-4 whitespace-nowrap">
@@ -31,16 +31,16 @@ export function Header() {
         </div>
       </div>
 
-      <header className="sticky top-0 z-30 border-b border-black/5 bg-white/88 backdrop-blur-md">
-        <div className="mx-auto flex min-h-18 w-full max-w-7xl flex-col gap-3 px-4 py-4 sm:px-6 lg:px-8">
+      <header className="sticky top-0 z-30 border-b border-black/5 bg-white/92 backdrop-blur-md">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#5b3df5] text-sm font-bold text-white shadow-[0_12px_30px_rgba(91,61,245,0.28)]">
-                NO
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#4154ff] text-sm font-black text-white shadow-[0_12px_30px_rgba(65,84,255,0.28)]">
+                NOL
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#5b3df5]">NOL</p>
-                <h1 className="text-lg font-bold tracking-tight">전세계 여행 할인 & 인기 공연 예매</h1>
+                <p className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#4154ff]">INTERPARK</p>
+                <h1 className="text-lg font-black tracking-[-0.03em] text-[#1c1c1e]">전세계 여행 할인 & 인기 공연 예매</h1>
               </div>
             </div>
 
@@ -48,16 +48,16 @@ export function Header() {
               <button className="hidden rounded-full border border-[#e5e7eb] bg-white px-4 py-2 text-sm font-semibold text-[#374151] md:block">
                 KRW · 한국어
               </button>
-              <button className="rounded-full bg-[#111827] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-black">
+              <button className="rounded-full bg-[#1c1c1e] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-black">
                 로그인
               </button>
             </div>
           </div>
 
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-            <nav className="flex flex-wrap items-center gap-6 text-sm font-semibold text-[#374151]">
+            <nav className="flex flex-wrap items-center gap-6 text-sm font-bold text-[#29292d]">
               {mainNavLinks.map((link) => (
-                <a key={link} href="#" className="transition hover:text-[#111827]">
+                <a key={link} href="#" className="transition hover:text-[#4154ff]">
                   {link}
                 </a>
               ))}
@@ -65,7 +65,10 @@ export function Header() {
 
             <div className="flex flex-wrap gap-2">
               {quickNavItems.map((item) => (
-                <span key={item} className="rounded-full bg-[#f8f8fc] px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#6b7280] ring-1 ring-black/4">
+                <span
+                  key={item}
+                  className="rounded-full border border-[#eceef5] bg-[#fafbff] px-3 py-2 text-[11px] font-extrabold uppercase tracking-[0.12em] text-[#6b7280]"
+                >
                   {item}
                 </span>
               ))}
