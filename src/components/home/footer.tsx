@@ -1,3 +1,5 @@
+import { supportLinks } from "./data";
+
 export function Footer() {
   return (
     <footer className="mt-8 border-t border-black/5 bg-white">
@@ -36,6 +38,19 @@ export function Footer() {
               <li>Dễ bảo trì dài hạn</li>
             </ul>
           </div>
+        </div>
+      </div>
+
+      <div className="border-t border-black/5 bg-[#fafafe]">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-5 text-sm text-[#6b7280] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+          <div className="flex flex-wrap gap-4">
+            {supportLinks.map((link) => (
+              <a key={link} href="#" className="transition hover:text-[#111827]">
+                {link}
+              </a>
+            ))}
+          </div>
+          <p>© 2026 Notai Clone Lab. Built for UI parity migration.</p>
         </div>
       </div>
     </footer>

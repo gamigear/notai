@@ -160,6 +160,30 @@ export const themeCollections = [
   },
 ];
 
+export const liveIssues = [
+  "Jeju air + hotel combo đang tăng tốc đặt trong 2 giờ gần nhất",
+  "Musical ranking cập nhật theo thời gian thực cho suất diễn tối nay",
+  "Family waterpark package được click cao nhất trong nhóm leisure",
+  "Flash deal Seoul staycation còn lại số lượng giới hạn",
+];
+
+export const appBenefits = [
+  {
+    title: "App coupon",
+    description: "Giảm thêm cho người dùng quay lại trên mobile app.",
+  },
+  {
+    title: "Realtime ranking",
+    description: "Khối ranking biến động theo nhịp bán hàng trong ngày.",
+  },
+  {
+    title: "Saved picks",
+    description: "Lưu nhanh tour, phòng và show để quay lại quyết định sau.",
+  },
+];
+
+export const supportLinks = ["Điều khoản", "Chính sách giá", "Hoàn hủy", "Trung tâm trợ giúp", "Liên hệ", "Tuyển dụng"];
+
 export const paritySteps = [
   "Chạy local, chụp đối chiếu bố cục homepage giữa site gốc và bản clone.",
   "Tách layout thành component: header, hero, category chips, deal cards, ranking block.",

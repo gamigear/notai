@@ -1,4 +1,4 @@
-import { promoBanners, themeCollections } from "./data";
+import { appBenefits, liveIssues, promoBanners, themeCollections } from "./data";
 
 export function PromotionsSection() {
   return (
@@ -47,6 +47,48 @@ export function PromotionsSection() {
                     </span>
                   ))}
                 </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6 grid gap-6 xl:grid-cols-[0.95fr_1.05fr]">
+        <div className="rounded-[32px] bg-[#111827] p-6 text-white shadow-[0_18px_56px_rgba(15,23,42,0.16)] sm:p-8">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/60">Live issues</p>
+              <h3 className="mt-2 text-3xl font-black tracking-[-0.03em]">Những gì đang nóng lúc này</h3>
+            </div>
+            <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-white/80">Realtime vibe</span>
+          </div>
+
+          <div className="mt-6 space-y-3">
+            {liveIssues.map((issue, index) => (
+              <article key={issue} className="flex gap-4 rounded-[24px] border border-white/8 bg-white/6 p-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/12 text-sm font-black text-white">
+                  0{index + 1}
+                </div>
+                <p className="text-sm leading-7 text-white/78">{issue}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-[32px] bg-white p-6 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">App & loyalty</p>
+              <h3 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">Các lợi ích giữ chân người dùng</h3>
+            </div>
+            <span className="rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold text-[#7c3aed]">Retention layer</span>
+          </div>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {appBenefits.map((benefit) => (
+              <article key={benefit.title} className="rounded-[24px] bg-[#f8f8fc] p-5 ring-1 ring-black/3">
+                <h4 className="text-lg font-black tracking-[-0.03em] text-[#111827]">{benefit.title}</h4>
+                <p className="mt-3 text-sm leading-7 text-[#6b7280]">{benefit.description}</p>
               </article>
             ))}
           </div>
