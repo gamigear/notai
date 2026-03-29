@@ -11,10 +11,10 @@ export default function Home() {
     <main className="min-h-screen bg-[#f6f7fb] text-[#111827]">
       <Header />
       <HeroSection />
-      <CategoriesSection />
       <DealsSection />
-      <PromotionsSection />
       <RankingSection />
+      <CategoriesSection />
+      <PromotionsSection />
       <Footer />
     </main>
   );
