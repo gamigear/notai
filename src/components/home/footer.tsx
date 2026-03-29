@@ -84,7 +84,7 @@ export function Footer() {
                 </a>
               ))}
             </div>
-            <p>© 2026 NOL. All rights reserved.</p>
+            <p>© 2026 NOL. 모든 권리 보유.</p>
           </div>
         </div>
       </footer>
@@ -107,3 +107,4 @@ export function Footer() {
     </>
   );
 }
+

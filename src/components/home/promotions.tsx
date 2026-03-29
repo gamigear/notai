@@ -81,7 +81,7 @@ export function PromotionsSection() {
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">앱 혜택</p>
               <h3 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">앱에서 누릴 수 있는 편리한 기능</h3>
             </div>
-            <span className="rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold text-[#7c3aed]">MEMBER</span>
+            <span className="rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold text-[#7c3aed]">회원혜택</span>
           </div>
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">

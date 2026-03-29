@@ -19,7 +19,7 @@ export function Header() {
       <div className="border-b border-black/5 bg-white/86 backdrop-blur-sm">
         <div className="mx-auto flex h-10 w-full max-w-7xl items-center gap-4 overflow-hidden px-4 text-sm text-[#4b5563] sm:px-6 lg:px-8">
           <span className="shrink-0 rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-[#7c3aed]">
-            Trending now
+            지금 인기
           </span>
           <div className="flex flex-wrap gap-4 whitespace-nowrap">
             {trendingKeywords.map((item) => (
