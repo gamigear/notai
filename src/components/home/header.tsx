@@ -35,9 +35,11 @@ export function Header() {
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#4154ff] text-sm font-black text-white shadow-[0_12px_30px_rgba(65,84,255,0.28)]">
-                NOL
-              </div>
+              <img
+                src="https://tour-web-assets.interparkcdn.net/assets/int-frontend/nol-header/nol-interpark-logo-multiline.svg"
+                alt="NOL 인터파크"
+                className="h-11 w-auto"
+              />
               <div>
                 <p className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#4154ff]">INTERPARK</p>
                 <h1 className="text-lg font-black tracking-[-0.03em] text-[#1c1c1e]">전세계 여행 할인 & 인기 공연 예매</h1>

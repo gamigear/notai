@@ -39,12 +39,29 @@ export function Footer() {
 
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4154ff]">NOL SERVICE</p>
+            <img
+              src="https://tour-web-assets.interparkcdn.net/assets/int-frontend/nol-header/nol-interpark-logo-multiline.svg"
+              alt="NOL 인터파크"
+              className="h-11 w-auto"
+            />
+            <p className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-[#4154ff]">NOL SERVICE</p>
             <h3 className="mt-3 text-2xl font-black tracking-[-0.03em] text-[#111827]">여행, 공연, 레저 예약을 한 곳에서.</h3>
             <p className="mt-3 max-w-md text-sm leading-7 text-[#6b7280]">
               원하는 상품을 빠르게 찾고, 실시간 인기 흐름을 확인하며, 더 쉬운 예약 경험으로 이어질 수 있도록 메인 화면을
               구성했습니다.
             </p>
+            <div className="mt-5 flex items-center gap-4 opacity-80">
+              <img
+                src="https://tour-web-assets.interparkcdn.net/assets/int-frontend/nol-footer/partner-nol.svg"
+                alt="NOL"
+                className="h-5 w-auto"
+              />
+              <img
+                src="https://tour-web-assets.interparkcdn.net/assets/int-frontend/nol-footer/partner-triple.svg"
+                alt="TRIPLE"
+                className="h-5 w-auto"
+              />
+            </div>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-3">
