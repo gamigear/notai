@@ -1,4 +1,4 @@
-import { paritySteps, rankingCards } from "./data";
+import { paritySteps, rankingCards, rankingNotices } from "./data";
 
 export function RankingSection() {
   return (
@@ -16,6 +16,14 @@ export function RankingSection() {
           <p className="mt-3 max-w-lg text-sm leading-7 text-[#6b7280]">
             Module này mô phỏng block ticket ranking của site gốc: headline rõ, danh sách nổi bật và CTA gọn.
           </p>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            {rankingNotices.map((notice) => (
+              <span key={notice} className="rounded-full bg-[#f8f8fc] px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#6b7280]">
+                {notice}
+              </span>
+            ))}
+          </div>
 
           <div className="mt-7 space-y-4">
             {rankingCards.map((card) => (

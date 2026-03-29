@@ -1,4 +1,4 @@
-import { travelDeals } from "./data";
+import { bookingStats, travelDeals } from "./data";
 
 export function DealsSection() {
   return (
@@ -12,6 +12,14 @@ export function DealsSection() {
           <a className="text-sm font-semibold text-[#5b3df5]" href="#">
             Xem tất cả
           </a>
+        </div>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {bookingStats.map((stat) => (
+            <span key={stat} className="rounded-full bg-[#f5f3ff] px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#7c3aed]">
+              {stat}
+            </span>
+          ))}
         </div>
 
         <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-4">

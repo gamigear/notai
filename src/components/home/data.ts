@@ -23,6 +23,21 @@ export const searchFields = [
   },
 ];
 
+export const heroStats = [
+  {
+    value: "1.2M+",
+    label: "monthly visits pattern",
+  },
+  {
+    value: "24/7",
+    label: "live ranking refresh",
+  },
+  {
+    value: "3-step",
+    label: "booking funnel",
+  },
+];
+
 export const serviceShortcuts = [
   {
     title: "Tour quốc tế",
@@ -98,6 +113,12 @@ export const travelDeals = [
   },
 ];
 
+export const bookingStats = [
+  "4 deals hot nhất đang được đẩy mạnh",
+  "2 tuyến châu Âu chuyển đổi cao nhất tuần",
+  "Nhiều gói gia đình có tỷ lệ add-to-cart tăng",
+];
+
 export const rankingCards = [
   {
     rank: "01",
@@ -115,6 +136,8 @@ export const rankingCards = [
     description: "Đêm nhạc giao hưởng với ưu đãi đặt sớm giới hạn.",
   },
 ];
+
+export const rankingNotices = ["Updated every few minutes", "Best-selling seats first", "Live interest spikes after 18:00"];
 
 export const quickCategories = ["Tour quốc tế", "Khách sạn", "Vé show", "Công viên", "Spa & thư giãn", "Cuối tuần"];
 

@@ -1,4 +1,4 @@
-import { companionOptions, searchFields, searchTabs, serviceShortcuts } from "./data";
+import { companionOptions, heroStats, searchFields, searchTabs, serviceShortcuts } from "./data";
 
 export function HeroSection() {
   return (
@@ -18,6 +18,15 @@ export function HeroSection() {
               Scaffold này đang đi theo nhịp portal đậm nội dung giống nol.interpark.com: khối tìm kiếm lớn, shortcut
               dịch vụ, ranking cập nhật nhanh và nhiều điểm chạm để người dùng khám phá rồi đặt ngay.
             </p>
+          </div>
+
+          <div className="mt-6 grid gap-3 sm:grid-cols-3">
+            {heroStats.map((stat) => (
+              <article key={stat.label} className="rounded-[22px] border border-white/12 bg-white/10 p-4 backdrop-blur-sm">
+                <p className="text-2xl font-black tracking-[-0.04em] text-white">{stat.value}</p>
+                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/70">{stat.label}</p>
+              </article>
+            ))}
           </div>
 
           <div className="mt-8 rounded-[30px] bg-white p-4 text-[#111827] shadow-[0_20px_50px_rgba(17,24,39,0.12)] sm:p-5">
@@ -77,10 +86,10 @@ export function HeroSection() {
 
           <div className="rounded-[30px] bg-[#111827] p-6 text-white shadow-[0_16px_50px_rgba(15,23,42,0.16)]">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/60">Giai đoạn hiện tại</p>
-            <h3 className="mt-3 text-2xl font-bold">Phase 03 · Navigation Rhythm</h3>
+            <h3 className="mt-3 text-2xl font-bold">Phase 04 · Live Commerce Signals</h3>
             <p className="mt-3 text-sm leading-6 text-white/72">
-              Mục tiêu là làm cảm giác portal Hàn rõ hơn: nhiều lớp điều hướng, line trending, quick nav và hierarchy nội dung
-              dày nhưng vẫn dễ quét.
+              Mục tiêu là làm portal có cảm giác sống hơn: thêm stats, thêm dấu hiệu realtime và phân tầng thông tin theo
+              kiểu commerce-driven homepage.
             </p>
           </div>
         </aside>
