@@ -6,11 +6,11 @@ export function CategoriesSection() {
       <div className="rounded-[30px] bg-white p-5 shadow-[0_14px_40px_rgba(15,23,42,0.05)] sm:p-6">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-[#7c3aed]">Popular destinations</p>
-            <h3 className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#111827]">Khối khám phá nhanh theo điểm đến</h3>
+            <p className="text-sm font-black uppercase tracking-[0.16em] text-[#7c3aed]">인기 여행지</p>
+            <h3 className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#111827]">지금 많이 찾는 여행지를 빠르게 둘러보세요</h3>
           </div>
           <button className="w-fit rounded-full border border-[#ddd6fe] px-4 py-2 text-sm font-bold text-[#6d28d9]">
-            Xem tất cả destination
+            전체 여행지 보기
           </button>
         </div>
 
@@ -40,11 +40,11 @@ export function CategoriesSection() {
       <div className="mt-6 grid gap-4 lg:grid-cols-4">
         {categoryGrid.map((item) => (
           <article key={item.title} className="rounded-[28px] bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.05)]">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#7c3aed]">Category lane</p>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#7c3aed]">추천 카테고리</p>
             <h3 className="mt-3 text-xl font-black tracking-[-0.03em] text-[#111827]">{item.title}</h3>
             <p className="mt-3 text-sm leading-7 text-[#6b7280]">{item.desc}</p>
             <button className="mt-5 rounded-full border border-[#ececf3] px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#4b5563]">
-              Explore
+              자세히 보기
             </button>
           </article>
         ))}
@@ -53,7 +53,7 @@ export function CategoriesSection() {
       <div className="mt-6 grid gap-4 lg:grid-cols-3">
         {portalBenefits.map((benefit) => (
           <article key={benefit.title} className="rounded-[28px] bg-white p-6 shadow-[0_14px_40px_rgba(15,23,42,0.05)]">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#7c3aed]">Portal principle</p>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#7c3aed]">서비스 특징</p>
             <h3 className="mt-3 text-xl font-black tracking-[-0.03em] text-[#111827]">{benefit.title}</h3>
             <p className="mt-3 text-sm leading-7 text-[#6b7280]">{benefit.description}</p>
           </article>

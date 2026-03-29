@@ -28,47 +28,47 @@ export const searchFields = [
 export const heroStats = [
   {
     value: "1.2M+",
-    label: "monthly search flow",
+    label: "월간 검색 흐름",
   },
   {
     value: "24/7",
-    label: "live ranking refresh",
+    label: "실시간 랭킹 반영",
   },
   {
     value: "3-step",
-    label: "easy booking funnel",
+    label: "간편 예약 단계",
   },
 ];
 
 export const serviceShortcuts = [
   {
     title: "해외투어",
-    subtitle: "BEST",
+    subtitle: "추천",
     accent: "from-[#ffe7c7] to-[#ffd1a1]",
   },
   {
     title: "호텔",
-    subtitle: "FAST",
+    subtitle: "빠른예약",
     accent: "from-[#d7e7ff] to-[#bfd3ff]",
   },
   {
     title: "공연티켓",
-    subtitle: "HOT",
+    subtitle: "인기",
     accent: "from-[#eed8ff] to-[#d8b8ff]",
   },
   {
     title: "테마파크",
-    subtitle: "FAMILY",
+    subtitle: "가족추천",
     accent: "from-[#d7f7eb] to-[#b5ead7]",
   },
   {
     title: "스파",
-    subtitle: "HEALING",
+    subtitle: "힐링",
     accent: "from-[#ffe0ec] to-[#ffc9df]",
   },
   {
     title: "주말여행",
-    subtitle: "GETAWAY",
+    subtitle: "주말추천",
     accent: "from-[#efe8ff] to-[#d9ccff]",
   },
 ];
@@ -129,7 +129,7 @@ export const rankingCards = [
   },
   {
     rank: "02",
-    title: "K-POP LIVE WEEKEND",
+    title: "K-POP 라이브 위크엔드",
     description: "선호 좌석이 빠르게 소진되고 있는 주말 공연입니다.",
   },
   {
@@ -181,13 +181,13 @@ export const categoryGrid = [
 
 export const promoBanners = [
   {
-    eyebrow: "SPRING SALE",
+    eyebrow: "봄 특가",
     title: "주말 공연 · 콘서트 특가 모음",
     description: "지금 주목받는 좌석과 빠르게 마감되는 공연 혜택을 모아 보여드립니다.",
     accent: "from-[#111827] via-[#1f2937] to-[#374151]",
   },
   {
-    eyebrow: "FAMILY GETAWAY",
+    eyebrow: "가족 여행",
     title: "가족 여행을 위한 짧고 편한 휴양 패키지",
     description: "숙소와 레저, 체험 상품을 묶어 보다 편리하게 예약할 수 있습니다.",
     accent: "from-[#5b3df5] via-[#7c3aed] to-[#a855f7]",

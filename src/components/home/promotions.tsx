@@ -13,7 +13,7 @@ export function PromotionsSection() {
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">{banner.eyebrow}</p>
               <h3 className="mt-4 text-2xl font-black tracking-[-0.04em]">{banner.title}</h3>
               <p className="mt-4 max-w-sm text-sm leading-7 text-white/78">{banner.description}</p>
-              <button className="mt-8 rounded-full bg-white px-5 py-3 text-sm font-bold text-[#111827]">Khám phá ngay</button>
+              <button className="mt-8 rounded-full bg-white px-5 py-3 text-sm font-bold text-[#111827]">지금 보기</button>
             </article>
           ))}
         </div>
@@ -21,10 +21,10 @@ export function PromotionsSection() {
         <div className="rounded-[32px] bg-white p-6 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">Themed curation</p>
-              <h3 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">Chọn theo mood du lịch</h3>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">테마 큐레이션</p>
+              <h3 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">기분에 맞는 여행을 골라보세요</h3>
             </div>
-            <span className="rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold text-[#7c3aed]">3 bộ sưu tập</span>
+            <span className="rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold text-[#7c3aed]">3개 큐레이션</span>
           </div>
 
           <div className="mt-6 space-y-4">
@@ -36,7 +36,7 @@ export function PromotionsSection() {
                     <h4 className="mt-2 text-xl font-black tracking-[-0.03em] text-[#111827]">{collection.title}</h4>
                   </div>
                   <button className="rounded-full border border-[#ddd6fe] px-3 py-2 text-xs font-bold text-[#6d28d9]">
-                    Xem thêm
+                    더보기
                   </button>
                 </div>
 
@@ -57,10 +57,10 @@ export function PromotionsSection() {
         <div className="rounded-[32px] bg-[#111827] p-6 text-white shadow-[0_18px_56px_rgba(15,23,42,0.16)] sm:p-8">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/60">Live issues</p>
-              <h3 className="mt-2 text-3xl font-black tracking-[-0.03em]">Những gì đang nóng lúc này</h3>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/60">실시간 이슈</p>
+              <h3 className="mt-2 text-3xl font-black tracking-[-0.03em]">지금 가장 많이 보고 있는 상품</h3>
             </div>
-            <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-white/80">Realtime vibe</span>
+            <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-white/80">LIVE</span>
           </div>
 
           <div className="mt-6 space-y-3">
@@ -78,10 +78,10 @@ export function PromotionsSection() {
         <div className="rounded-[32px] bg-white p-6 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">App & loyalty</p>
-              <h3 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">Các lợi ích giữ chân người dùng</h3>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#7c3aed]">앱 혜택</p>
+              <h3 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">앱에서 누릴 수 있는 편리한 기능</h3>
             </div>
-            <span className="rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold text-[#7c3aed]">Retention layer</span>
+            <span className="rounded-full bg-[#f5f3ff] px-3 py-1 text-xs font-bold text-[#7c3aed]">MEMBER</span>
           </div>
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
@@ -90,7 +90,7 @@ export function PromotionsSection() {
                 <h4 className="text-lg font-black tracking-[-0.03em] text-[#111827]">{benefit.title}</h4>
                 <p className="mt-3 text-sm leading-7 text-[#6b7280]">{benefit.description}</p>
                 <button className="mt-5 rounded-full border border-[#ececf3] px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#4b5563]">
-                  Learn more
+                  자세히 보기
                 </button>
               </article>
             ))}
