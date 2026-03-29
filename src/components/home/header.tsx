@@ -4,7 +4,7 @@ import { mainNavLinks, quickNavItems, trendingKeywords, utilityLinks } from "./d
 export function Header() {
   return (
     <>
-      <div className="border-b border-black/5 bg-[#f5f6fa]">
+      <div className="hidden border-b border-black/5 bg-[#f5f6fa] md:block">
         <div className="mx-auto flex h-10 w-full max-w-7xl items-center justify-between px-4 text-[12px] font-medium text-[#6b7280] sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 overflow-x-auto whitespace-nowrap">
             {utilityLinks.map((link) => (
@@ -17,7 +17,7 @@ export function Header() {
         </div>
       </div>
 
-      <div className="border-b border-black/5 bg-white">
+      <div className="hidden border-b border-black/5 bg-white md:block">
         <div className="mx-auto flex h-10 w-full max-w-7xl items-center gap-4 overflow-hidden px-4 text-sm text-[#4b5563] sm:px-6 lg:px-8">
           <span className="shrink-0 rounded-full bg-[#eef1ff] px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#4154ff]">
             지금 인기
@@ -33,35 +33,35 @@ export function Header() {
       </div>
 
       <header className="sticky top-0 z-30 border-b border-black/5 bg-white/92 backdrop-blur-md">
-        <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+          <div className="flex items-center justify-between gap-3 sm:gap-4">
+            <div className="flex min-w-0 items-center gap-3">
               <Image
                 src="https://tour-web-assets.interparkcdn.net/assets/int-frontend/nol-header/nol-interpark-logo-multiline.svg"
                 alt="NOL 인터파크"
                 width={122}
                 height={44}
-                className="h-11 w-auto"
+                className="h-9 w-auto sm:h-11"
                 priority
               />
-              <div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#4154ff]">INTERPARK</p>
-                <h1 className="text-lg font-black tracking-[-0.03em] text-[#1c1c1e]">전세계 여행 할인 & 인기 공연 예매</h1>
+              <div className="min-w-0">
+                <p className="text-[10px] font-extrabold uppercase tracking-[0.22em] text-[#4154ff] sm:text-[11px]">INTERPARK</p>
+                <h1 className="truncate text-sm font-black tracking-[-0.03em] text-[#1c1c1e] sm:text-lg">전세계 여행 할인 & 인기 공연 예매</h1>
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex shrink-0 items-center gap-2 sm:gap-3">
               <button className="hidden rounded-full border border-[#e5e7eb] bg-white px-4 py-2 text-sm font-semibold text-[#374151] md:block">
                 KRW · 한국어
               </button>
-              <button className="rounded-full bg-[#1c1c1e] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-black">
+              <button className="rounded-full bg-[#1c1c1e] px-4 py-2 text-xs font-semibold text-white transition hover:bg-black sm:px-5 sm:py-2.5 sm:text-sm">
                 로그인
               </button>
             </div>
           </div>
 
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-            <nav className="flex flex-wrap items-center gap-6 text-sm font-bold text-[#29292d]">
+            <nav className="hidden flex-wrap items-center gap-6 text-sm font-bold text-[#29292d] md:flex">
               {mainNavLinks.map((link) => (
                 <a key={link} href="#" className="transition hover:text-[#4154ff]">
                   {link}
@@ -69,13 +69,24 @@ export function Header() {
               ))}
             </nav>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="hidden flex-wrap gap-2 md:flex">
               {quickNavItems.map((item) => (
                 <span
                   key={item}
                   className="rounded-full border border-[#eceef5] bg-[#fafbff] px-3 py-2 text-[11px] font-extrabold uppercase tracking-[0.12em] text-[#6b7280]"
                 >
                   {item}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex gap-2 overflow-x-auto whitespace-nowrap md:hidden">
+              {mainNavLinks.map((link, index) => (
+                <span
+                  key={link}
+                  className={`rounded-full px-3 py-2 text-xs font-bold ${index === 0 ? "bg-[#4154ff] text-white" : "bg-[#f3f4f8] text-[#4b5563]"}`}
+                >
+                  {link}
                 </span>
               ))}
             </div>

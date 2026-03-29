@@ -5,13 +5,13 @@ export function Footer() {
   return (
     <>
       <footer className="mt-8 border-t border-black/5 bg-white pb-24 md:pb-0">
-        <div className="mx-auto w-full max-w-7xl px-4 pt-10 pb-0 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 pt-8 pb-0 sm:px-6 sm:pt-10 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="rounded-[32px] bg-gradient-to-br from-[#4154ff] via-[#6b4ef7] to-[#a94df5] p-6 text-white shadow-[0_18px_56px_rgba(65,84,255,0.22)] sm:p-8">
+            <div className="rounded-[28px] bg-gradient-to-br from-[#4154ff] via-[#6b4ef7] to-[#a94df5] p-5 text-white shadow-[0_18px_56px_rgba(65,84,255,0.22)] sm:rounded-[32px] sm:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">앱 혜택</p>
               <div className="mt-3 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                 <div>
-                  <h3 className="text-3xl font-black tracking-[-0.04em]">앱에서 더 빠르게, 더 큰 혜택으로 예약하세요.</h3>
+                  <h3 className="text-2xl font-black tracking-[-0.04em] sm:text-3xl">앱에서 더 빠르게, 더 큰 혜택으로 예약하세요.</h3>
                   <p className="mt-3 max-w-2xl text-sm leading-7 text-white/80">
                     실시간 인기 상품 확인부터 쿠폰 적용, 저장한 상품 다시 보기까지. 여행과 공연 예매를 더 빠르게 이어갈 수 있도록
                     주요 혜택을 한곳에 담았습니다.
@@ -24,9 +24,9 @@ export function Footer() {
               </div>
             </div>
 
-            <div className="rounded-[32px] bg-[#1c1c1e] p-6 text-white shadow-[0_18px_56px_rgba(15,23,42,0.18)] sm:p-8">
+            <div className="rounded-[28px] bg-[#1c1c1e] p-5 text-white shadow-[0_18px_56px_rgba(15,23,42,0.18)] sm:rounded-[32px] sm:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/60">Membership value</p>
-              <h3 className="mt-3 text-3xl font-black tracking-[-0.04em]">다시 찾을수록 더 편리해집니다.</h3>
+              <h3 className="mt-3 text-2xl font-black tracking-[-0.04em] sm:text-3xl">다시 찾을수록 더 편리해집니다.</h3>
               <div className="mt-5 space-y-3">
                 {membershipBenefits.map((benefit) => (
                   <div key={benefit} className="rounded-[22px] border border-white/10 bg-white/6 px-4 py-3 text-sm font-medium text-white/80">
@@ -38,7 +38,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-8 sm:px-6 sm:py-10 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
           <div>
             <Image
               src="https://tour-web-assets.interparkcdn.net/assets/int-frontend/nol-header/nol-interpark-logo-multiline.svg"
@@ -108,7 +108,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-black/5 bg-[#fafafe]">
-          <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-5 text-sm text-[#6b7280] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+          <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-5 text-sm text-[#6b7280] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
             <div className="flex flex-wrap gap-4">
               {supportLinks.map((link) => (
                 <a key={link} href="#" className="transition hover:text-[#111827]">
@@ -121,7 +121,7 @@ export function Footer() {
         </div>
       </footer>
 
-      <div className="fixed right-0 bottom-0 left-0 z-40 border-t border-black/5 bg-white/95 px-4 py-3 backdrop-blur md:hidden">
+      <div className="fixed right-0 bottom-0 left-0 z-40 border-t border-black/5 bg-white/95 px-3 py-3 backdrop-blur md:hidden">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-2">
           {mobileQuickActions.map((action, index) => (
             <button
