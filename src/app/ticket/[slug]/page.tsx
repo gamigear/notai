@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { notFound } from "next/navigation";
 import { rankingCards } from "@/components/home/data";
 
@@ -31,13 +32,7 @@ export default async function TicketDetailPage({ params }: PageProps) {
   return (
     <main className="min-h-screen bg-[#f6f7fb] px-4 py-6 text-[#111827] sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-4 flex items-center gap-2 text-sm text-[#6b7280]">
-          <Link href="/" className="hover:text-[#111827]">홈</Link>
-          <span>/</span>
-          <Link href="/ticket" className="hover:text-[#111827]">티켓 랭킹</Link>
-          <span>/</span>
-          <span className="font-semibold text-[#111827]">공연 상세</span>
-        </div>
+        <Breadcrumbs items={[{ label: "홈", href: "/" }, { label: "티켓 랭킹", href: "/ticket" }, { label: "공연 상세" }]} />
 
         <div className="overflow-hidden rounded-[28px] bg-white shadow-[0_18px_56px_rgba(15,23,42,0.06)] ring-1 ring-black/4">
           <div className="h-56 bg-gradient-to-br from-[#17181f] via-[#232734] to-[#3a4256] sm:h-72" />

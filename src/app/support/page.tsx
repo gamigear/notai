@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { supportLinks } from "@/components/home/data";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 
 export default function SupportPage() {
   return (
     <main className="min-h-screen bg-[#f6f7fb] px-4 py-6 text-[#111827] sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
+        <Breadcrumbs items={[{ label: "홈", href: "/" }, { label: "고객지원" }]} />
+
         <div className="rounded-[28px] bg-white p-5 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -34,12 +37,7 @@ export default function SupportPage() {
             <section className="rounded-[24px] bg-[#fafafe] p-5 ring-1 ring-black/4">
               <h2 className="text-xl font-black text-[#111827]">빠른 도움</h2>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                {[
-                  "예약 변경/취소",
-                  "결제/환불 문의",
-                  "티켓 예매 도움",
-                  "쿠폰/혜택 문의",
-                ].map((item) => (
+                {["예약 변경/취소", "결제/환불 문의", "티켓 예매 도움", "쿠폰/혜택 문의"].map((item) => (
                   <div key={item} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-4 text-sm font-semibold text-[#111827]">
                     {item}
                   </div>
