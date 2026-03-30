@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { DetailBulletList, DetailSection } from "@/components/ui/detail-section";
 import { PageIntro } from "@/components/ui/page-intro";
 import { slugify } from "@/lib/slugify";
+import { SubpageNav } from "@/components/ui/subpage-nav";
 
 const filterGroups = [
   {
@@ -27,6 +28,14 @@ const filterGroups = [
 
 const sortOptions = ["추천순", "낮은 가격순", "출발 임박순", "평점순"];
 
+const subpageItems = [
+  { label: "투어 검색", href: "/search" },
+  { label: "티켓 랭킹", href: "/ticket" },
+  { label: "저장한 상품", href: "/saved" },
+  { label: "마이페이지", href: "/mypage" },
+  { label: "고객지원", href: "/support" },
+];
+
 export default function SearchPage() {
   return (
     <main className="min-h-screen bg-[#f6f7fb] px-4 py-6 text-[#111827] sm:px-6 lg:px-8">
@@ -47,6 +56,8 @@ export default function SearchPage() {
               </Link>
             }
           />
+
+          <SubpageNav items={subpageItems} current="/search" />
 
           <div className="mt-4 flex flex-wrap gap-2">
             {["인천 출발", "4일 ~ 9일", "친구 · 연인 / 가족", `${travelDeals.length}개 상품`].map((chip, index) => (

@@ -4,6 +4,15 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { DetailBulletList, DetailSection } from "@/components/ui/detail-section";
 import { PageIntro } from "@/components/ui/page-intro";
 import { slugify } from "@/lib/slugify";
+import { SubpageNav } from "@/components/ui/subpage-nav";
+
+const subpageItems = [
+  { label: "투어 검색", href: "/search" },
+  { label: "티켓 랭킹", href: "/ticket" },
+  { label: "저장한 상품", href: "/saved" },
+  { label: "마이페이지", href: "/mypage" },
+  { label: "고객지원", href: "/support" },
+];
 
 export default function SavedPage() {
   return (
@@ -27,6 +36,8 @@ export default function SavedPage() {
               </>
             }
           />
+
+          <SubpageNav items={subpageItems} current="/saved" />
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
             <DetailSection title="저장한 여행" tone="tinted">

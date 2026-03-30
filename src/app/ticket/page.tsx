@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { DetailBulletList, DetailSection } from "@/components/ui/detail-section";
 import { PageIntro } from "@/components/ui/page-intro";
 import { slugify } from "@/lib/slugify";
+import { SubpageNav } from "@/components/ui/subpage-nav";
 
 const ticketQuickFilters = ["뮤지컬", "콘서트", "클래식", `${rankingCards.length}개 랭킹`];
 const ticketSortOptions = ["실시간 랭킹", "예매 많은 순", "관심 급상승", "오픈 임박순"];
@@ -11,6 +12,14 @@ const ticketInsights = [
   "지금 가장 빠르게 예매가 늘고 있는 공연을 바로 확인할 수 있어요.",
   "저녁 시간대 관심 급상승 작품부터 상세 → 예매 흐름으로 이어집니다.",
   "랭킹, 회차, 오픈 정보 중심으로 빠르게 비교하는 티켓 전용 쉘입니다.",
+];
+
+const subpageItems = [
+  { label: "투어 검색", href: "/search" },
+  { label: "티켓 랭킹", href: "/ticket" },
+  { label: "저장한 상품", href: "/saved" },
+  { label: "마이페이지", href: "/mypage" },
+  { label: "고객지원", href: "/support" },
 ];
 
 export default function TicketPage() {
@@ -30,6 +39,8 @@ export default function TicketPage() {
               </Link>
             }
           />
+
+          <SubpageNav items={subpageItems} current="/ticket" />
 
           <div className="mt-4 flex flex-wrap gap-2">
             {ticketQuickFilters.map((chip, index) => (
