@@ -47,7 +47,7 @@ export default async function TicketDetailPage({ params }: PageProps) {
                 { label: "장르", value: "뮤지컬 · 콘서트 · 클래식" },
                 { label: "랭킹", value: `RANK ${card.rank}` },
                 { label: "상태", value: "실시간 예매 가능" },
-                { label: "예매 흐름", value: "상세 → 예매 → 결제" },
+                { label: "좌석 상황", value: card.rank === "1" ? "빠르게 예매 중" : "여유 좌석 확인 가능" },
               ]}
             />
 

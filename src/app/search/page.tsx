@@ -162,7 +162,7 @@ export default function SearchPage() {
 
                       <div className="mt-4 flex flex-wrap gap-2">
                         {[
-                          "출발확인 쉬움",
+                          index === 0 ? "오늘 인기급상승" : "출발확인 쉬움",
                           "상세 일정 확인",
                           index % 2 === 0 ? "가족/연인 추천" : "실속 구성",
                         ].map((point) => (
