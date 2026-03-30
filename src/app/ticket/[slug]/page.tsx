@@ -44,9 +44,12 @@ export default async function TicketDetailPage({ params }: PageProps) {
               <div className="rounded-[24px] bg-[#fafafe] p-5 ring-1 ring-black/4 sm:min-w-[280px]">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">티켓 오픈</p>
                 <p className="mt-2 text-3xl font-black text-[#111827]">오늘 20:00</p>
-                <button className="mt-5 w-full rounded-full bg-[#1c1c1e] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)]">
+                <Link
+                  href={`/reserve/ticket/${slug}`}
+                  className="mt-5 block w-full rounded-full bg-[#1c1c1e] px-5 py-3 text-center text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)]"
+                >
                   예매하기
-                </button>
+                </Link>
               </div>
             </div>
 
