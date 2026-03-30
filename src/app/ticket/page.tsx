@@ -125,6 +125,11 @@ export default function TicketPage() {
                             저장됨
                           </span>
                         ) : null}
+                        {index === 0 ? (
+                          <span className="rounded-full bg-[#ffd7ea]/25 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+                            추천 이유 있음
+                          </span>
+                        ) : null}
                       </div>
                     </div>
                     <div className="p-5">
@@ -147,7 +152,7 @@ export default function TicketPage() {
                       <div className="mt-4 flex flex-wrap gap-2">
                         {[
                           "실시간 랭킹",
-                          index === 0 ? "관심 급상승" : "예매 흐름 연결",
+                          index === 0 ? "최근 관심 패턴 기반 추천" : "예매 흐름 연결",
                           index === 2 ? "좌석 여유" : "상세 정보 확인",
                         ].map((tag) => (
                           <span key={tag} className="rounded-full bg-[#fafafe] px-3 py-1 text-xs font-semibold text-[#4b5563] ring-1 ring-black/4">

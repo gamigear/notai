@@ -149,6 +149,11 @@ export default function SearchPage() {
                                 저장됨
                               </span>
                             ) : null}
+                            {index === 2 ? (
+                              <span className="rounded-full bg-[#ffe8f3] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#b4236b] shadow-sm">
+                                추천 이유 있음
+                              </span>
+                            ) : null}
                           </div>
                           <h3 className="mt-3 text-xl font-black tracking-[-0.03em] text-[#111827]">{deal.title}</h3>
                         </div>
