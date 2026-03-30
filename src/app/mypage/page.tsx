@@ -23,7 +23,7 @@ export default function MyPage() {
           <PageIntro
             eyebrow="MY PAGE"
             title="마이페이지"
-            description="예약 내역, 쿠폰, 최근 본 상품, 고객지원 진입점을 담는 사용자 계정 레이어의 첫 번째 쉘입니다."
+            description="예약 내역, 저장 상태, 최근 활동, 고객지원 진입점을 함께 보여주는 개인 계정 허브입니다. 사용자의 다음 행동을 빠르게 이어주도록 구성했습니다."
             actions={
               <>
                 <Link href="/saved" className="w-fit rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm">

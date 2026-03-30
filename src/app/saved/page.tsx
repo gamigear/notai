@@ -24,7 +24,7 @@ export default function SavedPage() {
           <PageIntro
             eyebrow="SAVED ITEMS"
             title="저장한 상품"
-            description="관심 있는 여행, 티켓, 앱 혜택을 다시 빠르게 이어볼 수 있도록 구성한 저장함 쉘입니다."
+            description="저장한 여행과 공연, 최근 본 흐름, 다시 이어볼 행동을 한곳에 모은 개인 저장 허브입니다. 탐색과 전환 사이를 자연스럽게 이어줍니다."
             actions={
               <>
                 <Link href="/mypage" className="w-fit rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm">

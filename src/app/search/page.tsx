@@ -46,7 +46,7 @@ export default function SearchPage() {
           <PageIntro
             eyebrow="SEARCH RESULTS"
             title="홍콩/마카오 · 싱가포르 · 유럽 특가 모아보기"
-            description="NOL 스타일 검색 결과 화면의 첫 번째 쉘입니다. 필터, 카드, 가격 정보, CTA 배치를 실제 흐름처럼 확장하기 위한 기반입니다."
+            description="실시간 특가, 최근 본 흐름, 추천 이유, 예약 가능 상태를 함께 보여주는 투어 탐색 허브입니다. 비교 후 상세와 예약 단계로 자연스럽게 이어집니다."
             actions={
               <Link
                 href="/"

@@ -32,7 +32,7 @@ export default function TicketPage() {
           <PageIntro
             eyebrow="TICKET RANKING"
             title="오늘 뭐볼까? 지금 HOT한 공연"
-            description="공연 · 전시 · 콘서트 카테고리를 위한 별도 티켓 흐름 쉘입니다. 랭킹 기반 탐색과 상세 페이지 이동 흐름을 확장합니다."
+            description="실시간 랭킹, 최근 본 공연, 저장 상태, 추천 이유를 함께 보여주는 티켓 탐색 허브입니다. 비교 후 상세와 예매 단계로 자연스럽게 이어집니다."
             actions={
               <Link href="/" className="w-fit rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm">
                 홈으로 돌아가기

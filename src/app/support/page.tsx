@@ -23,7 +23,7 @@ export default function SupportPage() {
           <PageIntro
             eyebrow="SUPPORT CENTER"
             title="고객지원"
-            description="이용 가이드, 취소/환불, 문의 내역, 자주 묻는 질문으로 확장할 수 있는 고객지원 허브 쉘입니다."
+            description="이용 가이드, 취소/환불, 문의 흐름, 자주 찾는 도움을 한 번에 모은 지원 허브입니다. 예약과 예매 흐름에서 막히지 않도록 연결을 정리했습니다."
             actions={
               <>
                 <Link href="/mypage" className="w-fit rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm">
