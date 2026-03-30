@@ -110,9 +110,12 @@ export default function SearchPage() {
 
             <section>
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm font-semibold text-[#6b7280]">
-                  총 <span className="font-black text-[#111827]">{travelDeals.length}개</span> 상품을 찾았어요
-                </p>
+                <div>
+                  <p className="text-sm font-semibold text-[#6b7280]">
+                    총 <span className="font-black text-[#111827]">{travelDeals.length}개</span> 상품을 찾았어요
+                  </p>
+                  <p className="mt-1 text-xs font-semibold text-[#9ca3af]">가격, 일정, 추천 이유, 최근 본 흐름을 함께 비교하면서 다음 상품을 고르기 좋아요.</p>
+                </div>
                 <div className="flex flex-wrap items-center gap-2">
                   {sortOptions.map((sort, index) => (
                     <button

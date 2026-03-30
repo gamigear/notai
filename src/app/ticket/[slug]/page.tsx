@@ -53,7 +53,11 @@ export default async function TicketDetailPage({ params }: PageProps) {
 
             <div className="mt-8 grid gap-6 lg:grid-cols-2">
               <DetailSection title="공연 소개" tone="tinted">
+                <p className="mt-4 text-sm leading-8 text-[#6b7280]">
+                  공연 성격, 오픈 타이밍, 관람 전 확인 포인트를 빠르게 파악한 뒤 바로 예매 단계로 넘어갈 수 있도록 정리한 상세 화면입니다.
+                </p>
                 <DetailBulletList
+                  className="mt-6 space-y-3"
                   items={[
                     "캐스팅 / 회차 / 좌석 정보 확장 가능",
                     "티켓 오픈 일정과 안내 사항 노출",

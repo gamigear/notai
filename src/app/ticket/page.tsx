@@ -89,9 +89,12 @@ export default function TicketPage() {
 
             <section>
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm font-semibold text-[#6b7280]">
-                  총 <span className="font-black text-[#111827]">{rankingCards.length}개</span> 공연이 실시간 랭킹에 있어요
-                </p>
+                <div>
+                  <p className="text-sm font-semibold text-[#6b7280]">
+                    총 <span className="font-black text-[#111827]">{rankingCards.length}개</span> 공연이 실시간 랭킹에 있어요
+                  </p>
+                  <p className="mt-1 text-xs font-semibold text-[#9ca3af]">랭킹, 좌석 분위기, 저장 상태, 최근 본 흐름을 함께 보면서 빠르게 공연을 고를 수 있어요.</p>
+                </div>
                 <div className="flex flex-wrap items-center gap-2">
                   {ticketSortOptions.map((sort, index) => (
                     <button

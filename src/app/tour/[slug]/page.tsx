@@ -55,8 +55,8 @@ export default async function TourDetailPage({ params }: PageProps) {
             <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
               <DetailSection title="상품 소개" tone="tinted">
                 <p className="mt-4 text-sm leading-8 text-[#6b7280]">
-                  이 페이지는 NOL 스타일 투어 상세 화면을 확장하기 위한 첫 번째 쉘입니다. 실제 상품 상세, 포함 사항, 불포함 사항,
-                  취소/환불 규정, 리뷰, FAQ, 날짜 선택 모듈을 붙일 수 있도록 레이아웃을 먼저 구성했습니다.
+                  여행 핵심 분위기와 포함 조건, 예약 전 확인 포인트를 한 번에 훑어본 뒤 바로 예약으로 이어질 수 있도록 정리한 상세 화면입니다.
+                  실제 운영 시에는 날짜 선택, 객실/옵션 확장, 후기와 FAQ가 자연스럽게 이어지는 구조를 염두에 두고 구성했습니다.
                 </p>
                 <DetailBulletList
                   className="mt-6 space-y-3"
