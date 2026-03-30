@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { DetailFacts } from "@/components/ui/detail-facts";
 import { DetailHero } from "@/components/ui/detail-hero";
 import { DetailBulletList, DetailNumberedList, DetailSection } from "@/components/ui/detail-section";
 import { notFound } from "next/navigation";
@@ -40,6 +41,15 @@ export default async function TourDetailPage({ params }: PageProps) {
               ctaLabel="바로 예약하기"
               ctaHref={`/reserve/tour/${slug}`}
               accent="price"
+            />
+
+            <DetailFacts
+              items={[
+                { label: "출발", value: "인천 출발" },
+                { label: "일정", value: deal.title.includes("9일") ? "9일 일정" : deal.title.includes("5일") ? "5일 일정" : "4일 일정" },
+                { label: "상품 성격", value: deal.badge },
+                { label: "예약 흐름", value: "상세 → 예약 → 결제" },
+              ]}
             />
 
             <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
@@ -83,12 +93,36 @@ export default async function TourDetailPage({ params }: PageProps) {
                 />
               </DetailSection>
 
+              <DetailSection title="포함 / 불포함 정보">
+                <DetailBulletList
+                  items={[
+                    "포함: 핵심 일정, 숙소, 주요 이동 또는 옵션 요약",
+                    "불포함: 개인 경비, 선택 관광, 일부 현지 팁",
+                    "상품별 세부 조건은 예약 단계에서 추가 확장 가능",
+                  ]}
+                  itemTone="soft"
+                />
+              </DetailSection>
+            </div>
+
+            <div className="mt-6 grid gap-6 lg:grid-cols-2">
               <DetailSection title="리뷰 & 정책">
                 <DetailBulletList
                   items={[
                     "평점 9점대 후기 블록이 들어갈 자리",
                     "취소/환불 규정 요약 블록",
                     "자주 묻는 질문(FAQ) 아코디언 확장 가능",
+                  ]}
+                  itemTone="soft"
+                />
+              </DetailSection>
+
+              <DetailSection title="다음 단계">
+                <DetailBulletList
+                  items={[
+                    "상세 정보 확인 후 바로 예약 단계로 이동",
+                    "예약 화면에서 출발일, 인원, 대표 예약자 정보를 입력",
+                    "결제 요약에서 총액 확인 후 결제를 진행",
                   ]}
                   itemTone="soft"
                 />

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { DetailFacts } from "@/components/ui/detail-facts";
 import { DetailHero } from "@/components/ui/detail-hero";
 import { DetailBulletList, DetailNumberedList, DetailSection } from "@/components/ui/detail-section";
 import { notFound } from "next/navigation";
@@ -41,6 +42,15 @@ export default async function TicketDetailPage({ params }: PageProps) {
               ctaHref={`/reserve/ticket/${slug}`}
             />
 
+            <DetailFacts
+              items={[
+                { label: "장르", value: "뮤지컬 · 콘서트 · 클래식" },
+                { label: "랭킹", value: `RANK ${card.rank}` },
+                { label: "상태", value: "실시간 예매 가능" },
+                { label: "예매 흐름", value: "상세 → 예매 → 결제" },
+              ]}
+            />
+
             <div className="mt-8 grid gap-6 lg:grid-cols-2">
               <DetailSection title="공연 소개" tone="tinted">
                 <DetailBulletList
@@ -59,6 +69,54 @@ export default async function TicketDetailPage({ params }: PageProps) {
                     "예매 수수료 및 취소 규정 확인",
                     "공연 시작 전 입장 제한 여부 확인",
                   ]}
+                />
+              </DetailSection>
+            </div>
+
+            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+              <DetailSection title="관람 정보">
+                <DetailBulletList
+                  items={[
+                    "공연장 위치와 관람 시간 안내",
+                    "입장 가능 시간과 현장 수령 여부 확인",
+                    "좌석 등급과 회차별 차이 확장 가능",
+                  ]}
+                  itemTone="soft"
+                />
+              </DetailSection>
+
+              <DetailSection title="취소 / 환불 정보">
+                <DetailBulletList
+                  items={[
+                    "예매 수수료 및 취소 가능 시점 확인",
+                    "공연 임박 시 환불 제한 여부 안내",
+                    "공연장 정책 및 티켓 수령 방식 정리 가능",
+                  ]}
+                  itemTone="soft"
+                />
+              </DetailSection>
+            </div>
+
+            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+              <DetailSection title="추천 포인트">
+                <DetailBulletList
+                  items={[
+                    "지금 가장 빠르게 예매가 늘고 있는 인기 공연 흐름",
+                    "실시간 랭킹 기반으로 선택하기 쉬운 구조",
+                    "상세에서 바로 예매 단계로 넘어가는 전환 흐름",
+                  ]}
+                  itemTone="soft"
+                />
+              </DetailSection>
+
+              <DetailSection title="다음 단계">
+                <DetailBulletList
+                  items={[
+                    "상세 정보 확인 후 바로 예매 단계로 이동",
+                    "예매 화면에서 회차, 좌석, 예매자 정보를 입력",
+                    "결제 요약에서 총액 확인 후 결제를 진행",
+                  ]}
+                  itemTone="soft"
                 />
 
                 <div className="mt-6 flex flex-wrap gap-3">
