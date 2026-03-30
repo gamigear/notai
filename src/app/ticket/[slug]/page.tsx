@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { DetailHero } from "@/components/ui/detail-hero";
 import { notFound } from "next/navigation";
 import { rankingCards } from "@/components/home/data";
 import { slugify } from "@/lib/slugify";
@@ -29,23 +30,15 @@ export default async function TicketDetailPage({ params }: PageProps) {
           <div className="h-56 bg-gradient-to-br from-[#17181f] via-[#232734] to-[#3a4256] sm:h-72" />
 
           <div className="p-5 sm:p-8">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-              <div>
-                <span className="rounded-full bg-[#eef1ff] px-3 py-1 text-xs font-bold text-[#4154ff] shadow-sm">실시간 랭킹</span>
-                <h1 className="mt-3 text-3xl font-black tracking-[-0.04em] text-[#111827]">{card.title}</h1>
-                <p className="mt-3 text-sm leading-7 text-[#6b7280]">{card.description}</p>
-              </div>
-              <div className="rounded-[24px] bg-[#fafafe] p-5 ring-1 ring-black/4 sm:min-w-[280px]">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">티켓 오픈</p>
-                <p className="mt-2 text-3xl font-black text-[#111827]">오늘 20:00</p>
-                <Link
-                  href={`/reserve/ticket/${slug}`}
-                  className="mt-5 block w-full rounded-full bg-[#1c1c1e] px-5 py-3 text-center text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)]"
-                >
-                  예매하기
-                </Link>
-              </div>
-            </div>
+            <DetailHero
+              badge="실시간 랭킹"
+              title={card.title}
+              description={card.description}
+              summaryLabel="티켓 오픈"
+              summaryValue="오늘 20:00"
+              ctaLabel="예매하기"
+              ctaHref={`/reserve/ticket/${slug}`}
+            />
 
             <div className="mt-8 grid gap-6 lg:grid-cols-2">
               <section className="rounded-[24px] bg-[#fafafe] p-5 ring-1 ring-black/4">
