@@ -144,6 +144,11 @@ export default function SearchPage() {
                                 최근 본 상품
                               </span>
                             ) : null}
+                            {index === 1 ? (
+                              <span className="rounded-full bg-[#e7f8ec] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#1f7a3d] shadow-sm">
+                                저장됨
+                              </span>
+                            ) : null}
                           </div>
                           <h3 className="mt-3 text-xl font-black tracking-[-0.03em] text-[#111827]">{deal.title}</h3>
                         </div>

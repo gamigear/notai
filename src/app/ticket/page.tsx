@@ -120,6 +120,11 @@ export default function TicketPage() {
                             최근 본 공연
                           </span>
                         ) : null}
+                        {index === 2 ? (
+                          <span className="rounded-full bg-[#9be7b1]/25 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+                            저장됨
+                          </span>
+                        ) : null}
                       </div>
                     </div>
                     <div className="p-5">
