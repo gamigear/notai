@@ -93,28 +93,28 @@ export function Footer() {
             <div>
               <p className="text-sm font-black text-[#111827]">서비스</p>
               <ul className="mt-3 space-y-2 text-sm text-[#6b7280]">
-                <li>해외여행</li>
-                <li>숙소 예약</li>
-                <li>공연 예매</li>
-                <li>레저 · 액티비티</li>
+                <li><Link href="/search">해외여행</Link></li>
+                <li><Link href="/search">숙소 예약</Link></li>
+                <li><Link href="/ticket">공연 예매</Link></li>
+                <li><Link href="/search">레저 · 액티비티</Link></li>
               </ul>
             </div>
             <div>
               <p className="text-sm font-black text-[#111827]">혜택</p>
               <ul className="mt-3 space-y-2 text-sm text-[#6b7280]">
-                <li>앱 전용 쿠폰</li>
-                <li>실시간 랭킹</li>
-                <li>저장한 상품</li>
-                <li>회원 전용 프로모션</li>
+                <li><Link href="/mypage">앱 전용 쿠폰</Link></li>
+                <li><Link href="/ticket">실시간 랭킹</Link></li>
+                <li><Link href="/saved">저장한 상품</Link></li>
+                <li><Link href="/mypage">회원 전용 프로모션</Link></li>
               </ul>
             </div>
             <div>
               <p className="text-sm font-black text-[#111827]">고객지원</p>
               <ul className="mt-3 space-y-2 text-sm text-[#6b7280]">
-                <li>도움말 센터</li>
-                <li>취소/환불 안내</li>
-                <li>이용 가이드</li>
-                <li>공지사항</li>
+                <li><Link href="/support">도움말 센터</Link></li>
+                <li><Link href="/support">취소/환불 안내</Link></li>
+                <li><Link href="/support">이용 가이드</Link></li>
+                <li><Link href="/support">공지사항</Link></li>
               </ul>
             </div>
           </div>

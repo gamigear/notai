@@ -5,6 +5,7 @@ import { mainNavLinks, quickNavItems, trendingKeywords, utilityLinks } from "./d
 const utilityHref = (label: string) => {
   if (label === "투어") return "/search";
   if (label === "티켓") return "/ticket";
+  if (label === "고객센터") return "/support";
   return "/";
 };
 
@@ -20,6 +21,11 @@ const quickHref = (label: string) => {
   if (label === "티켓" || label === "공연") return "/ticket";
   if (label === "호텔" || label === "항공") return "/search";
   return "/";
+};
+
+const trendingHref = (item: string) => {
+  if (item.includes("뮤지컬")) return "/ticket";
+  return "/search";
 };
 
 export function Header() {
@@ -45,9 +51,9 @@ export function Header() {
           </span>
           <div className="flex flex-wrap gap-4 whitespace-nowrap">
             {trendingKeywords.map((item) => (
-              <span key={item} className="font-medium text-[#6b7280]">
+              <Link key={item} href={trendingHref(item)} className="font-medium text-[#6b7280] transition hover:text-[#111827]">
                 {item}
-              </span>
+              </Link>
             ))}
           </div>
         </div>
@@ -76,7 +82,7 @@ export function Header() {
                 KRW · 한국어
               </button>
               <Link href="/mypage" className="rounded-full bg-[#1c1c1e] px-4 py-2 text-xs font-semibold text-white transition hover:bg-black sm:px-5 sm:py-2.5 sm:text-sm">
-                로그인
+                마이페이지
               </Link>
             </div>
           </div>
