@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { appBenefits, rankingCards, travelDeals } from "@/components/home/data";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
@@ -13,6 +14,12 @@ const subpageItems = [
   { label: "마이페이지", href: "/mypage" },
   { label: "고객지원", href: "/support" },
 ];
+
+export const metadata: Metadata = {
+  title: "저장한 상품 | NOL 인터파크",
+  description: "저장한 여행과 공연, 최근 본 흐름, 다시 이어볼 행동을 한곳에 모은 개인 저장 허브입니다.",
+  alternates: { canonical: "/saved" },
+};
 
 export default function SavedPage() {
   return (

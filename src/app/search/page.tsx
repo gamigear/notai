@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { bookingStats, travelDeals } from "@/components/home/data";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
@@ -35,6 +36,12 @@ const subpageItems = [
   { label: "마이페이지", href: "/mypage" },
   { label: "고객지원", href: "/support" },
 ];
+
+export const metadata: Metadata = {
+  title: "투어 검색 | NOL 인터파크",
+  description: "실시간 특가, 추천 이유, 최근 본 흐름을 함께 비교하며 다음 여행 후보를 고르는 투어 탐색 허브입니다.",
+  alternates: { canonical: "/search" },
+};
 
 export default function SearchPage() {
   return (

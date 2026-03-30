@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { supportLinks } from "@/components/home/data";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
@@ -12,6 +13,12 @@ const subpageItems = [
   { label: "마이페이지", href: "/mypage" },
   { label: "고객지원", href: "/support" },
 ];
+
+export const metadata: Metadata = {
+  title: "고객지원 | NOL 인터파크",
+  description: "이용 가이드, 취소/환불, 문의 흐름, 자주 찾는 도움을 한 번에 모은 지원 허브입니다.",
+  alternates: { canonical: "/support" },
+};
 
 export default function SupportPage() {
   return (

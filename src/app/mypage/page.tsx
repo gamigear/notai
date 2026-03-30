@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { membershipBenefits, supportLinks } from "@/components/home/data";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
@@ -12,6 +13,12 @@ const subpageItems = [
   { label: "마이페이지", href: "/mypage" },
   { label: "고객지원", href: "/support" },
 ];
+
+export const metadata: Metadata = {
+  title: "마이페이지 | NOL 인터파크",
+  description: "예약 내역, 저장 상태, 최근 활동, 고객지원 진입점을 함께 보여주는 개인 계정 허브입니다.",
+  alternates: { canonical: "/mypage" },
+};
 
 export default function MyPage() {
   return (
@@ -62,7 +69,7 @@ export default function MyPage() {
               <DetailBulletList items={membershipBenefits} />
             </DetailSection>
 
-            <DetailSection title="고객지원 바로가기" tone="tinted">
+            <DetailSection title="고객지원 바로가기" subtitle="예약, 쿠폰, 문의처럼 자주 이어지는 지원 흐름을 계정 안에서 바로 여는 구간입니다." tone="tinted">
               <div className="mt-4 flex flex-wrap gap-2">
                 {supportLinks.map((link) => (
                   <Link
