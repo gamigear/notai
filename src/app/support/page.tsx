@@ -38,22 +38,42 @@ export default function SupportPage() {
 
           <SubpageNav items={subpageItems} current="/support" />
 
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {[
+              ["문의 내역", "2건", "마이페이지와 이어지는 최근 문의 흐름을 확인해 보세요"],
+              ["자주 찾는 도움", "4개", "예약/환불/예매 관련 빠른 진입점이 준비돼 있어요"],
+              ["연결된 흐름", "3개", "saved / mypage / search/ticket 흐름과 이어집니다"],
+            ].map(([label, value, desc]) => (
+              <div key={label} className="rounded-[22px] bg-[#fafafe] px-5 py-4 ring-1 ring-black/4">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{label}</p>
+                <p className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#111827]">{value}</p>
+                <p className="mt-2 text-sm leading-6 text-[#6b7280]">{desc}</p>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
             <DetailSection title="지원 메뉴" tone="tinted">
               <div className="mt-4 flex flex-wrap gap-2">
                 {supportLinks.map((link) => (
-                  <span key={link} className="rounded-full border border-[#ececf3] bg-white px-4 py-2 text-sm font-semibold text-[#4b5563] shadow-sm">
+                  <Link key={link} href="/support" className="rounded-full border border-[#ececf3] bg-white px-4 py-2 text-sm font-semibold text-[#4b5563] shadow-sm">
                     {link}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </DetailSection>
 
             <DetailSection title="빠른 도움" tone="tinted">
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                {["예약 변경/취소", "결제/환불 문의", "티켓 예매 도움", "쿠폰/혜택 문의"].map((item) => (
-                  <div key={item} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-4 text-sm font-semibold text-[#111827]">
-                    {item}
+                {[
+                  ["예약 변경/취소", "예약 흐름에서 바로 이어지는 문의"],
+                  ["결제/환불 문의", "결제 요약 이후 자주 연결되는 도움"],
+                  ["티켓 예매 도움", "회차/좌석/예매 흐름 지원"],
+                  ["쿠폰/혜택 문의", "앱 혜택, 마이페이지와 연결"],
+                ].map(([item, sub]) => (
+                  <div key={item} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-4">
+                    <p className="text-sm font-semibold text-[#111827]">{item}</p>
+                    <p className="mt-1 text-xs font-semibold text-[#9ca3af]">{sub}</p>
                   </div>
                 ))}
               </div>
@@ -73,20 +93,21 @@ export default function SupportPage() {
               />
             </DetailSection>
 
-            <DetailSection title="관련 페이지 바로가기">
+            <DetailSection title="지원 흐름 바로가기">
               <div className="mt-4 grid gap-3">
                 {[
-                  ["마이페이지", "/mypage"],
-                  ["저장한 상품", "/saved"],
-                  ["투어 검색", "/search"],
-                  ["티켓 랭킹", "/ticket"],
-                ].map(([label, href]) => (
+                  ["마이페이지", "/mypage", "문의/예약 상태와 함께 보기"],
+                  ["저장한 상품", "/saved", "saved/recent 흐름과 연결"],
+                  ["투어 검색", "/search", "여행 상품 흐름으로 복귀"],
+                  ["티켓 랭킹", "/ticket", "공연 예매 흐름으로 복귀"],
+                ].map(([label, href, sub]) => (
                   <Link
                     key={label}
                     href={href}
-                    className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-4 text-sm font-semibold text-[#111827] transition hover:-translate-y-0.5 hover:bg-white"
+                    className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-4 transition hover:-translate-y-0.5 hover:bg-white"
                   >
-                    {label}
+                    <p className="text-sm font-semibold text-[#111827]">{label}</p>
+                    <p className="mt-1 text-xs font-semibold text-[#9ca3af]">{sub}</p>
                   </Link>
                 ))}
               </div>
