@@ -1,8 +1,31 @@
 import Link from "next/link";
-import { travelDeals } from "@/components/home/data";
+import { bookingStats, travelDeals } from "@/components/home/data";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { DetailBulletList, DetailSection } from "@/components/ui/detail-section";
 import { PageIntro } from "@/components/ui/page-intro";
 import { slugify } from "@/lib/slugify";
+
+const filterGroups = [
+  {
+    title: "기본 조건",
+    items: [
+      ["출발 지역", "인천 출발"],
+      ["여행 기간", "4일 ~ 9일"],
+      ["동행", "친구 · 연인 / 가족"],
+      ["가격대", "70만원 ~ 610만원"],
+    ],
+  },
+  {
+    title: "추천 포인트",
+    items: [
+      ["상품 타입", "노쇼핑 / 실속형 / 가족 추천"],
+      ["예약 상태", "즉시예약 가능"],
+      ["분위기", "도시여행 · 휴양 · 공연 연계"],
+    ],
+  },
+];
+
+const sortOptions = ["추천순", "낮은 가격순", "출발 임박순", "평점순"];
 
 export default function SearchPage() {
   return (
@@ -38,27 +61,40 @@ export default function SearchPage() {
             ))}
           </div>
 
-          <div className="mt-6 grid gap-6 lg:grid-cols-[280px_1fr]">
-            <aside className="rounded-[24px] bg-[#fafafe] p-5 ring-1 ring-black/4">
-              <div className="flex items-center justify-between gap-3">
-                <h2 className="text-lg font-black text-[#111827]">필터</h2>
-                <button className="rounded-full border border-[#ececf3] bg-white px-3 py-2 text-xs font-bold text-[#4b5563] shadow-sm">
-                  초기화
-                </button>
+          <div className="mt-6 grid gap-4 lg:grid-cols-3">
+            {bookingStats.map((item) => (
+              <div key={item} className="rounded-[22px] bg-[#fafafe] px-5 py-4 ring-1 ring-black/4">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">SEARCH INSIGHT</p>
+                <p className="mt-2 text-base font-black tracking-[-0.02em] text-[#111827]">{item}</p>
               </div>
-              <div className="mt-4 space-y-4">
-                {[
-                  ["출발 지역", "인천 출발"],
-                  ["여행 기간", "4일 ~ 9일"],
-                  ["동행", "친구 · 연인 / 가족"],
-                  ["가격대", "70만원 ~ 610만원"],
-                ].map(([label, value]) => (
-                  <div key={label} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-3">
-                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{label}</p>
-                    <p className="mt-1 text-sm font-semibold text-[#111827]">{value}</p>
+            ))}
+          </div>
+
+          <div className="mt-6 grid gap-6 lg:grid-cols-[300px_1fr]">
+            <aside className="space-y-4">
+              {filterGroups.map((group) => (
+                <DetailSection key={group.title} title={group.title} tone="tinted">
+                  <div className="mt-4 space-y-3">
+                    {group.items.map(([label, value]) => (
+                      <div key={label} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-3">
+                        <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{label}</p>
+                        <p className="mt-1 text-sm font-semibold text-[#111827]">{value}</p>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </DetailSection>
+              ))}
+
+              <DetailSection title="예약 전에 보기">
+                <DetailBulletList
+                  items={[
+                    "실시간 인기 상품은 조기 마감될 수 있어요.",
+                    "도시형/휴양형/가족형 상품을 같이 비교해 보세요.",
+                    "상세 페이지에서 일정, 정책, 예약 흐름을 바로 이어갈 수 있습니다.",
+                  ]}
+                  itemTone="soft"
+                />
+              </DetailSection>
             </aside>
 
             <section>
@@ -67,7 +103,7 @@ export default function SearchPage() {
                   총 <span className="font-black text-[#111827]">{travelDeals.length}개</span> 상품을 찾았어요
                 </p>
                 <div className="flex flex-wrap items-center gap-2">
-                  {["추천순", "낮은 가격순", "출발 임박순", "평점순"].map((sort, index) => (
+                  {sortOptions.map((sort, index) => (
                     <button
                       key={sort}
                       className={`rounded-full px-4 py-2 text-sm font-semibold ${
@@ -81,13 +117,18 @@ export default function SearchPage() {
               </div>
 
               <div className="grid gap-4 xl:grid-cols-2">
-                {travelDeals.map((deal) => (
+                {travelDeals.map((deal, index) => (
                   <article key={deal.title} className="overflow-hidden rounded-[26px] bg-white shadow-[0_14px_40px_rgba(15,23,42,0.06)] ring-1 ring-black/4">
                     <div className={`h-44 bg-gradient-to-br ${deal.accent}`} />
                     <div className="p-5">
                       <div className="flex items-start justify-between gap-3">
                         <div>
-                          <span className="rounded-full bg-[#eef1ff] px-3 py-1 text-xs font-bold text-[#4154ff] shadow-sm">{deal.badge}</span>
+                          <div className="flex flex-wrap items-center gap-2">
+                            <span className="rounded-full bg-[#eef1ff] px-3 py-1 text-xs font-bold text-[#4154ff] shadow-sm">{deal.badge}</span>
+                            <span className="rounded-full border border-[#ececf3] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#4b5563] shadow-sm">
+                              {index < 2 ? "인기" : "추천"}
+                            </span>
+                          </div>
                           <h3 className="mt-3 text-xl font-black tracking-[-0.03em] text-[#111827]">{deal.title}</h3>
                         </div>
                         <span className="rounded-full border border-[#ececf3] bg-white px-3 py-1 text-xs font-bold text-[#4b5563] shadow-sm">즉시예약</span>
@@ -95,17 +136,29 @@ export default function SearchPage() {
 
                       <p className="mt-3 text-sm leading-7 text-[#6b7280]">{deal.meta}</p>
 
-                      <div className="mt-5 flex items-center justify-between gap-4">
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {["출발확인 쉬움", "상세 일정 확인", "예약 흐름 연결"].map((point) => (
+                          <span key={point} className="rounded-full bg-[#fafafe] px-3 py-1 text-xs font-semibold text-[#4b5563] ring-1 ring-black/4">
+                            {point}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="mt-5 flex items-end justify-between gap-4">
                         <div>
                           <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">판매가</p>
                           <p className="mt-1 text-lg font-black text-[#ff322e]">{deal.price}</p>
+                          <p className="mt-1 text-xs text-[#9ca3af]">카드할인 · 쿠폰 적용 전 기준</p>
                         </div>
-                        <Link
-                          href={`/tour/${slugify(deal.title)}`}
-                          className="rounded-full bg-[#1c1c1e] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)]"
-                        >
-                          상품 보기
-                        </Link>
+                        <div className="flex flex-col gap-2 sm:items-end">
+                          <Link
+                            href={`/tour/${slugify(deal.title)}`}
+                            className="rounded-full bg-[#1c1c1e] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)]"
+                          >
+                            상품 보기
+                          </Link>
+                          <span className="text-xs font-semibold text-[#6b7280]">상세 → 예약까지 바로 연결</span>
+                        </div>
                       </div>
                     </div>
                   </article>
