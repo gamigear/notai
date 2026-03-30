@@ -44,6 +44,11 @@ export default async function ReserveTicketPage({ params }: PageProps) {
           <SubpageNav items={subpageItems} current="/ticket" />
         </div>
 
+        <div className="mt-6 rounded-[20px] bg-[#f7f8ff] px-5 py-4 ring-1 ring-[#dfe4ff]">
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#4154ff]">FINAL CHECK</p>
+          <p className="mt-2 text-sm font-semibold text-[#111827]">관람일, 회차, 좌석 정보가 이미 정리돼 있어서 수수료와 취소 조건만 다시 보면 결제 단계로 바로 이어가기 좋은 상태예요.</p>
+        </div>
+
         <div className="mt-6 grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
           <section className="space-y-6">
             <DetailSection title="예매 정보 입력" tone="tinted">

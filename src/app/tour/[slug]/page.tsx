@@ -52,6 +52,11 @@ export default async function TourDetailPage({ params }: PageProps) {
               ]}
             />
 
+            <div className="mt-6 rounded-[20px] bg-[#f7f8ff] px-5 py-4 ring-1 ring-[#dfe4ff]">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#4154ff]">BOOKING READINESS</p>
+              <p className="mt-2 text-sm font-semibold text-[#111827]">핵심 일정, 포함 조건, 최근 본 흐름까지 이미 정리돼 있어서 예약 전 마지막 비교만 하면 되는 상태예요.</p>
+            </div>
+
             <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
               <DetailSection title="상품 소개" tone="tinted">
                 <p className="mt-4 text-sm leading-8 text-[#6b7280]">

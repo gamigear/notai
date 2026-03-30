@@ -44,6 +44,11 @@ export default async function ReserveTourPage({ params }: PageProps) {
           <SubpageNav items={subpageItems} current="/search" />
         </div>
 
+        <div className="mt-6 rounded-[20px] bg-[#f7f8ff] px-5 py-4 ring-1 ring-[#dfe4ff]">
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#4154ff]">FINAL CHECK</p>
+          <p className="mt-2 text-sm font-semibold text-[#111827]">대표 예약자 정보와 출발 조건이 이미 정리돼 있어서 총액과 규정만 다시 보면 결제 단계로 이어가기 좋은 상태예요.</p>
+        </div>
+
         <div className="mt-6 grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
           <section className="space-y-6">
             <DetailSection title="예약 정보 입력" tone="tinted">

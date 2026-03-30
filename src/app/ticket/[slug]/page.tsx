@@ -51,6 +51,11 @@ export default async function TicketDetailPage({ params }: PageProps) {
               ]}
             />
 
+            <div className="mt-6 rounded-[20px] bg-[#f7f8ff] px-5 py-4 ring-1 ring-[#dfe4ff]">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#4154ff]">TICKET READINESS</p>
+              <p className="mt-2 text-sm font-semibold text-[#111827]">랭킹, 오픈 타이밍, 최근 본 흐름이 정리돼 있어서 회차와 좌석만 확인하면 예매로 바로 이어가기 좋은 상태예요.</p>
+            </div>
+
             <div className="mt-8 grid gap-6 lg:grid-cols-2">
               <DetailSection title="공연 소개" tone="tinted">
                 <p className="mt-4 text-sm leading-8 text-[#6b7280]">
