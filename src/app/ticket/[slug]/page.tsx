@@ -128,6 +128,25 @@ export default async function TicketDetailPage({ params }: PageProps) {
                   </Link>
                 </div>
               </DetailSection>
+
+              <DetailSection title="이런 흐름도 함께 보기">
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {[
+                    ["저장한 공연으로 이어보기", "/saved"],
+                    ["투어 검색 함께 보기", "/search"],
+                    ["고객지원에서 예매 도움 받기", "/support"],
+                    ["티켓 랭킹 계속 보기", "/ticket"],
+                  ].map(([label, href]) => (
+                    <Link
+                      key={label}
+                      href={href}
+                      className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-4 text-sm font-semibold text-[#111827] transition hover:-translate-y-0.5 hover:bg-white"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </DetailSection>
             </div>
           </div>
         </div>

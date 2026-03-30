@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { DetailBulletList, DetailSection } from "@/components/ui/detail-section";
 import { PageIntro } from "@/components/ui/page-intro";
@@ -75,6 +76,25 @@ export default async function ReserveTourPage({ params }: PageProps) {
                 ]}
                 itemTone="soft"
               />
+            </DetailSection>
+
+            <DetailSection title="다음에 같이 보면 좋은 흐름">
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {[
+                  ["저장한 상품 다시 보기", "/saved"],
+                  ["다른 투어 비교하기", "/search"],
+                  ["고객지원에서 규정 확인", "/support"],
+                  ["실시간 공연도 살펴보기", "/ticket"],
+                ].map(([label, href]) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-4 text-sm font-semibold text-[#111827] transition hover:-translate-y-0.5 hover:bg-white"
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
             </DetailSection>
           </section>
 

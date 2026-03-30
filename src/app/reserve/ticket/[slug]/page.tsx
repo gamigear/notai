@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { DetailBulletList, DetailSection } from "@/components/ui/detail-section";
 import { PageIntro } from "@/components/ui/page-intro";
@@ -75,6 +76,25 @@ export default async function ReserveTicketPage({ params }: PageProps) {
                 ]}
                 itemTone="soft"
               />
+            </DetailSection>
+
+            <DetailSection title="다음에 같이 보면 좋은 흐름">
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {[
+                  ["저장한 공연 다시 보기", "/saved"],
+                  ["다른 공연 비교하기", "/ticket"],
+                  ["고객지원에서 예매 도움 받기", "/support"],
+                  ["투어 상품도 살펴보기", "/search"],
+                ].map(([label, href]) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-4 text-sm font-semibold text-[#111827] transition hover:-translate-y-0.5 hover:bg-white"
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
             </DetailSection>
           </section>
 

@@ -136,6 +136,25 @@ export default async function TourDetailPage({ params }: PageProps) {
                   </Link>
                 </div>
               </DetailSection>
+
+              <DetailSection title="이런 흐름도 함께 보기">
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {[
+                    ["저장한 상품으로 이어보기", "/saved"],
+                    ["실시간 공연 랭킹 보기", "/ticket"],
+                    ["고객지원에서 조건 확인", "/support"],
+                    ["투어 검색 계속하기", "/search"],
+                  ].map(([label, href]) => (
+                    <Link
+                      key={label}
+                      href={href}
+                      className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-4 text-sm font-semibold text-[#111827] transition hover:-translate-y-0.5 hover:bg-white"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </DetailSection>
             </div>
           </div>
         </div>
