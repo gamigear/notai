@@ -1,16 +1,7 @@
 import Link from "next/link";
 import { travelDeals } from "@/components/home/data";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
-
-function slugify(value: string) {
-  return value
-    .toLowerCase()
-    .replace(/·/g, "-")
-    .replace(/[\/\s]+/g, "-")
-    .replace(/[^a-z0-9가-힣-]/g, "")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "");
-}
+import { slugify } from "@/lib/slugify";
 
 export default function SearchPage() {
   return (

@@ -3,20 +3,11 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { PageIntro } from "@/components/ui/page-intro";
 import { notFound } from "next/navigation";
 import { rankingCards } from "@/components/home/data";
+import { slugify } from "@/lib/slugify";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
-
-function slugify(value: string) {
-  return value
-    .toLowerCase()
-    .replace(/·/g, "-")
-    .replace(/[\/\s]+/g, "-")
-    .replace(/[^a-z0-9가-힣-]/g, "")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "");
-}
 
 export function generateStaticParams() {
   return rankingCards.map((card) => ({ slug: slugify(card.title) }));
