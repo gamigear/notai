@@ -44,10 +44,10 @@ export default async function TicketDetailPage({ params }: PageProps) {
 
             <DetailFacts
               items={[
-                { label: "장르", value: "뮤지컬 · 콘서트 · 클래식" },
-                { label: "랭킹", value: `RANK ${card.rank}` },
-                { label: "추천 이유", value: card.rank === "1" ? "최근 관심 패턴과 가장 유사" : "저장/최근 본 흐름과 연결" },
-                { label: "저장 상태", value: card.rank === "3" ? "저장한 공연에서 다시 확인" : "관심 공연으로 저장 가능" },
+                { label: "장르", value: "뮤지컬 · 콘서트 · 클래식 대표 흐름" },
+                { label: "랭킹", value: `RANK ${card.rank} · 실시간 관심 반영` },
+                { label: "추천 이유", value: card.rank === "1" ? "최근 관심 패턴과 가장 유사한 선택지" : "저장/최근 본 흐름과 자연스럽게 연결" },
+                { label: "저장 상태", value: card.rank === "3" ? "저장한 공연에서 다시 확인 중" : "관심 공연으로 바로 저장 가능" },
               ]}
             />
 

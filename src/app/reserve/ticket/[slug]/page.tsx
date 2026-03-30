@@ -105,7 +105,7 @@ export default async function ReserveTicketPage({ params }: PageProps) {
 
           <ReservationSummary
             title="결제 요약"
-            rows={[["티켓 금액", "R석 2매"], ["예매 수수료", "12,000원"], ["할인", "-0원"]]}
+            rows={[["선택 좌석", "R석 2매"], ["예매 수수료", "12,000원"], ["적용 할인", "-0원"]]}
             totalLabel="총 결제 예상 금액"
             totalValue="256,000원"
             primaryCta="결제 계속하기"

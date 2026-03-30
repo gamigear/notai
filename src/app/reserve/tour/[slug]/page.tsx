@@ -105,7 +105,7 @@ export default async function ReserveTourPage({ params }: PageProps) {
 
           <ReservationSummary
             title="결제 요약"
-            rows={[["상품가", deal.price], ["수수료", "0원"], ["쿠폰", "-0원"]]}
+            rows={[["선택 상품", deal.price], ["예약 수수료", "0원"], ["적용 할인", "-0원"]]}
             totalLabel="총 결제 예상 금액"
             totalValue={deal.price}
             primaryCta="결제 계속하기"

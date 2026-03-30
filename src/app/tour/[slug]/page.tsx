@@ -45,10 +45,10 @@ export default async function TourDetailPage({ params }: PageProps) {
 
             <DetailFacts
               items={[
-                { label: "출발", value: "인천 출발" },
-                { label: "일정", value: deal.title.includes("9일") ? "9일 일정" : deal.title.includes("5일") ? "5일 일정" : "4일 일정" },
-                { label: "추천 이유", value: "최근 본 여행 / 저장 흐름과 유사" },
-                { label: "최근 활동", value: "최근 본 상품에서 다시 열람" },
+                { label: "출발", value: "인천 출발 · 출발 조건 확인 가능" },
+                { label: "일정", value: deal.title.includes("9일") ? "9일 일정 · 장거리 비교용" : deal.title.includes("5일") ? "5일 일정 · 균형형 일정" : "4일 일정 · 짧게 다녀오기 좋음" },
+                { label: "추천 이유", value: "최근 본 여행 / 저장 흐름과 가장 가까운 후보" },
+                { label: "최근 활동", value: "최근 본 상품에서 다시 열람 중" },
               ]}
             />
 
