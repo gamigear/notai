@@ -38,6 +38,11 @@ export default function MyPage() {
 
           <SubpageNav items={subpageItems} current="/mypage" />
 
+          <div className="mt-5 rounded-[22px] bg-[#f7f8ff] px-5 py-4 ring-1 ring-[#dfe4ff]">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#4154ff]">ACCOUNT SUMMARY</p>
+            <p className="mt-2 text-sm font-semibold text-[#111827]">예약 내역 확인, 저장함 이어보기, 문의 내역 점검까지 한 화면에서 다음 행동을 고르기 쉬운 상태로 정리돼 있습니다.</p>
+          </div>
+
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {[
               ["예약 내역", "4건", "당신이 보던 투어/티켓 흐름을 다시 이어볼 수 있어요"],

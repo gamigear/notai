@@ -38,6 +38,11 @@ export default function SupportPage() {
 
           <SubpageNav items={subpageItems} current="/support" />
 
+          <div className="mt-5 rounded-[22px] bg-[#f7f8ff] px-5 py-4 ring-1 ring-[#dfe4ff]">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#4154ff]">HELP RIGHT NOW</p>
+            <p className="mt-2 text-sm font-semibold text-[#111827]">예약 변경/취소, 결제/환불, 티켓 예매 도움처럼 실제로 자주 이어지는 지원 흐름을 먼저 볼 수 있도록 정리했습니다.</p>
+          </div>
+
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {[
               ["문의 내역", "2건", "당신의 최근 문의 흐름을 마이페이지와 함께 확인해 보세요"],

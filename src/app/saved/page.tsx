@@ -39,6 +39,11 @@ export default function SavedPage() {
 
           <SubpageNav items={subpageItems} current="/saved" />
 
+          <div className="mt-5 rounded-[22px] bg-[#f7f8ff] px-5 py-4 ring-1 ring-[#dfe4ff]">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#4154ff]">NOW RESUMING</p>
+            <p className="mt-2 text-sm font-semibold text-[#111827]">저장한 여행 2건, 저장한 공연 2건, 최근 본 흐름 3건이 함께 정리되어 있어서 바로 비교하고 다시 이어가기 좋습니다.</p>
+          </div>
+
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {[
               ["저장한 여행", "2개", "최근 살펴본 여행 흐름을 바로 이어갈 수 있어요"],
