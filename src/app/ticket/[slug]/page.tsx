@@ -37,7 +37,7 @@ export default async function TicketDetailPage({ params }: PageProps) {
               description={card.description}
               summaryLabel="티켓 오픈"
               summaryValue="오늘 20:00"
-              ctaLabel="예매하기"
+              ctaLabel="바로 예매하기"
               ctaHref={`/reserve/ticket/${slug}`}
             />
 

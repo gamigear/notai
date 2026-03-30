@@ -37,7 +37,7 @@ export default async function TourDetailPage({ params }: PageProps) {
               description={deal.meta}
               summaryLabel="판매가"
               summaryValue={deal.price}
-              ctaLabel="예약하기"
+              ctaLabel="바로 예약하기"
               ctaHref={`/reserve/tour/${slug}`}
               accent="price"
             />

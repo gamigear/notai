@@ -132,13 +132,13 @@ export default function TicketPage() {
                       <div className="mt-5 flex items-center justify-between gap-4">
                         <div>
                           <span className="rounded-full border border-[#ececf3] bg-white px-3 py-1 text-xs font-bold text-[#4b5563] shadow-sm">실시간 예매</span>
-                          <p className="mt-2 text-xs font-semibold text-[#9ca3af]">상세 → 예매까지 바로 연결</p>
+                          <p className="mt-2 text-xs font-semibold text-[#9ca3af]">상세 → 예매 흐름으로 바로 연결</p>
                         </div>
                         <Link
                           href={`/ticket/${slugify(card.title)}`}
                           className="rounded-full bg-[#1c1c1e] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)]"
                         >
-                          상세 보기
+                          자세히 보기
                         </Link>
                       </div>
                     </div>

@@ -166,9 +166,9 @@ export default function SearchPage() {
                             href={`/tour/${slugify(deal.title)}`}
                             className="rounded-full bg-[#1c1c1e] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)]"
                           >
-                            상품 보기
+                            자세히 보기
                           </Link>
-                          <span className="text-xs font-semibold text-[#6b7280]">상세 → 예약까지 바로 연결</span>
+                          <span className="text-xs font-semibold text-[#6b7280]">상세 → 예약 흐름으로 바로 연결</span>
                         </div>
                       </div>
                     </div>
