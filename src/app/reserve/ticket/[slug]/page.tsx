@@ -28,6 +28,16 @@ export default async function ReserveTicketPage({ params }: PageProps) {
   return (
     <main className="min-h-screen bg-[#f6f7fb] px-4 py-6 text-[#111827] sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
+        <div className="mb-4 flex items-center gap-2 text-sm text-[#6b7280]">
+          <Link href="/" className="hover:text-[#111827]">홈</Link>
+          <span>/</span>
+          <Link href="/ticket" className="hover:text-[#111827]">티켓 랭킹</Link>
+          <span>/</span>
+          <Link href={`/ticket/${slug}`} className="hover:text-[#111827]">공연 상세</Link>
+          <span>/</span>
+          <span className="font-semibold text-[#111827]">예매</span>
+        </div>
+
         <div className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
           <section className="rounded-[28px] bg-white p-5 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4154ff]">TICKET RESERVATION</p>
@@ -35,12 +45,7 @@ export default async function ReserveTicketPage({ params }: PageProps) {
             <p className="mt-3 text-sm leading-7 text-[#6b7280]">회차, 좌석, 관람자 정보를 선택하는 티켓 예매 플로우 쉘입니다.</p>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {[
-                ["관람일", "2026-04-20"],
-                ["회차", "19:30"],
-                ["좌석등급", "R석 2매"],
-                ["예매자", "Cherry"],
-              ].map(([label, value]) => (
+              {[["관람일", "2026-04-20"], ["회차", "19:30"], ["좌석등급", "R석 2매"], ["예매자", "Cherry"]].map(([label, value]) => (
                 <div key={label} className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-3">
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{label}</p>
                   <p className="mt-1 text-sm font-semibold text-[#111827]">{value}</p>
@@ -51,11 +56,7 @@ export default async function ReserveTicketPage({ params }: PageProps) {
             <div className="mt-6 rounded-[24px] bg-[#fafafe] p-5 ring-1 ring-black/4">
               <h2 className="text-xl font-black text-[#111827]">예매 유의사항</h2>
               <div className="mt-4 space-y-3">
-                {[
-                  "회차별 티켓 오픈 일정과 매수 제한을 확인해 주세요.",
-                  "취소 마감 시간 이후에는 환불이 제한될 수 있습니다.",
-                  "공연 시작 후 입장 정책은 공연장 규정을 따릅니다.",
-                ].map((item) => (
+                {["회차별 티켓 오픈 일정과 매수 제한을 확인해 주세요.", "취소 마감 시간 이후에는 환불이 제한될 수 있습니다.", "공연 시작 후 입장 정책은 공연장 규정을 따릅니다."].map((item) => (
                   <div key={item} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-3 text-sm text-[#374151]">
                     {item}
                   </div>
@@ -67,11 +68,7 @@ export default async function ReserveTicketPage({ params }: PageProps) {
           <aside className="rounded-[28px] bg-white p-5 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
             <h2 className="text-xl font-black text-[#111827]">결제 요약</h2>
             <div className="mt-4 space-y-3">
-              {[
-                ["티켓 금액", "R석 2매"],
-                ["예매 수수료", "12,000원"],
-                ["할인", "-0원"],
-              ].map(([label, value]) => (
+              {[["티켓 금액", "R석 2매"], ["예매 수수료", "12,000원"], ["할인", "-0원"]].map(([label, value]) => (
                 <div key={label} className="flex items-center justify-between rounded-[18px] bg-[#fafafe] px-4 py-3 ring-1 ring-black/3">
                   <span className="text-sm text-[#6b7280]">{label}</span>
                   <span className="text-sm font-bold text-[#111827]">{value}</span>
@@ -90,7 +87,7 @@ export default async function ReserveTicketPage({ params }: PageProps) {
                 상세로 돌아가기
               </Link>
               <Link href="/ticket" className="rounded-full border border-[#ececf3] bg-white px-4 py-2 text-sm font-bold text-[#4b5563] shadow-sm">
-                티켓 목록 보기
+                목록으로 돌아가기
               </Link>
             </div>
           </aside>

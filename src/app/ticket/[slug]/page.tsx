@@ -31,6 +31,14 @@ export default async function TicketDetailPage({ params }: PageProps) {
   return (
     <main className="min-h-screen bg-[#f6f7fb] px-4 py-6 text-[#111827] sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
+        <div className="mb-4 flex items-center gap-2 text-sm text-[#6b7280]">
+          <Link href="/" className="hover:text-[#111827]">홈</Link>
+          <span>/</span>
+          <Link href="/ticket" className="hover:text-[#111827]">티켓 랭킹</Link>
+          <span>/</span>
+          <span className="font-semibold text-[#111827]">공연 상세</span>
+        </div>
+
         <div className="overflow-hidden rounded-[28px] bg-white shadow-[0_18px_56px_rgba(15,23,42,0.06)] ring-1 ring-black/4">
           <div className="h-56 bg-gradient-to-br from-[#17181f] via-[#232734] to-[#3a4256] sm:h-72" />
 
@@ -57,11 +65,7 @@ export default async function TicketDetailPage({ params }: PageProps) {
               <section className="rounded-[24px] bg-[#fafafe] p-5 ring-1 ring-black/4">
                 <h2 className="text-xl font-black text-[#111827]">공연 소개</h2>
                 <div className="mt-4 space-y-3">
-                  {[
-                    "캐스팅 / 회차 / 좌석 정보 확장 가능",
-                    "티켓 오픈 일정과 안내 사항 노출",
-                    "공연장 위치, 관람 시간, 연령 제한 정보",
-                  ].map((item) => (
+                  {["캐스팅 / 회차 / 좌석 정보 확장 가능", "티켓 오픈 일정과 안내 사항 노출", "공연장 위치, 관람 시간, 연령 제한 정보"].map((item) => (
                     <div key={item} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-3 text-sm text-[#374151]">
                       {item}
                     </div>
@@ -72,11 +76,7 @@ export default async function TicketDetailPage({ params }: PageProps) {
               <section className="rounded-[24px] bg-white p-5 ring-1 ring-black/4">
                 <h2 className="text-xl font-black text-[#111827]">예매 안내</h2>
                 <div className="mt-4 space-y-3">
-                  {[
-                    "회차별 좌석 오픈 시간 확인",
-                    "예매 수수료 및 취소 규정 확인",
-                    "공연 시작 전 입장 제한 여부 확인",
-                  ].map((item, index) => (
+                  {["회차별 좌석 오픈 시간 확인", "예매 수수료 및 취소 규정 확인", "공연 시작 전 입장 제한 여부 확인"].map((item, index) => (
                     <div key={item} className="flex gap-3 rounded-[18px] bg-[#f8f8fc] px-4 py-3 ring-1 ring-black/3">
                       <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#4154ff] text-xs font-bold text-white">{index + 1}</span>
                       <p className="text-sm leading-6 text-[#374151]">{item}</p>
@@ -86,7 +86,7 @@ export default async function TicketDetailPage({ params }: PageProps) {
 
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Link href="/ticket" className="rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm">
-                    티켓 목록으로 돌아가기
+                    목록으로 돌아가기
                   </Link>
                   <Link href="/" className="rounded-full border border-[#ececf3] bg-white px-4 py-2 text-sm font-bold text-[#4b5563] shadow-sm">
                     홈으로 이동

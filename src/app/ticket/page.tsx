@@ -15,6 +15,12 @@ export default function TicketPage() {
   return (
     <main className="min-h-screen bg-[#f6f7fb] px-4 py-6 text-[#111827] sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
+        <div className="mb-4 flex items-center gap-2 text-sm text-[#6b7280]">
+          <Link href="/" className="hover:text-[#111827]">홈</Link>
+          <span>/</span>
+          <span className="font-semibold text-[#111827]">티켓 랭킹</span>
+        </div>
+
         <div className="rounded-[28px] bg-white p-5 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
