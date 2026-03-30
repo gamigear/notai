@@ -40,9 +40,9 @@ export default function MyPage() {
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {[
-              ["예약 내역", "4건", "투어/티켓 흐름을 다시 이어볼 수 있어요"],
-              ["저장한 상품", "4개", "저장함과 최근 본 흐름이 연결돼 있어요"],
-              ["문의 내역", "2건", "고객지원으로 바로 이어지는 상태 허브입니다"],
+              ["예약 내역", "4건", "당신이 보던 투어/티켓 흐름을 다시 이어볼 수 있어요"],
+              ["저장한 상품", "4개", "저장함과 최근 본 흐름이 자연스럽게 연결돼 있어요"],
+              ["문의 내역", "2건", "고객지원으로 바로 이어지는 개인 상태 허브입니다"],
             ].map(([label, value, desc]) => (
               <div key={label} className="rounded-[22px] bg-[#fafafe] px-5 py-4 ring-1 ring-black/4">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{label}</p>

@@ -40,9 +40,9 @@ export default function SupportPage() {
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {[
-              ["문의 내역", "2건", "마이페이지와 이어지는 최근 문의 흐름을 확인해 보세요"],
-              ["자주 찾는 도움", "4개", "예약/환불/예매 관련 빠른 진입점이 준비돼 있어요"],
-              ["연결된 흐름", "3개", "saved / mypage / search/ticket 흐름과 이어집니다"],
+              ["문의 내역", "2건", "당신의 최근 문의 흐름을 마이페이지와 함께 확인해 보세요"],
+              ["자주 찾는 도움", "4개", "예약/환불/예매 관련 개인화된 빠른 진입점처럼 이어집니다"],
+              ["연결된 흐름", "3개", "saved / mypage / search/ticket 흐름과 자연스럽게 이어집니다"],
             ].map(([label, value, desc]) => (
               <div key={label} className="rounded-[22px] bg-[#fafafe] px-5 py-4 ring-1 ring-black/4">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{label}</p>

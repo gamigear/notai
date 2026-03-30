@@ -41,9 +41,9 @@ export default function SavedPage() {
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {[
-              ["저장한 여행", "2개", "다시 예약 흐름으로 이어질 수 있어요"],
-              ["저장한 티켓", "2개", "최근 본 공연과 함께 다시 비교해 보세요"],
-              ["최근 활동", "3건", "최근 본 상품 / 저장한 공연 흐름이 반영돼 있어요"],
+              ["저장한 여행", "2개", "최근 살펴본 여행 흐름을 바로 이어갈 수 있어요"],
+              ["저장한 티켓", "2개", "최근 본 공연과 저장한 공연을 함께 비교해 보세요"],
+              ["최근 활동", "3건", "당신이 최근 본 상품 / 저장한 공연 흐름이 반영돼 있어요"],
             ].map(([label, value, desc]) => (
               <div key={label} className="rounded-[22px] bg-[#fafafe] px-5 py-4 ring-1 ring-black/4">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{label}</p>
