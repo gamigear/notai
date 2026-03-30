@@ -39,18 +39,43 @@ export default function SavedPage() {
 
           <SubpageNav items={subpageItems} current="/saved" />
 
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {[
+              ["저장한 여행", "2개", "다시 예약 흐름으로 이어질 수 있어요"],
+              ["저장한 티켓", "2개", "최근 본 공연과 함께 다시 비교해 보세요"],
+              ["최근 활동", "3건", "최근 본 상품 / 저장한 공연 흐름이 반영돼 있어요"],
+            ].map(([label, value, desc]) => (
+              <div key={label} className="rounded-[22px] bg-[#fafafe] px-5 py-4 ring-1 ring-black/4">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{label}</p>
+                <p className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#111827]">{value}</p>
+                <p className="mt-2 text-sm leading-6 text-[#6b7280]">{desc}</p>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
             <DetailSection title="저장한 여행" tone="tinted">
               <div className="mt-4 space-y-3">
-                {travelDeals.slice(0, 2).map((deal) => (
+                {travelDeals.slice(0, 2).map((deal, index) => (
                   <Link
                     key={deal.title}
                     href={`/tour/${slugify(deal.title)}`}
                     className="block rounded-[18px] border border-[#ececf3] bg-white px-4 py-4 transition hover:-translate-y-0.5 hover:shadow-sm"
                   >
-                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{deal.badge}</p>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{deal.badge}</p>
+                      <span className="rounded-full bg-[#e7f8ec] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#1f7a3d] shadow-sm">
+                        저장됨
+                      </span>
+                      {index === 0 ? (
+                        <span className="rounded-full bg-[#fff3d6] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#9a6700] shadow-sm">
+                          최근 본 상품
+                        </span>
+                      ) : null}
+                    </div>
                     <h3 className="mt-2 text-lg font-black text-[#111827]">{deal.title}</h3>
                     <p className="mt-2 text-sm text-[#6b7280]">{deal.price}</p>
+                    <p className="mt-2 text-xs font-semibold text-[#9ca3af]">상세 → 예약 흐름으로 다시 이어가기</p>
                   </Link>
                 ))}
               </div>
@@ -58,15 +83,26 @@ export default function SavedPage() {
 
             <DetailSection title="저장한 티켓" tone="tinted">
               <div className="mt-4 space-y-3">
-                {rankingCards.slice(0, 2).map((card) => (
+                {rankingCards.slice(0, 2).map((card, index) => (
                   <Link
                     key={card.title}
                     href={`/ticket/${slugify(card.title)}`}
                     className="block rounded-[18px] border border-[#ececf3] bg-white px-4 py-4 transition hover:-translate-y-0.5 hover:shadow-sm"
                   >
-                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">RANK {card.rank}</p>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">RANK {card.rank}</p>
+                      <span className="rounded-full bg-[#e7f8ec] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#1f7a3d] shadow-sm">
+                        저장됨
+                      </span>
+                      {index === 1 ? (
+                        <span className="rounded-full bg-[#fff3d6] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#9a6700] shadow-sm">
+                          최근 본 공연
+                        </span>
+                      ) : null}
+                    </div>
                     <h3 className="mt-2 text-lg font-black text-[#111827]">{card.title}</h3>
                     <p className="mt-2 text-sm text-[#6b7280]">{card.description}</p>
+                    <p className="mt-2 text-xs font-semibold text-[#9ca3af]">상세 → 예매 흐름으로 다시 이어가기</p>
                   </Link>
                 ))}
               </div>
@@ -95,18 +131,18 @@ export default function SavedPage() {
               />
             </DetailSection>
 
-            <DetailSection title="바로가기">
-              <div className="mt-4 flex flex-wrap gap-2">
+            <DetailSection title="바로 이어보기">
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {[
-                  ["투어 검색", "/search"],
-                  ["티켓 랭킹", "/ticket"],
-                  ["마이페이지", "/mypage"],
-                  ["고객지원", "/support"],
+                  ["투어 검색 계속 보기", "/search"],
+                  ["티켓 랭킹 다시 보기", "/ticket"],
+                  ["마이페이지로 이동", "/mypage"],
+                  ["고객지원 바로가기", "/support"],
                 ].map(([label, href]) => (
                   <Link
                     key={label}
                     href={href}
-                    className="rounded-full border border-[#ececf3] bg-white px-4 py-2 text-sm font-semibold text-[#4b5563] shadow-sm"
+                    className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-4 text-sm font-semibold text-[#111827] transition hover:-translate-y-0.5 hover:bg-white"
                   >
                     {label}
                   </Link>
