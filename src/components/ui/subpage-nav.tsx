@@ -7,7 +7,7 @@ type SubpageNavItem = {
 
 type SubpageNavProps = {
   items: SubpageNavItem[];
-  current: string;
+  current?: string;
 };
 
 export function SubpageNav({ items, current }: SubpageNavProps) {
