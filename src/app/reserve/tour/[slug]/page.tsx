@@ -65,6 +65,17 @@ export default async function ReserveTourPage({ params }: PageProps) {
                 ]}
               />
             </DetailSection>
+
+            <DetailSection title="안심 예약 포인트">
+              <DetailBulletList
+                items={[
+                  "실시간 예약 가능 여부를 기준으로 다음 단계로 이어집니다.",
+                  "결제 직전 총액과 조건을 다시 확인할 수 있어요.",
+                  "변동 가능 정보는 요약 영역에서 한 번 더 안내합니다.",
+                ]}
+                itemTone="soft"
+              />
+            </DetailSection>
           </section>
 
           <ReservationSummary

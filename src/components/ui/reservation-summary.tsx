@@ -38,6 +38,7 @@ export function ReservationSummary({
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/60">{totalLabel}</p>
         <p className="mt-2 text-3xl font-black">{totalValue}</p>
         <p className="mt-2 text-xs font-semibold text-white/65">입력 정보와 선택 조건을 다시 확인한 뒤 결제를 진행해 주세요.</p>
+        <p className="mt-1 text-xs font-semibold text-white/50">실시간 재고/좌석/가격 상황에 따라 일부 정보는 변동될 수 있어요.</p>
       </div>
       <button className="mt-5 w-full rounded-full bg-[#4154ff] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_30px_rgba(65,84,255,0.24)]">
         {primaryCta}

@@ -65,6 +65,17 @@ export default async function ReserveTicketPage({ params }: PageProps) {
                 ]}
               />
             </DetailSection>
+
+            <DetailSection title="안심 예매 포인트">
+              <DetailBulletList
+                items={[
+                  "실시간 좌석/회차 기준으로 예매 흐름이 이어집니다.",
+                  "결제 전 수수료와 총액을 다시 확인할 수 있어요.",
+                  "좌석/오픈 상황이 변동될 수 있다는 점을 요약 영역에서 안내합니다.",
+                ]}
+                itemTone="soft"
+              />
+            </DetailSection>
           </section>
 
           <ReservationSummary
