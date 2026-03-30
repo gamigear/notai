@@ -1,4 +1,15 @@
+import Link from "next/link";
 import { paritySteps, rankingCards, rankingNotices } from "./data";
+
+function slugify(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/·/g, "-")
+    .replace(/[\/\s]+/g, "-")
+    .replace(/[^a-z0-9가-힣-]/g, "")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
 
 export function RankingSection() {
   return (
@@ -10,7 +21,9 @@ export function RankingSection() {
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4154ff]">티켓 랭킹</p>
               <h2 className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#111827] sm:text-3xl">오늘 뭐볼까? 지금 HOT한 공연</h2>
             </div>
-            <span className="w-fit rounded-full bg-[#eef1ff] px-3 py-1 text-xs font-bold text-[#4154ff]">실시간 반영</span>
+            <Link href="/ticket" className="w-fit rounded-full bg-[#eef1ff] px-3 py-1 text-xs font-bold text-[#4154ff]">
+              전체 랭킹 보기
+            </Link>
           </div>
 
           <p className="mt-3 max-w-lg text-sm leading-7 text-[#6b7280]">
@@ -35,9 +48,12 @@ export function RankingSection() {
                   <h3 className="text-base font-bold text-[#111827]">{card.title}</h3>
                   <p className="mt-1 text-sm leading-6 text-[#6b7280]">{card.description}</p>
                 </div>
-                <button className="self-center rounded-full border border-[#dbe1ff] px-3 py-2 text-xs font-bold text-[#4154ff]">
+                <Link
+                  href={`/ticket/${slugify(card.title)}`}
+                  className="self-center rounded-full border border-[#dbe1ff] bg-white px-3 py-2 text-xs font-bold text-[#4154ff] shadow-sm"
+                >
                   예매하기
-                </button>
+                </Link>
               </article>
             ))}
           </div>
