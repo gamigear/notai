@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { bookingStats, travelDeals } from "./data";
+import { slugify } from "@/lib/slugify";
 
 export function DealsSection() {
   return (
@@ -10,9 +12,9 @@ export function DealsSection() {
             <h2 className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#111827] sm:text-3xl">마감임박! 금주의 특가 여행 추천</h2>
             <p className="mt-3 text-sm leading-7 text-[#6b7280]">누구와 여행 가시나요? 동행자별 맞춤여행 상품을 모아 보여드립니다.</p>
           </div>
-          <a className="text-sm font-semibold text-[#4154ff]" href="#">
+          <Link className="text-sm font-semibold text-[#4154ff]" href="/search">
             전체보기
-          </a>
+          </Link>
         </div>
 
         <div className="mt-5 flex flex-wrap gap-2">
@@ -25,8 +27,9 @@ export function DealsSection() {
 
         <div className="mt-6 grid gap-4 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
           {travelDeals.map((deal) => (
-            <article
+            <Link
               key={deal.title}
+              href={`/tour/${slugify(deal.title)}`}
               className="group overflow-hidden rounded-[24px] bg-[#fbfbfe] ring-1 ring-black/4 transition duration-200 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.10)] sm:rounded-[28px]"
             >
               <div className={`flex h-40 items-end bg-gradient-to-br ${deal.accent} p-4 sm:h-48 sm:p-5`}>
@@ -37,10 +40,10 @@ export function DealsSection() {
                 <p className="mt-2 min-h-0 text-sm leading-6 text-[#6b7280] sm:min-h-12">{deal.meta}</p>
                 <div className="mt-5 flex items-center justify-between gap-3">
                   <p className="text-base font-black text-[#ff322e]">{deal.price}</p>
-                  <span className="rounded-full border border-[#dbe1ff] bg-white px-3 py-1 text-xs font-bold text-[#4154ff] shadow-sm">예약하기</span>
+                  <span className="rounded-full border border-[#dbe1ff] bg-white px-3 py-1 text-xs font-bold text-[#4154ff] shadow-sm">자세히 보기</span>
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { categoryGrid, destinationHighlights, portalBenefits, quickCategories } from "./data";
 
 export function CategoriesSection() {
@@ -9,9 +10,9 @@ export function CategoriesSection() {
             <p className="text-sm font-black uppercase tracking-[0.16em] text-[#4154ff]">인기 여행지</p>
             <h3 className="mt-2 text-xl font-black tracking-[-0.03em] text-[#111827] sm:text-2xl">지금 많이 찾는 여행지를 빠르게 둘러보세요</h3>
           </div>
-          <button className="w-fit rounded-full border border-[#dbe1ff] px-4 py-2 text-sm font-bold text-[#4154ff]">
+          <Link href="/search" className="w-fit rounded-full border border-[#dbe1ff] px-4 py-2 text-sm font-bold text-[#4154ff]">
             전체 여행지 보기
-          </button>
+          </Link>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -28,12 +29,13 @@ export function CategoriesSection() {
 
       <div className="mt-5 flex flex-wrap gap-3 sm:mt-6">
         {quickCategories.map((category) => (
-          <span
+          <Link
             key={category}
+            href={category === "티켓" ? "/ticket" : "/search"}
             className="rounded-full border border-[#e5e7eb] bg-white px-5 py-3 text-sm font-semibold text-[#374151] shadow-sm"
           >
             {category}
-          </span>
+          </Link>
         ))}
       </div>
 
@@ -43,9 +45,12 @@ export function CategoriesSection() {
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#4154ff]">추천 카테고리</p>
             <h3 className="mt-3 text-xl font-black tracking-[-0.03em] text-[#111827]">{item.title}</h3>
             <p className="mt-3 text-sm leading-7 text-[#6b7280]">{item.desc}</p>
-            <button className="mt-5 rounded-full border border-[#ececf3] px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#4b5563]">
+            <Link
+              href={item.title === "공연 예매" ? "/ticket" : "/search"}
+              className="mt-5 inline-flex rounded-full border border-[#ececf3] px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#4b5563]"
+            >
               자세히 보기
-            </button>
+            </Link>
           </article>
         ))}
       </div>

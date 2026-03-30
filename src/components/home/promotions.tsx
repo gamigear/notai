@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { appBenefits, liveIssues, promoBanners, themeCollections } from "./data";
 
 export function PromotionsSection() {
@@ -5,7 +6,7 @@ export function PromotionsSection() {
     <section className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
       <div className="grid gap-5 sm:gap-6 xl:grid-cols-[1.1fr_0.9fr]">
         <div className="grid gap-5 sm:gap-6 md:grid-cols-2">
-          {promoBanners.map((banner) => (
+          {promoBanners.map((banner, index) => (
             <article
               key={banner.title}
               className={`rounded-[28px] bg-gradient-to-br ${banner.accent} p-5 text-white shadow-[0_18px_56px_rgba(15,23,42,0.10)] sm:rounded-[32px] sm:p-8`}
@@ -13,7 +14,9 @@ export function PromotionsSection() {
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">{banner.eyebrow}</p>
               <h3 className="mt-4 text-2xl font-black tracking-[-0.04em]">{banner.title}</h3>
               <p className="mt-4 max-w-sm text-sm leading-7 text-white/78">{banner.description}</p>
-              <button className="mt-8 rounded-full bg-white px-5 py-3 text-sm font-bold text-[#111827] shadow-sm">지금 보기</button>
+              <Link href={index === 0 ? "/ticket" : "/search"} className="mt-8 inline-flex rounded-full bg-white px-5 py-3 text-sm font-bold text-[#111827] shadow-sm">
+                지금 보기
+              </Link>
             </article>
           ))}
         </div>
@@ -35,9 +38,9 @@ export function PromotionsSection() {
                     <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#4154ff]">{collection.subtitle}</p>
                     <h4 className="mt-2 text-xl font-black tracking-[-0.03em] text-[#111827]">{collection.title}</h4>
                   </div>
-                  <button className="rounded-full border border-[#dbe1ff] bg-white px-3 py-2 text-xs font-bold text-[#4154ff] shadow-sm">
+                  <Link href="/search" className="rounded-full border border-[#dbe1ff] bg-white px-3 py-2 text-xs font-bold text-[#4154ff] shadow-sm">
                     더보기
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="mt-4 flex flex-wrap gap-2">
@@ -76,6 +79,9 @@ export function PromotionsSection() {
               </article>
             ))}
           </div>
+          <Link href="/search" className="mt-6 inline-flex rounded-full bg-white px-4 py-2 text-sm font-bold text-[#111827] shadow-sm">
+            특가 흐름 보기
+          </Link>
         </div>
 
         <div className="rounded-[28px] bg-white p-5 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:rounded-[32px] sm:p-8">
@@ -92,9 +98,9 @@ export function PromotionsSection() {
               <article key={benefit.title} className="rounded-[22px] bg-[#f8f8fc] p-4 ring-1 ring-black/3 sm:rounded-[24px] sm:p-5">
                 <h4 className="text-lg font-black tracking-[-0.03em] text-[#111827]">{benefit.title}</h4>
                 <p className="mt-3 text-sm leading-7 text-[#6b7280]">{benefit.description}</p>
-                <button className="mt-5 rounded-full border border-[#ececf3] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#4b5563] shadow-sm">
+                <Link href="/mypage" className="mt-5 inline-flex rounded-full border border-[#ececf3] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#4b5563] shadow-sm">
                   자세히 보기
-                </button>
+                </Link>
               </article>
             ))}
           </div>

@@ -1,15 +1,6 @@
 import Link from "next/link";
 import { paritySteps, rankingCards, rankingNotices } from "./data";
-
-function slugify(value: string) {
-  return value
-    .toLowerCase()
-    .replace(/·/g, "-")
-    .replace(/[\/\s]+/g, "-")
-    .replace(/[^a-z0-9가-힣-]/g, "")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "");
-}
+import { slugify } from "@/lib/slugify";
 
 export function RankingSection() {
   return (
@@ -52,7 +43,7 @@ export function RankingSection() {
                   href={`/ticket/${slugify(card.title)}`}
                   className="self-center rounded-full border border-[#dbe1ff] bg-white px-3 py-2 text-xs font-bold text-[#4154ff] shadow-sm"
                 >
-                  예매하기
+                  자세히 보기
                 </Link>
               </article>
             ))}
@@ -69,6 +60,12 @@ export function RankingSection() {
               </li>
             ))}
           </ol>
+          <Link
+            href="/support"
+            className="mt-6 inline-flex rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm"
+          >
+            고객지원 바로가기
+          </Link>
         </div>
       </div>
     </section>
