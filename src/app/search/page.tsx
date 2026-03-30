@@ -11,21 +11,19 @@ export default function SearchPage() {
         <Breadcrumbs items={[{ label: "홈", href: "/" }, { label: "투어 검색" }]} />
 
         <div className="rounded-[28px] bg-white p-5 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4154ff]">SEARCH RESULTS</p>
-              <h1 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">홍콩/마카오 · 싱가포르 · 유럽 특가 모아보기</h1>
-              <p className="mt-3 text-sm leading-7 text-[#6b7280]">
-                NOL 스타일 검색 결과 화면의 첫 번째 쉘입니다. 필터, 카드, 가격 정보, CTA 배치를 실제 흐름처럼 확장하기 위한 기반입니다.
-              </p>
-            </div>
-            <Link
-              href="/"
-              className="w-fit rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm"
-            >
-              홈으로 돌아가기
-            </Link>
-          </div>
+          <PageIntro
+            eyebrow="SEARCH RESULTS"
+            title="홍콩/마카오 · 싱가포르 · 유럽 특가 모아보기"
+            description="NOL 스타일 검색 결과 화면의 첫 번째 쉘입니다. 필터, 카드, 가격 정보, CTA 배치를 실제 흐름처럼 확장하기 위한 기반입니다."
+            actions={
+              <Link
+                href="/"
+                className="w-fit rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm"
+              >
+                홈으로 돌아가기
+              </Link>
+            }
+          />
 
           <div className="mt-4 flex flex-wrap gap-2">
             {["인천 출발", "4일 ~ 9일", "친구 · 연인 / 가족", `${travelDeals.length}개 상품`].map((chip, index) => (
