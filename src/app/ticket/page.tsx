@@ -121,8 +121,25 @@ export default function TicketPage() {
                       <h2 className="text-xl font-black tracking-[-0.03em] text-[#111827]">{card.title}</h2>
                       <p className="mt-3 text-sm leading-7 text-[#6b7280]">{card.description}</p>
 
+                      <div className="mt-4 grid gap-2 sm:grid-cols-3">
+                        {[
+                          ["랭킹", `${card.rank}위`],
+                          ["상태", "실시간 예매"],
+                          ["흐름", "상세 후 예매"],
+                        ].map(([label, value]) => (
+                          <div key={label} className="rounded-[16px] bg-[#fafafe] px-3 py-3 ring-1 ring-black/4">
+                            <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#9ca3af]">{label}</p>
+                            <p className="mt-1 text-sm font-bold text-[#111827]">{value}</p>
+                          </div>
+                        ))}
+                      </div>
+
                       <div className="mt-4 flex flex-wrap gap-2">
-                        {["실시간 랭킹", "예매 흐름 연결", "상세 정보 확인"].map((tag) => (
+                        {[
+                          "실시간 랭킹",
+                          "예매 흐름 연결",
+                          index === 0 ? "관심 급상승" : "상세 정보 확인",
+                        ].map((tag) => (
                           <span key={tag} className="rounded-full bg-[#fafafe] px-3 py-1 text-xs font-semibold text-[#4b5563] ring-1 ring-black/4">
                             {tag}
                           </span>

@@ -147,8 +147,25 @@ export default function SearchPage() {
 
                       <p className="mt-3 text-sm leading-7 text-[#6b7280]">{deal.meta}</p>
 
+                      <div className="mt-4 grid gap-2 sm:grid-cols-3">
+                        {[
+                          ["출발", "인천"],
+                          ["일정", deal.title.includes("9일") ? "9일" : deal.title.includes("5일") ? "5일" : "4일"],
+                          ["흐름", "상세 후 예약"],
+                        ].map(([label, value]) => (
+                          <div key={label} className="rounded-[16px] bg-[#fafafe] px-3 py-3 ring-1 ring-black/4">
+                            <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#9ca3af]">{label}</p>
+                            <p className="mt-1 text-sm font-bold text-[#111827]">{value}</p>
+                          </div>
+                        ))}
+                      </div>
+
                       <div className="mt-4 flex flex-wrap gap-2">
-                        {["출발확인 쉬움", "상세 일정 확인", "예약 흐름 연결"].map((point) => (
+                        {[
+                          "출발확인 쉬움",
+                          "상세 일정 확인",
+                          index % 2 === 0 ? "가족/연인 추천" : "실속 구성",
+                        ].map((point) => (
                           <span key={point} className="rounded-full bg-[#fafafe] px-3 py-1 text-xs font-semibold text-[#4b5563] ring-1 ring-black/4">
                             {point}
                           </span>
