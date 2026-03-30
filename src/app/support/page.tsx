@@ -68,7 +68,7 @@ export default function SupportPage() {
               </div>
             </DetailSection>
 
-            <DetailSection title="빠른 도움" tone="tinted">
+            <DetailSection title="빠른 도움" subtitle="실제로 가장 자주 막히는 예약/환불/예매 포인트를 먼저 확인하는 구간입니다." tone="tinted">
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {[
                   ["예약 변경/취소", "예약 흐름에서 바로 이어지는 문의"],

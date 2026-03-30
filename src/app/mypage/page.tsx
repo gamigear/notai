@@ -58,7 +58,7 @@ export default function MyPage() {
           </div>
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-            <DetailSection title="회원 혜택" tone="tinted">
+            <DetailSection title="회원 혜택" subtitle="계정에서 바로 체감할 수 있는 앱 혜택과 사용 이점을 모아둔 구간입니다." tone="tinted">
               <DetailBulletList items={membershipBenefits} />
             </DetailSection>
 

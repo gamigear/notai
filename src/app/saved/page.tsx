@@ -86,7 +86,7 @@ export default function SavedPage() {
               </div>
             </DetailSection>
 
-            <DetailSection title="저장한 티켓" tone="tinted">
+            <DetailSection title="저장한 티켓" subtitle="저장한 공연과 최근 본 공연을 다시 확인하고 예매 흐름으로 이어가는 구간입니다." tone="tinted">
               <div className="mt-4 space-y-3">
                 {rankingCards.slice(0, 2).map((card, index) => (
                   <Link
