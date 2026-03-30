@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { rankingCards } from "@/components/home/data";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { PageIntro } from "@/components/ui/page-intro";
 
 function slugify(value: string) {
   return value
@@ -19,18 +20,16 @@ export default function TicketPage() {
         <Breadcrumbs items={[{ label: "홈", href: "/" }, { label: "티켓 랭킹" }]} />
 
         <div className="rounded-[28px] bg-white p-5 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4154ff]">TICKET RANKING</p>
-              <h1 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">오늘 뭐볼까? 지금 HOT한 공연</h1>
-              <p className="mt-3 text-sm leading-7 text-[#6b7280]">
-                공연 · 전시 · 콘서트 카테고리를 위한 별도 티켓 흐름 쉘입니다. 랭킹 기반 탐색과 상세 페이지 이동 흐름을 확장합니다.
-              </p>
-            </div>
-            <Link href="/" className="w-fit rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm">
-              홈으로 돌아가기
-            </Link>
-          </div>
+          <PageIntro
+            eyebrow="TICKET RANKING"
+            title="오늘 뭐볼까? 지금 HOT한 공연"
+            description="공연 · 전시 · 콘서트 카테고리를 위한 별도 티켓 흐름 쉘입니다. 랭킹 기반 탐색과 상세 페이지 이동 흐름을 확장합니다."
+            actions={
+              <Link href="/" className="w-fit rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm">
+                홈으로 돌아가기
+              </Link>
+            }
+          />
 
           <div className="mt-4 flex flex-wrap gap-2">
             {["뮤지컬", "콘서트", "클래식", `${rankingCards.length}개 랭킹`].map((chip, index) => (

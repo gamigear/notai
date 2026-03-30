@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { supportLinks } from "@/components/home/data";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { PageIntro } from "@/components/ui/page-intro";
 
 export default function SupportPage() {
   return (
@@ -9,18 +10,16 @@ export default function SupportPage() {
         <Breadcrumbs items={[{ label: "홈", href: "/" }, { label: "고객지원" }]} />
 
         <div className="rounded-[28px] bg-white p-5 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4154ff]">SUPPORT CENTER</p>
-              <h1 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">고객지원</h1>
-              <p className="mt-3 text-sm leading-7 text-[#6b7280]">
-                이용 가이드, 취소/환불, 문의 내역, 자주 묻는 질문으로 확장할 수 있는 고객지원 허브 쉘입니다.
-              </p>
-            </div>
-            <Link href="/mypage" className="w-fit rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm">
-              마이페이지로 이동
-            </Link>
-          </div>
+          <PageIntro
+            eyebrow="SUPPORT CENTER"
+            title="고객지원"
+            description="이용 가이드, 취소/환불, 문의 내역, 자주 묻는 질문으로 확장할 수 있는 고객지원 허브 쉘입니다."
+            actions={
+              <Link href="/mypage" className="w-fit rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm">
+                마이페이지로 이동
+              </Link>
+            }
+          />
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
             <section className="rounded-[24px] bg-[#fafafe] p-5 ring-1 ring-black/4">
