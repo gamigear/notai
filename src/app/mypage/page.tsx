@@ -38,6 +38,20 @@ export default function MyPage() {
 
           <SubpageNav items={subpageItems} current="/mypage" />
 
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {[
+              ["예약 내역", "4건", "투어/티켓 흐름을 다시 이어볼 수 있어요"],
+              ["저장한 상품", "4개", "저장함과 최근 본 흐름이 연결돼 있어요"],
+              ["문의 내역", "2건", "고객지원으로 바로 이어지는 상태 허브입니다"],
+            ].map(([label, value, desc]) => (
+              <div key={label} className="rounded-[22px] bg-[#fafafe] px-5 py-4 ring-1 ring-black/4">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{label}</p>
+                <p className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#111827]">{value}</p>
+                <p className="mt-2 text-sm leading-6 text-[#6b7280]">{desc}</p>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
             <DetailSection title="회원 혜택" tone="tinted">
               <DetailBulletList items={membershipBenefits} />
@@ -56,9 +70,15 @@ export default function MyPage() {
                 ))}
               </div>
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                {["예약 내역", "쿠폰함", "최근 본 상품", "문의 내역"].map((item) => (
-                  <div key={item} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-4 text-sm font-semibold text-[#111827]">
-                    {item}
+                {[
+                  ["예약 내역", "최근 예약 흐름 다시 보기"],
+                  ["쿠폰함", "앱 혜택과 함께 확인"],
+                  ["최근 본 상품", "saved/recent 흐름 이어보기"],
+                  ["문의 내역", "지원 흐름 바로 이동"],
+                ].map(([item, sub]) => (
+                  <div key={item} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-4">
+                    <p className="text-sm font-semibold text-[#111827]">{item}</p>
+                    <p className="mt-1 text-xs font-semibold text-[#9ca3af]">{sub}</p>
                   </div>
                 ))}
               </div>
@@ -66,20 +86,21 @@ export default function MyPage() {
           </div>
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-            <DetailSection title="계정에서 자주 쓰는 메뉴">
+            <DetailSection title="계정에서 자주 이어보기">
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {[
-                  ["저장한 상품", "/saved"],
-                  ["고객지원", "/support"],
-                  ["투어 검색", "/search"],
-                  ["티켓 랭킹", "/ticket"],
-                ].map(([label, href]) => (
+                  ["저장한 상품", "/saved", "saved state 이어보기"],
+                  ["고객지원", "/support", "문의 흐름 바로 이동"],
+                  ["투어 검색", "/search", "여행 탐색 계속하기"],
+                  ["티켓 랭킹", "/ticket", "공연 탐색 계속하기"],
+                ].map(([label, href, sub]) => (
                   <Link
                     key={label}
                     href={href}
-                    className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-4 text-sm font-semibold text-[#111827] transition hover:-translate-y-0.5 hover:bg-white"
+                    className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-4 transition hover:-translate-y-0.5 hover:bg-white"
                   >
-                    {label}
+                    <p className="text-sm font-semibold text-[#111827]">{label}</p>
+                    <p className="mt-1 text-xs font-semibold text-[#9ca3af]">{sub}</p>
                   </Link>
                 ))}
               </div>
