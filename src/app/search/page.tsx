@@ -222,6 +222,7 @@ export default function SearchPage() {
                           <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">판매가</p>
                           <p className="mt-1 text-lg font-black text-[#ff322e]">{deal.price}</p>
                           <p className="mt-1 text-xs text-[#9ca3af]">카드할인 · 쿠폰 적용 전 기준</p>
+                          <p className="mt-1 text-[11px] font-semibold text-[#4154ff]">지금 비교 후 상세에서 포함 조건까지 바로 확인</p>
                         </div>
                         <div className="flex flex-col gap-2 sm:items-end">
                           <Link

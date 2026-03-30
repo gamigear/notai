@@ -45,6 +45,7 @@ export function DetailHero({
         >
           {ctaLabel}
         </Link>
+        <p className="mt-2 text-center text-[11px] font-semibold text-[#9ca3af]">다음 단계에서 조건과 총액을 다시 확인할 수 있어요.</p>
       </div>
     </div>
   );

@@ -190,6 +190,7 @@ export default function TicketPage() {
                         <div>
                           <span className="rounded-full border border-[#ececf3] bg-white px-3 py-1 text-xs font-bold text-[#4b5563] shadow-sm">실시간 예매</span>
                           <p className="mt-2 text-xs font-semibold text-[#9ca3af]">상세 → 예매 흐름으로 바로 연결</p>
+                          <p className="mt-1 text-[11px] font-semibold text-[#4154ff]">회차와 좌석 조건을 다음 단계에서 다시 확인할 수 있어요.</p>
                         </div>
                         <Link
                           href={`/ticket/${slugify(card.title)}`}

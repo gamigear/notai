@@ -43,6 +43,7 @@ export function ReservationSummary({
       <button className="mt-5 w-full rounded-full bg-[#4154ff] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_30px_rgba(65,84,255,0.24)]">
         {primaryCta}
       </button>
+      <p className="mt-2 text-center text-[11px] font-semibold text-[#9ca3af]">다음 단계에서 결제 직전 정보를 한 번 더 확인할 수 있어요.</p>
       <div className="mt-4 flex flex-wrap gap-3">
         <Link href={backHref} className="rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm">
           {backLabel}
