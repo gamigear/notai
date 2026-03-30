@@ -10,7 +10,7 @@ export function DealsSection() {
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4154ff]">투어 특가</p>
             <h2 className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#111827] sm:text-3xl">마감임박! 금주의 특가 여행 추천</h2>
-            <p className="mt-3 text-sm leading-7 text-[#6b7280]">누구와 여행 가시나요? 동행자별 맞춤여행 상품을 모아 보여드립니다.</p>
+            <p className="mt-3 text-sm leading-7 text-[#6b7280]">누구와 여행 가시나요? 동행자별 맞춤여행 상품을 모아 보여드리고, 가격과 일정, 추천 이유를 빠르게 비교할 수 있게 정리했습니다.</p>
           </div>
           <Link className="text-sm font-semibold text-[#4154ff]" href="/search">
             전체보기

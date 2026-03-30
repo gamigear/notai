@@ -18,7 +18,7 @@ export function RankingSection() {
           </div>
 
           <p className="mt-3 max-w-lg text-sm leading-7 text-[#6b7280]">
-            실시간 관심도가 높은 공연과 티켓을 한 번에 살펴보고, 예매 전환이 빠른 상품부터 먼저 확인할 수 있습니다.
+            실시간 관심도가 높은 공연과 티켓을 한 번에 살펴보고, 랭킹 흐름과 저장 상태, 최근 관심 패턴을 함께 보며 빠르게 비교할 수 있습니다.
           </p>
 
           <div className="mt-5 flex flex-wrap gap-2">

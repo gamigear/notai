@@ -30,6 +30,9 @@ export function HeroSection() {
               여행과 공연, 전시 예약을 한번에. 취향에 맞는 상품을 빠르게 찾고 바로 예약할 수 있도록 핵심 정보만 또렷하게
               보여줍니다.
             </p>
+            <p className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-white/68 sm:text-sm">
+              실시간 특가 · 추천 이유 · 최근 본 흐름 · 저장 상태까지 한 번에 이어집니다.
+            </p>
           </div>
 
           <div className="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-3">
