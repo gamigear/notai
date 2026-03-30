@@ -1,54 +1,68 @@
 import Link from "next/link";
 import { appBenefits, rankingCards, travelDeals } from "@/components/home/data";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { DetailBulletList, DetailSection } from "@/components/ui/detail-section";
+import { PageIntro } from "@/components/ui/page-intro";
+import { slugify } from "@/lib/slugify";
 
 export default function SavedPage() {
   return (
     <main className="min-h-screen bg-[#f6f7fb] px-4 py-6 text-[#111827] sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
+        <Breadcrumbs items={[{ label: "홈", href: "/" }, { label: "저장한 상품" }]} />
+
         <div className="rounded-[28px] bg-white p-5 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4154ff]">SAVED ITEMS</p>
-              <h1 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">저장한 상품</h1>
-              <p className="mt-3 text-sm leading-7 text-[#6b7280]">
-                관심 있는 여행, 티켓, 앱 혜택을 다시 빠르게 이어볼 수 있도록 구성한 저장함 쉘입니다.
-              </p>
-            </div>
-            <Link href="/mypage" className="w-fit rounded-full bg-[#1c1c1e] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_30px_rgba(17,24,39,0.18)]">
-              마이페이지로 이동
-            </Link>
-          </div>
+          <PageIntro
+            eyebrow="SAVED ITEMS"
+            title="저장한 상품"
+            description="관심 있는 여행, 티켓, 앱 혜택을 다시 빠르게 이어볼 수 있도록 구성한 저장함 쉘입니다."
+            actions={
+              <>
+                <Link href="/mypage" className="w-fit rounded-full border border-[#dbe1ff] bg-white px-4 py-2 text-sm font-bold text-[#4154ff] shadow-sm">
+                  마이페이지로 이동
+                </Link>
+                <Link href="/search" className="w-fit rounded-full border border-[#ececf3] bg-white px-4 py-2 text-sm font-bold text-[#4b5563] shadow-sm">
+                  여행 더 보기
+                </Link>
+              </>
+            }
+          />
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-            <section className="rounded-[24px] bg-[#fafafe] p-5 ring-1 ring-black/4">
-              <h2 className="text-xl font-black text-[#111827]">저장한 여행</h2>
+            <DetailSection title="저장한 여행" tone="tinted">
               <div className="mt-4 space-y-3">
                 {travelDeals.slice(0, 2).map((deal) => (
-                  <div key={deal.title} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-4">
+                  <Link
+                    key={deal.title}
+                    href={`/tour/${slugify(deal.title)}`}
+                    className="block rounded-[18px] border border-[#ececf3] bg-white px-4 py-4 transition hover:-translate-y-0.5 hover:shadow-sm"
+                  >
                     <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{deal.badge}</p>
                     <h3 className="mt-2 text-lg font-black text-[#111827]">{deal.title}</h3>
                     <p className="mt-2 text-sm text-[#6b7280]">{deal.price}</p>
-                  </div>
+                  </Link>
                 ))}
               </div>
-            </section>
+            </DetailSection>
 
-            <section className="rounded-[24px] bg-[#fafafe] p-5 ring-1 ring-black/4">
-              <h2 className="text-xl font-black text-[#111827]">저장한 티켓</h2>
+            <DetailSection title="저장한 티켓" tone="tinted">
               <div className="mt-4 space-y-3">
                 {rankingCards.slice(0, 2).map((card) => (
-                  <div key={card.title} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-4">
+                  <Link
+                    key={card.title}
+                    href={`/ticket/${slugify(card.title)}`}
+                    className="block rounded-[18px] border border-[#ececf3] bg-white px-4 py-4 transition hover:-translate-y-0.5 hover:shadow-sm"
+                  >
                     <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">RANK {card.rank}</p>
                     <h3 className="mt-2 text-lg font-black text-[#111827]">{card.title}</h3>
                     <p className="mt-2 text-sm text-[#6b7280]">{card.description}</p>
-                  </div>
+                  </Link>
                 ))}
               </div>
-            </section>
+            </DetailSection>
           </div>
 
-          <section className="mt-6 rounded-[24px] bg-white p-5 ring-1 ring-black/4">
-            <h2 className="text-xl font-black text-[#111827]">앱에서 이어보기</h2>
+          <DetailSection title="앱에서 이어보기" className="mt-6">
             <div className="mt-4 grid gap-4 md:grid-cols-3">
               {appBenefits.map((benefit) => (
                 <div key={benefit.title} className="rounded-[18px] bg-[#fafafe] px-4 py-4 ring-1 ring-black/3">
@@ -57,7 +71,38 @@ export default function SavedPage() {
                 </div>
               ))}
             </div>
-          </section>
+          </DetailSection>
+
+          <div className="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+            <DetailSection title="저장함 활용 팁">
+              <DetailBulletList
+                items={[
+                  "관심 상품을 저장해두고 가격/오픈 일정을 다시 확인해 보세요.",
+                  "마이페이지에서 예약 내역과 함께 비교하면 전환 흐름이 자연스러워집니다.",
+                  "투어와 티켓을 함께 저장해 두면 주말/휴가 계획을 한 번에 정리하기 좋아요.",
+                ]}
+              />
+            </DetailSection>
+
+            <DetailSection title="바로가기">
+              <div className="mt-4 flex flex-wrap gap-2">
+                {[
+                  ["투어 검색", "/search"],
+                  ["티켓 랭킹", "/ticket"],
+                  ["마이페이지", "/mypage"],
+                  ["고객지원", "/support"],
+                ].map(([label, href]) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    className="rounded-full border border-[#ececf3] bg-white px-4 py-2 text-sm font-semibold text-[#4b5563] shadow-sm"
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </DetailSection>
+          </div>
         </div>
       </div>
     </main>
