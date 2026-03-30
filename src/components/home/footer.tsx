@@ -1,7 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 import { membershipBenefits, mobileQuickActions, supportLinks } from "./data";
 
 export function Footer() {
+  const mobileActionHref = (action: string) => {
+    if (action === "저장") return "/saved";
+    if (action === "마이") return "/mypage";
+    if (action === "투어") return "/search";
+    if (action === "티켓") return "/ticket";
+    return "/";
+  };
+
   return (
     <>
       <footer className="mt-8 border-t border-black/5 bg-white pb-24 md:pb-0">
@@ -18,8 +27,12 @@ export function Footer() {
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  <button className="rounded-full bg-white px-5 py-3 text-sm font-bold text-[#111827] shadow-sm">앱 혜택 보기</button>
-                  <button className="rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white">최근 본 상품</button>
+                  <Link href="/mypage" className="rounded-full bg-white px-5 py-3 text-sm font-bold text-[#111827] shadow-sm">
+                    앱 혜택 보기
+                  </Link>
+                  <Link href="/saved" className="rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white">
+                    최근 본 상품
+                  </Link>
                 </div>
               </div>
             </div>
@@ -124,15 +137,16 @@ export function Footer() {
       <div className="fixed right-0 bottom-0 left-0 z-40 border-t border-black/5 bg-white/95 px-3 py-3 backdrop-blur md:hidden">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-2">
           {mobileQuickActions.map((action, index) => (
-            <button
+            <Link
               key={action}
+              href={mobileActionHref(action)}
               className={`flex min-w-0 flex-1 flex-col items-center gap-1 rounded-2xl px-2 py-2 text-[11px] font-bold uppercase tracking-[0.08em] ${
                 index === 0 ? "bg-[#1c1c1e] text-white" : "bg-[#f8f8fc] text-[#6b7280]"
               }`}
             >
               <span className={`h-2 w-2 rounded-full ${index === 0 ? "bg-white" : "bg-[#4154ff]"}`} />
               <span className="truncate">{action}</span>
-            </button>
+            </Link>
           ))}
         </div>
       </div>
