@@ -51,7 +51,7 @@ export default async function ReserveTourPage({ params }: PageProps) {
 
         <div className="mt-6 grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
           <section className="space-y-6">
-            <DetailSection title="예약 정보 입력" tone="tinted">
+            <DetailSection title="예약 정보 입력" subtitle="결제 전에 필요한 기본 예약 정보를 한 번에 확인하고 수정하는 구간입니다." tone="tinted">
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 {[["출발일", "2026-04-18"], ["인원", "성인 2명"], ["대표 예약자", "Cherry"], ["연락처", "+82 10-0000-0000"]].map(([label, value]) => (
                   <div key={label} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-3">

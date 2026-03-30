@@ -51,7 +51,7 @@ export default async function ReserveTicketPage({ params }: PageProps) {
 
         <div className="mt-6 grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
           <section className="space-y-6">
-            <DetailSection title="예매 정보 입력" tone="tinted">
+            <DetailSection title="예매 정보 입력" subtitle="회차와 좌석, 예매자 정보를 결제 전에 한 번 더 정리하는 구간입니다." tone="tinted">
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 {[["관람일", "2026-04-20"], ["회차", "19:30"], ["좌석등급", "R석 2매"], ["예매자", "Cherry"]].map(([label, value]) => (
                   <div key={label} className="rounded-[18px] border border-[#ececf3] bg-white px-4 py-3">

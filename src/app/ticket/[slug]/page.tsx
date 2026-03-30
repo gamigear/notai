@@ -71,7 +71,7 @@ export default async function TicketDetailPage({ params }: PageProps) {
                 />
               </DetailSection>
 
-              <DetailSection title="예매 안내">
+              <DetailSection title="예매 안내" subtitle="회차, 수수료, 입장 조건처럼 바로 판단에 필요한 정보만 먼저 모았습니다.">
                 <DetailNumberedList
                   items={[
                     "회차별 좌석 오픈 시간 확인",

@@ -58,7 +58,7 @@ export default async function TourDetailPage({ params }: PageProps) {
             </div>
 
             <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-              <DetailSection title="상품 소개" tone="tinted">
+              <DetailSection title="상품 소개" subtitle="이 상품의 분위기와 핵심 구성을 빠르게 훑는 구간입니다." tone="tinted">
                 <p className="mt-4 text-sm leading-8 text-[#6b7280]">
                   여행 핵심 분위기와 포함 조건, 예약 전 확인 포인트를 한 번에 훑어본 뒤 바로 예약으로 이어질 수 있도록 정리한 상세 화면입니다.
                   실제 운영 시에는 날짜 선택, 객실/옵션 확장, 후기와 FAQ가 자연스럽게 이어지는 구조를 염두에 두고 구성했습니다.

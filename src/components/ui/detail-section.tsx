@@ -2,15 +2,17 @@ import type { ReactNode } from "react";
 
 type DetailSectionProps = {
   title: string;
+  subtitle?: string;
   children: ReactNode;
   tone?: "tinted" | "plain";
   className?: string;
 };
 
-export function DetailSection({ title, children, tone = "plain", className = "" }: DetailSectionProps) {
+export function DetailSection({ title, subtitle, children, tone = "plain", className = "" }: DetailSectionProps) {
   return (
     <section className={`rounded-[24px] p-5 ring-1 ring-black/4 ${tone === "tinted" ? "bg-[#fafafe]" : "bg-white"} ${className}`}>
       <h2 className="text-xl font-black text-[#111827]">{title}</h2>
+      {subtitle ? <p className="mt-2 text-xs font-semibold text-[#9ca3af]">{subtitle}</p> : null}
       {children}
     </section>
   );
