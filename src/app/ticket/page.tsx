@@ -164,6 +164,17 @@ export default function TicketPage() {
                         ))}
                       </div>
 
+                      <div className="mt-4 rounded-[16px] bg-[#f7f8ff] px-4 py-3 ring-1 ring-[#dfe4ff]">
+                        <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#4154ff]">WHY THIS SHOW</p>
+                        <p className="mt-1 text-sm font-semibold text-[#111827]">
+                          {index === 0
+                            ? "랭킹 상승과 관심 패턴이 함께 붙어서 지금 가장 먼저 보기 좋은 공연이에요."
+                            : index === 1
+                              ? "최근 본 흐름이 이어져 있어서 회차와 좌석만 다시 보면 바로 예매하기 쉬워요."
+                              : "저장 상태와 좌석 여유가 보여서 부담 없이 비교 후보로 넣기 좋습니다."}
+                        </p>
+                      </div>
+
                       <div className="mt-5 flex items-center justify-between gap-4">
                         <div>
                           <span className="rounded-full border border-[#ececf3] bg-white px-3 py-1 text-xs font-bold text-[#4b5563] shadow-sm">실시간 예매</span>

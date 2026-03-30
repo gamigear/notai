@@ -190,6 +190,17 @@ export default function SearchPage() {
                         ))}
                       </div>
 
+                      <div className="mt-4 rounded-[16px] bg-[#f7f8ff] px-4 py-3 ring-1 ring-[#dfe4ff]">
+                        <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#4154ff]">WHY NOW</p>
+                        <p className="mt-1 text-sm font-semibold text-[#111827]">
+                          {index === 0
+                            ? "최근 본 흐름과 가장 가까워서 지금 다시 비교하기 좋은 상품이에요."
+                            : index === 1
+                              ? "저장해 둔 흐름이 있어 조건만 다시 확인하면 바로 이어가기 쉬워요."
+                              : "추천 이유와 일정 구성이 또렷해서 새 후보로 빠르게 판단하기 좋아요."}
+                        </p>
+                      </div>
+
                       <div className="mt-5 flex items-end justify-between gap-4">
                         <div>
                           <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">판매가</p>
