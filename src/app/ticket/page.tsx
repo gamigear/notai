@@ -82,6 +82,17 @@ export default function TicketPage() {
                 </div>
               </DetailSection>
 
+              <DetailSection title="비교 포인트">
+                <DetailBulletList
+                  items={[
+                    "랭킹만 보지 말고 좌석 여유와 최근 본 흐름을 같이 보세요.",
+                    "저장된 공연은 회차와 오픈 시간만 다시 봐도 빠르게 결정할 수 있어요.",
+                    "상세에서 예매 흐름이 자연스럽게 이어지는 공연부터 우선 확인하면 좋아요.",
+                  ]}
+                  itemTone="soft"
+                />
+              </DetailSection>
+
               <DetailSection title="예매 전에 보기">
                 <DetailBulletList items={ticketInsights} itemTone="soft" />
               </DetailSection>

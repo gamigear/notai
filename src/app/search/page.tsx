@@ -83,6 +83,11 @@ export default function SearchPage() {
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[300px_1fr]">
             <aside className="space-y-4">
+              <div className="rounded-[22px] bg-[#f7f8ff] px-5 py-4 ring-1 ring-[#dfe4ff]">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#4154ff]">CURRENT FILTER READ</p>
+                <p className="mt-2 text-sm font-semibold text-[#111827]">인천 출발, 4~9일, 친구/연인·가족 기준으로 지금 비교하기 좋은 대표 상품만 먼저 모아둔 상태예요.</p>
+              </div>
+
               {filterGroups.map((group) => (
                 <DetailSection key={group.title} title={group.title} tone="tinted">
                   <div className="mt-4 space-y-3">
@@ -95,6 +100,17 @@ export default function SearchPage() {
                   </div>
                 </DetailSection>
               ))}
+
+              <DetailSection title="비교 포인트">
+                <DetailBulletList
+                  items={[
+                    "가격만 보지 말고 일정 길이와 동행 유형까지 같이 보세요.",
+                    "최근 본 흐름 또는 저장 상태가 붙은 상품부터 다시 확인하면 빨라요.",
+                    "상세에서 정책과 예약 흐름이 자연스럽게 이어지는지 함께 체크해 보세요.",
+                  ]}
+                  itemTone="soft"
+                />
+              </DetailSection>
 
               <DetailSection title="예약 전에 보기">
                 <DetailBulletList
