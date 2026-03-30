@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { PageIntro } from "@/components/ui/page-intro";
 import { notFound } from "next/navigation";
 import { travelDeals } from "@/components/home/data";
 
@@ -33,12 +34,14 @@ export default async function ReserveTourPage({ params }: PageProps) {
 
         <div className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
           <section className="rounded-[28px] bg-white p-5 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4154ff]">TOUR RESERVATION</p>
-            <h1 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">{deal.title} 예약하기</h1>
-            <p className="mt-3 text-sm leading-7 text-[#6b7280]">출발일, 인원, 대표 예약자 정보를 입력하는 예약 플로우 쉘입니다.</p>
+            <PageIntro
+              eyebrow="TOUR RESERVATION"
+              title={`${deal.title} 예약하기`}
+              description="출발일, 인원, 대표 예약자 정보를 입력하는 예약 플로우 쉘입니다."
+            />
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {[ ["출발일", "2026-04-18"], ["인원", "성인 2명"], ["대표 예약자", "Cherry"], ["연락처", "+82 10-0000-0000"] ].map(([label, value]) => (
+              {[["출발일", "2026-04-18"], ["인원", "성인 2명"], ["대표 예약자", "Cherry"], ["연락처", "+82 10-0000-0000"]].map(([label, value]) => (
                 <div key={label} className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-3">
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9ca3af]">{label}</p>
                   <p className="mt-1 text-sm font-semibold text-[#111827]">{value}</p>

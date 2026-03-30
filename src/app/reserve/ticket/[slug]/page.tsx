@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { PageIntro } from "@/components/ui/page-intro";
 import { notFound } from "next/navigation";
 import { rankingCards } from "@/components/home/data";
 
@@ -33,9 +34,11 @@ export default async function ReserveTicketPage({ params }: PageProps) {
 
         <div className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
           <section className="rounded-[28px] bg-white p-5 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4154ff]">TICKET RESERVATION</p>
-            <h1 className="mt-2 text-3xl font-black tracking-[-0.03em] text-[#111827]">{card.title} 예매하기</h1>
-            <p className="mt-3 text-sm leading-7 text-[#6b7280]">회차, 좌석, 관람자 정보를 선택하는 티켓 예매 플로우 쉘입니다.</p>
+            <PageIntro
+              eyebrow="TICKET RESERVATION"
+              title={`${card.title} 예매하기`}
+              description="회차, 좌석, 관람자 정보를 선택하는 티켓 예매 플로우 쉘입니다."
+            />
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {[["관람일", "2026-04-20"], ["회차", "19:30"], ["좌석등급", "R석 2매"], ["예매자", "Cherry"]].map(([label, value]) => (
