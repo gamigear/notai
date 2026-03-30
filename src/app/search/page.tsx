@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { travelDeals } from "@/components/home/data";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { PageIntro } from "@/components/ui/page-intro";
 import { slugify } from "@/lib/slugify";
 
 export default function SearchPage() {
