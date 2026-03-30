@@ -139,6 +139,11 @@ export default function SearchPage() {
                             <span className="rounded-full border border-[#ececf3] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#4b5563] shadow-sm">
                               {index < 2 ? "인기" : "추천"}
                             </span>
+                            {index === 0 ? (
+                              <span className="rounded-full bg-[#fff3d6] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#9a6700] shadow-sm">
+                                최근 본 상품
+                              </span>
+                            ) : null}
                           </div>
                           <h3 className="mt-3 text-xl font-black tracking-[-0.03em] text-[#111827]">{deal.title}</h3>
                         </div>

@@ -48,7 +48,7 @@ export default async function TourDetailPage({ params }: PageProps) {
                 { label: "출발", value: "인천 출발" },
                 { label: "일정", value: deal.title.includes("9일") ? "9일 일정" : deal.title.includes("5일") ? "5일 일정" : "4일 일정" },
                 { label: "상품 성격", value: deal.badge },
-                { label: "예약 상태", value: "오늘 예약 가능" },
+                { label: "최근 활동", value: "최근 본 상품에서 다시 열람" },
               ]}
             />
 

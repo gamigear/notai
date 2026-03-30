@@ -115,6 +115,11 @@ export default function TicketPage() {
                         <span className="rounded-full bg-white/15 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-white">
                           {index === 0 ? "HOT" : index === 1 ? "FAST" : "PICK"}
                         </span>
+                        {index === 1 ? (
+                          <span className="rounded-full bg-white/15 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+                            최근 본 공연
+                          </span>
+                        ) : null}
                       </div>
                     </div>
                     <div className="p-5">
