@@ -15,6 +15,12 @@ export default function SearchPage() {
   return (
     <main className="min-h-screen bg-[#f6f7fb] px-4 py-6 text-[#111827] sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
+        <div className="mb-4 flex items-center gap-2 text-sm text-[#6b7280]">
+          <Link href="/" className="hover:text-[#111827]">홈</Link>
+          <span>/</span>
+          <span className="font-semibold text-[#111827]">투어 검색</span>
+        </div>
+
         <div className="rounded-[28px] bg-white p-5 shadow-[0_18px_56px_rgba(15,23,42,0.06)] sm:p-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -33,12 +39,7 @@ export default function SearchPage() {
           </div>
 
           <div className="mt-4 flex flex-wrap gap-2">
-            {[
-              "인천 출발",
-              "4일 ~ 9일",
-              "친구 · 연인 / 가족",
-              `${travelDeals.length}개 상품`,
-            ].map((chip, index) => (
+            {["인천 출발", "4일 ~ 9일", "친구 · 연인 / 가족", `${travelDeals.length}개 상품`].map((chip, index) => (
               <span
                 key={chip}
                 className={`rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] ${

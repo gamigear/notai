@@ -124,9 +124,9 @@ export function Footer() {
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-5 text-sm text-[#6b7280] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
             <div className="flex flex-wrap gap-4">
               {supportLinks.map((link) => (
-                <a key={link} href="#" className="transition hover:text-[#111827]">
+                <Link key={link} href="/support" className="transition hover:text-[#111827]">
                   {link}
-                </a>
+                </Link>
               ))}
             </div>
             <p>© 2026 NOL INTERPARK Clone Lab. All rights reserved.</p>
