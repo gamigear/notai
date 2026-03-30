@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { DetailFacts } from "@/components/ui/detail-facts";
@@ -15,6 +16,24 @@ export function generateStaticParams() {
   return rankingCards.map((card) => ({
     slug: slugify(card.title),
   }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const card = rankingCards.find((item) => slugify(item.title) === slug);
+
+  if (!card) {
+    return {
+      title: "공연 상세 | NOL 인터파크",
+      alternates: { canonical: `/ticket/${slug}` },
+    };
+  }
+
+  return {
+    title: `${card.title} | NOL 인터파크`,
+    description: `${card.description} 실시간 랭킹과 예매 흐름을 함께 확인할 수 있는 공연 상세 페이지입니다.`,
+    alternates: { canonical: `/ticket/${slug}` },
+  };
 }
 
 export default async function TicketDetailPage({ params }: PageProps) {

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { DetailBulletList, DetailSection } from "@/components/ui/detail-section";
@@ -22,6 +23,24 @@ const subpageItems = [
 
 export function generateStaticParams() {
   return travelDeals.map((deal) => ({ slug: slugify(deal.title) }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const deal = travelDeals.find((item) => slugify(item.title) === slug);
+
+  if (!deal) {
+    return {
+      title: "투어 예약 | NOL 인터파크",
+      alternates: { canonical: `/reserve/tour/${slug}` },
+    };
+  }
+
+  return {
+    title: `${deal.title} 예약하기 | NOL 인터파크`,
+    description: `${deal.title}의 출발일, 인원, 대표 예약자 정보를 확인하고 결제 단계로 이어가는 투어 예약 페이지입니다.`,
+    alternates: { canonical: `/reserve/tour/${slug}` },
+  };
 }
 
 export default async function ReserveTourPage({ params }: PageProps) {
