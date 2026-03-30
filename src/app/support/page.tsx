@@ -58,7 +58,7 @@ export default function SupportPage() {
           </div>
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-            <DetailSection title="지원 메뉴" tone="tinted">
+            <DetailSection title="지원 메뉴" subtitle="가장 자주 찾는 지원 카테고리를 빠르게 열어볼 수 있는 구간입니다." tone="tinted">
               <div className="mt-4 flex flex-wrap gap-2">
                 {supportLinks.map((link) => (
                   <Link key={link} href="/support" className="rounded-full border border-[#ececf3] bg-white px-4 py-2 text-sm font-semibold text-[#4b5563] shadow-sm">

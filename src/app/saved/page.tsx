@@ -59,7 +59,7 @@ export default function SavedPage() {
           </div>
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-            <DetailSection title="저장한 여행" tone="tinted">
+            <DetailSection title="저장한 여행" subtitle="최근 저장해 둔 여행 후보를 다시 비교하고 예약 흐름으로 이어가는 구간입니다." tone="tinted">
               <div className="mt-4 space-y-3">
                 {travelDeals.slice(0, 2).map((deal, index) => (
                   <Link
