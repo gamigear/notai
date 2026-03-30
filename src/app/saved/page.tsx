@@ -148,19 +148,21 @@ export default function SavedPage() {
             </DetailSection>
 
             <DetailSection title="바로 이어보기">
+              <p className="mt-4 text-xs font-semibold text-[#9ca3af]">저장 흐름을 끊지 않고 다음 단계로 바로 이어가기 좋은 진입점만 모았습니다.</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {[
-                  ["투어 검색 계속 보기", "/search"],
-                  ["티켓 랭킹 다시 보기", "/ticket"],
-                  ["마이페이지로 이동", "/mypage"],
-                  ["고객지원 바로가기", "/support"],
-                ].map(([label, href]) => (
+                  ["투어 검색 계속 보기", "/search", "다른 여행 후보까지 이어서 비교"],
+                  ["티켓 랭킹 다시 보기", "/ticket", "저장한 공연과 현재 랭킹 함께 확인"],
+                  ["마이페이지로 이동", "/mypage", "예약 내역과 저장 흐름을 같이 보기"],
+                  ["고객지원 바로가기", "/support", "조건 확인 후 다시 결정 이어가기"],
+                ].map(([label, href, sub]) => (
                   <Link
                     key={label}
                     href={href}
-                    className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-4 text-sm font-semibold text-[#111827] transition hover:-translate-y-0.5 hover:bg-white"
+                    className="rounded-[18px] border border-[#ececf3] bg-[#fafafe] px-4 py-4 transition hover:-translate-y-0.5 hover:bg-white"
                   >
-                    {label}
+                    <p className="text-sm font-semibold text-[#111827]">{label}</p>
+                    <p className="mt-1 text-xs font-semibold text-[#9ca3af]">{sub}</p>
                   </Link>
                 ))}
               </div>

@@ -110,6 +110,7 @@ export default function SupportPage() {
             </DetailSection>
 
             <DetailSection title="지원 흐름 바로가기">
+              <p className="mt-4 text-xs font-semibold text-[#9ca3af]">도움 확인 후 원래 하던 흐름으로 자연스럽게 돌아가기 좋은 진입점입니다.</p>
               <div className="mt-4 grid gap-3">
                 {[
                   ["마이페이지", "/mypage", "문의/예약 상태와 함께 보기"],

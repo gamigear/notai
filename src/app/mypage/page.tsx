@@ -103,6 +103,7 @@ export default function MyPage() {
             </DetailSection>
 
             <DetailSection title="계정에서 자주 이어보기">
+              <p className="mt-4 text-xs font-semibold text-[#9ca3af]">계정 상태를 확인한 뒤 바로 다음 행동으로 넘어가기 쉬운 흐름만 묶었습니다.</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {[
                   ["저장한 상품", "/saved", "saved state 이어보기"],
