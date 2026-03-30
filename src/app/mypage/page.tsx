@@ -91,6 +91,17 @@ export default function MyPage() {
           </div>
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+            <DetailSection title="NEXT BEST ACTION" tone="tinted">
+              <DetailBulletList
+                items={[
+                  "예약 내역에서 가장 가까운 일정이나 최근 확인한 흐름을 먼저 점검해 보세요.",
+                  "막히는 조건이 있으면 고객지원으로 바로 이어가면 됩니다.",
+                  "저장함과 함께 보면 다시 선택하거나 결정을 마무리하기 쉬워져요.",
+                ]}
+                itemTone="soft"
+              />
+            </DetailSection>
+
             <DetailSection title="계정에서 자주 이어보기">
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {[

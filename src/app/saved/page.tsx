@@ -126,6 +126,17 @@ export default function SavedPage() {
           </DetailSection>
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+            <DetailSection title="NEXT BEST ACTION" tone="tinted">
+              <DetailBulletList
+                items={[
+                  "저장한 여행과 공연 중 하나를 골라 상세에서 조건을 다시 비교해 보세요.",
+                  "최근 본 흐름이 붙은 상품부터 확인하면 결정이 더 빨라집니다.",
+                  "비교가 끝나면 상세 → 예약/예매 단계로 바로 이어가면 좋아요.",
+                ]}
+                itemTone="soft"
+              />
+            </DetailSection>
+
             <DetailSection title="저장함 활용 팁">
               <DetailBulletList
                 items={[

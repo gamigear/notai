@@ -86,6 +86,17 @@ export default function SupportPage() {
           </div>
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+            <DetailSection title="NEXT BEST ACTION" tone="tinted">
+              <DetailBulletList
+                items={[
+                  "먼저 자주 찾는 도움말에서 스스로 해결 가능한 조건을 확인해 보세요.",
+                  "결제/환불이나 예매 조건처럼 바로 막히는 항목을 우선 확인하면 좋아요.",
+                  "확인이 끝나면 search, ticket, mypage 흐름으로 자연스럽게 돌아갈 수 있습니다.",
+                ]}
+                itemTone="soft"
+              />
+            </DetailSection>
+
             <DetailSection title="자주 찾는 도움말">
               <DetailBulletList
                 items={[
